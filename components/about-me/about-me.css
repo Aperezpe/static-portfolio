@@ -1,0 +1,12 @@
+section.about-me {
+  justify-content: flex-start;
+}
+
+.about-me__title {
+  font-size: 3rem;
+}
+
+.about-me__title__number {
+  font-size: 2.3rem;
+  font-weight: 500;
+}

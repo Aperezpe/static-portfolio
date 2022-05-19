@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shared/styles/animations.css">
+    <link rel="stylesheet" href="shared/styles/font-styles.css">
+    <link rel="stylesheet" href="shared/styles/margins-paddings.css">
+    <link rel="stylesheet" href="components/about-me/about-me.css">
+    <link rel="stylesheet" href="components/header/header.css">
+    <link rel="stylesheet" href="components/hero/hero.css">
+    <link rel="stylesheet" href="components/splash-screen/splash-screen.css">
+    <title>Navbar</title>
+</head>
+
+<body>
+    <header id="navbar" class="header">
+        <div class="header__nav-items-block">
+            <img src="/assets/img/LogoAP_logo.png" alt="logo" class="header__logo" id="header-logo">
+            <ul class="nav-items">
+                <li class="nav-items--animated1"><a href="#about" class="nav-item nav-item--white ml"><span
+                            class="nav-item__number">01.</span>About</a></li>
+                <li class="nav-items--animated2"><a href="#work" class="nav-item nav-item--white ml"><span
+                            class="nav-item__number">03.</span>Work</a></li>
+                <li class="nav-items--animated3"><a href="#contact" class="nav-item nav-item--white ml"><span
+                            class="nav-item__number">04.</span>Contact</a></li>
+                <li class="nav-items--animated4"><a href="#experience" class="nav-item nav-item--white ml"><span
+                            class="nav-item__number">02.</span>Experience</a></li>
+                <li class="nav-items--animated5"><a href="#resume" class="btn btn--color2 ml">Resume</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="row">
+                <div class="hero__image-box">
+                    <img src="/assets/img/yo_Original 1.png" alt="Abraham_pic" class="hero__image">
+                </div>
+
+                <div class="col ml5">
+                    <div class="pb2">
+                        <h3 class="hero__hello mono-font font-color2">Hello, my name is</h3>
+                    </div>
+                    <div class="pb2">
+                        <h1 class="hero__name header-font font-color1">Abraham Perez</h1>
+                    </div>
+                    <div class="pb3">
+                        <h2 class="hero__title  header-font font-color2">I’m a Software Engineer</h2>
+                    </div>
+                    <div class="p-font">
+                        <p class="hero__content font-gray">I’m specilizing on web and mobile Full Stack development. I’m
+                            focused on building and maintaining web applications that increases supply chain
+                            fullfillment efficiency at Walmart. </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="about-me pt10">
+            <div class="col">
+                <div class="row">
+                    <h4 class="about-me__title header-font font-color1"><span
+                            class="about-me__title__number mono-font font-color2 pr1">01.</span>About me</h4>
+                    <div class="col line-separator ml">
+                        <div class="line-separator__content"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+<script src="components/header/header.js"></script>
+
+</html>

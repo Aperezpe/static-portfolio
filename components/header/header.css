@@ -1,0 +1,112 @@
+/* HEADER.css */
+@import "styles.css";
+
+.header {
+  background-color: var(--primary-color);
+  height: var(--navbar-height);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  transition: top 0.3s, height 0.3s;
+}
+
+.header--transparent {
+  background-color: var(--primary-color);
+  height: 75px;
+  width: 100vw;
+  opacity: .9;
+  position: fixed;
+  top: 0;
+  transition: top 0.3s, height 0.3s;
+}
+
+.header__nav-items-block {
+  align-content: space-between;
+  padding: 2.5rem 0 2.5rem 0;
+  padding-right: 10rem;
+  padding-left: 6rem;
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  height: 3.5rem;
+  align-content: center;
+  cursor: pointer;
+}
+
+
+.nav-item {
+  text-decoration: none;
+  font: 1.3rem var(--mono-font);
+  font-weight: 400;
+  transition: color .15s linear;
+}
+
+.nav-item:hover {
+  color: var(--secondary-color);
+  transition: color .15s linear;
+}
+
+.nav-items--animated1 {
+  animation: moveInTop .2s ease-out;
+  animation-fill-mode: backwards;
+}
+
+.nav-items--animated2 {
+  animation: moveInTop .2s ease-out;
+  animation-delay: .15s;
+  animation-fill-mode: backwards;
+}
+
+.nav-items--animated3 {
+  animation: moveInTop .2s ease-out;
+  animation-delay: .3s;
+  animation-fill-mode: backwards;
+}
+
+.nav-items--animated4 {
+  animation: moveInTop .2s ease-out;
+  animation-delay: .45s;
+  animation-fill-mode: backwards;
+}
+
+.nav-items--animated5 {
+  animation: moveInTop .2s ease-out;
+  animation-delay: .6s;
+  animation-fill-mode: backwards;
+}
+
+.nav-item--white {
+  color: var(--primary-font-color);
+}
+
+.nav-item__number {
+  color: var(--secondary-color);
+  padding-right: .3rem;
+}
+
+.nav-item--resume {
+  color: var(--secondary-color);
+}
+
+li {
+  display: inline-block;
+}
+
+
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

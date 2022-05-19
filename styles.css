@@ -1,0 +1,89 @@
+/* STYLES.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+ 
+body {
+  background-color: #361f67;
+} 
+
+:root {
+  --secondary-color: #ae2d68;
+  --primary-color: #25144b;
+  --primary-font-color: white;
+  --gray: #C9C9C9;
+  --navbar-height: 95px;
+  --light-gray: rgba(227, 227, 227, 0.158);
+  --mono-font: 'IBM Plex Mono', monospace;
+  --header-font: 'Nunito', sans-serif;
+  --p-font: 'Poppins', sans-serif;
+  --splash-screen-duration: 3;
+}
+
+p {
+  color: var(--primary-font-color);
+}
+
+.btn:link, .btn:visited {
+  border: 2px solid;
+  font: 1.3rem var(--mono-font);
+  font-weight: 600;
+  text-decoration: none;
+  padding: .8rem 1.5rem;
+  border-radius: .6rem;
+  transition: background-color .5s;
+}
+
+.btn:hover {
+  background-color: rgba(164, 42, 97, 0.404);
+  transition: background-color .5s;
+}
+
+.btn--color2 {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+main {
+  margin: 0 auto;
+  padding: 0 150px;
+}
+
+section {
+  margin: 0 auto;
+  max-width: 1000px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.line-separator {
+  justify-content: center;
+}
+
+.line-separator__content {
+  height: .2px;
+  width: 100px;
+  min-width: 250px;
+  background-color: var(--light-gray);
+}
+
+
