@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600&display=swap"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="shared/styles/animations.css">
     <link rel="stylesheet" href="shared/styles/font-styles.css">
@@ -19,10 +19,13 @@
     <link rel="stylesheet" href="components/header/header.css">
     <link rel="stylesheet" href="components/hero/hero.css">
     <link rel="stylesheet" href="components/about-me/about-me.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.4.4.min.js"></script> 
+    <script src="index.js"></script>
     <title>Abraham Perez</title>
 </head>
 
-<body>
+
+<body id="body">
     <header id="navbar" class="header">
         <div class="header__nav-items-block">
             <img src="/assets/img/LogoAP_logo.png" alt="logo" class="header__logo" id="header-logo">
@@ -39,8 +42,11 @@
             </ul>
         </div>
     </header>
-
+    <div class="splash-screen">
+        <img src="assets/img/LogoAP_logo.png" alt="Abraham_logo" class="splash-screen__logo">
+    </div>
     <main>
+        
         <section>
             <div class="row">
                 <div class="hero__image-box">
@@ -80,8 +86,7 @@
         </section>
     </main>
 
+   
 </body>
-
 <script src="components/header/header.js"></script>
-
 </html>

@@ -3,33 +3,33 @@
 
 .hero__image {
   width: 300px;
-  animation: inFromLeft .3s ease-in 1.2s;
+  animation: inFromLeft .3s ease-in calc(var(--splash-screen-duration) + 1.2s);
   animation-fill-mode: backwards;
 }
 
 .hero__hello{
   font-size: 1.8rem;
   font-weight: 500;
-  animation: inFromBottom .3s ease-in .8s;
+  animation: inFromBottom .3s ease-in calc(var(--splash-screen-duration) + .8s);
   animation-fill-mode: backwards;
 }
 
 .hero__name {
   font-size: 6rem;
-  animation: inFromBottom .3s ease-in .9s;
+  animation: inFromBottom .3s ease-in calc(var(--splash-screen-duration) + .9s);
   animation-fill-mode: backwards;
 }
 
 .hero__title {
   font-size: 4.5rem;
-  animation: inFromBottom .3s ease-in 1s;
+  animation: inFromBottom .3s ease-in calc(var(--splash-screen-duration) + 1s);
   animation-fill-mode: backwards;
 }
 
 .hero__content {
   font-size: 1.7rem;
   font-weight: 200;
-  animation: inFromBottom .3s ease-in 1.1s;
+  animation: inFromBottom .3s ease-in calc(var(--splash-screen-duration) + 1.1s);
   animation-fill-mode: backwards;
 }
 

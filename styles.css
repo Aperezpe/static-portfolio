@@ -11,12 +11,14 @@ html {
 }
  
 body {
-  background-color: #361f67;
+  background-color: var(--body-color)
 } 
 
 :root {
   --secondary-color: #ae2d68;
-  --primary-color: #25144b;
+  --splash-screen-color: #1f0544;
+  --primary-color: #280659;
+  --body-color: #341671;
   --primary-font-color: white;
   --gray: #C9C9C9;
   --navbar-height: 95px;
@@ -24,7 +26,7 @@ body {
   --mono-font: 'IBM Plex Mono', monospace;
   --header-font: 'Nunito', sans-serif;
   --p-font: 'Poppins', sans-serif;
-  --splash-screen-duration: 3;
+  --splash-screen-duration: 2000ms;
 }
 
 p {

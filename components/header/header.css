@@ -52,31 +52,31 @@
 }
 
 .nav-items--animated1 {
-  animation: moveInTop .2s ease-out;
+  animation: moveInTop .2s ease-out calc(var(--splash-screen-duration));
   animation-fill-mode: backwards;
 }
 
 .nav-items--animated2 {
   animation: moveInTop .2s ease-out;
-  animation-delay: .15s;
+  animation-delay: calc(var(--splash-screen-duration) + .15s);
   animation-fill-mode: backwards;
 }
 
 .nav-items--animated3 {
   animation: moveInTop .2s ease-out;
-  animation-delay: .3s;
+  animation-delay: calc(var(--splash-screen-duration) + .3s);
   animation-fill-mode: backwards;
 }
 
 .nav-items--animated4 {
   animation: moveInTop .2s ease-out;
-  animation-delay: .45s;
+  animation-delay: calc(var(--splash-screen-duration) + .45s);
   animation-fill-mode: backwards;
 }
 
 .nav-items--animated5 {
   animation: moveInTop .2s ease-out;
-  animation-delay: .6s;
+  animation-delay: calc(var(--splash-screen-duration) + .6s);
   animation-fill-mode: backwards;
 }
 

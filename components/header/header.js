@@ -2,11 +2,6 @@
 
 var prevScrollPos = window.scrollY;
 
-// stick navbar to the top when page is loaded
-window.onload = function() {
-  document.getElementById('navbar').style.top = "0";
-}
-
 window.onscroll = function() {
   var currentScrollPos = window.scrollY;
 
