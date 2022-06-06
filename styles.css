@@ -11,7 +11,8 @@ html {
 }
  
 body {
-  background-color: var(--body-color)
+  background-color: var(--body-color);
+  overflow: hidden;
 } 
 
 :root {

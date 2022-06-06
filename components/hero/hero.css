@@ -26,10 +26,13 @@
   animation-fill-mode: backwards;
 }
 
-.hero__content {
+.p-content {
   font-size: 1.7rem;
   font-weight: 200;
+}
+
+
+.hero__content--animated {
   animation: inFromBottom .3s ease-in calc(var(--splash-screen-duration) + 1.1s);
   animation-fill-mode: backwards;
 }
-
