@@ -3,7 +3,6 @@ $(window).load(function() {
   
   $(".splash-screen").delay(msDuration).queue(function() {
     $(this).remove();
-    // $('.hide').removeClass();
   });
   
   $("#navbar").css("top", "0");

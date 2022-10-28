@@ -1,0 +1,37 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-primary;
+  height: $navbar-height;
+  padding: 0 4rem;
+
+  &__logo {
+    height: 6rem;
+    cursor: pointer;
+  }
+
+  &__item {
+    display: inline-block;
+    padding-right: 5rem;
+    list-style: none;
+
+  }
+  
+  &__link {
+    text-decoration: none;
+    font-family: $font-mono;
+    color: $color-light-gray;
+    font-size: $font-size-tiny;
+    transition: color .3s;
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+
+  &__item-number {
+    color: $color-secondary;
+    padding-right: .8rem;
+  }
+}

@@ -1,0 +1,39 @@
+.content-paragraph {
+  font-size: $font-size-small;
+  color: $color-gray;
+  font-family: $font-poppins;
+  margin-bottom: 2rem;
+}
+
+.company-position-title {
+  font-size: calc(#{$font-size-small} * 1.2);
+  color: $color-light-gray;
+  font-family: $font-poppins;
+
+  & span {
+    color: $color-secondary;
+    padding-left: 1rem;
+  }
+}
+
+.project-title {
+  font-size: calc(#{$font-size-small} * 1.2);
+  color: $color-light-gray;
+  font-family: $font-poppins;
+
+}
+
+.text-tiny {
+  font-family: $font-mono;
+  font-size: $font-size-tiny;
+}
+
+.hoverable-icon {
+  color: $color-light-gray;
+  transition: all .3s;
+  font-size: 2.5rem;
+
+  &:hover {
+    color: $color-secondary;
+  }
+}

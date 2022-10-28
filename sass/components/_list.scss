@@ -1,0 +1,28 @@
+.list {
+  list-style: none;
+  color: $color-gray;
+  line-height: 3.5rem;
+
+  &--skills {
+    columns: 2;
+  }
+
+  &__item {
+    &::before {
+      content: "▹";
+      font-family: $font-poppins;
+      display: inline-block;
+      margin-right: 1rem;
+      color: $color-secondary;
+      font-size: 2rem;
+    }
+
+    &--experience {
+      font-family: $font-poppins;
+      font-size: 115%;
+      font-weight: 300;
+      line-height: 3rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.project {
+  position: relative;
+  // width: 80%;
+  margin-bottom: 12rem;
+  
+  &__box {
+    display: flex;
+
+    &--right {
+      justify-content: flex-start;
+    }
+    
+    &--left {
+      justify-content: flex-end;
+    }
+  }
+
+  &__content {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    /* 
+    * 100% of container width minus 85% of img size
+    * This makes sure the description text box scales together with component
+    * when component width is changed.
+    */
+    width: calc(100% - #{$width-colored-img * .85});
+
+
+    z-index: 1000;
+
+    
+    &--right {
+      right: 0;
+      align-items: flex-end;
+    }
+    
+    &--left {
+      left: 0;
+      align-items: flex-start;
+    }
+  }
+
+  &__description-space {
+    height: 14rem;
+    width: 5rem;
+    background-color: transparent;
+  }
+
+  &__description {
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    font-size: calc(#{$font-size-tiny} * 1.2);
+    font-family: $font-poppins;
+    height: 12rem;
+    
+    &--right {
+      background-color: $color-purple;
+      text-align: right;
+      color: $color-white-2;
+      font-weight: 300;
+    }
+    
+    &--left {
+      background-color: $color-gray;
+      text-align: left;
+      color: $color-black;
+      font-weight: 400;
+    }
+  }
+
+  &__stack {
+    display: flex;
+
+    p:not(:last-child)  {
+      padding-right: 2rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+  }
+
+  &__link:not(:last-child) {
+    padding-right: 2rem;
+  }
+
+}

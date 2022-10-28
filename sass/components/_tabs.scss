@@ -1,0 +1,56 @@
+.tabs {
+  display: flex;
+
+  &__menu {
+    position: relative;
+  }
+
+  &__items {
+    width: 15rem;
+
+    border-left: 1px solid $color-dark-gray;
+
+    // Pink line highliter
+    &::before {
+      content: "";
+      width: 2.5px;
+      height: 5.5rem;
+      background-color: $color-secondary;
+
+      position: absolute;
+      left: -.5px;
+    }
+
+  }
+
+  // LI
+  &__item {
+    list-style: none;
+  }
+  
+  // A
+  &__link {
+    display: block;
+
+    color: $color-gray;
+    text-decoration: none;
+    
+    line-height: 5.5rem;
+    padding-left: 2.5rem;
+
+    &:hover {
+      background-color: rgba($color-secondary, .1);
+      color: $color-secondary;
+    }
+    
+
+    &:focus {
+      background-color: rgba($color-secondary, .1);
+      color: $color-secondary;
+    }
+  }
+
+  &__content {
+    padding-left: 5rem;
+  }
+}

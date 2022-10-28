@@ -1,0 +1,25 @@
+.subtitle {
+  font-size: $font-size-medium;
+  color: $color-light-gray;
+  font-family: $font-nuito;
+
+  &::after {
+    content: "";
+    width: 30rem;
+    display: inline-block;
+    height: 1px;
+    background-color: rgba($color-light-gray, .2);
+    margin-bottom: .5rem;
+    margin-left: 2rem;
+  }
+
+  &::before {
+    counter-increment: section;
+    content: "0" counter(section) ".";
+    color: $color-secondary;
+    padding-right: 1rem;
+    font-family: $font-mono;
+    font-weight: 400;
+    font-size: 80%;
+  }
+}
