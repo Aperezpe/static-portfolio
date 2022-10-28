@@ -137,7 +137,7 @@ main {
     height: 30rem;
     width: 30rem; }
     .colored-img__picture--headshot {
-      background-image: url("/assets/img/headshot.jpg"); }
+      background-image: url("https://raw.githubusercontent.com/Aperezpe/static-portfolio/main/assets/img/headshot.JPG"); }
     .colored-img__picture--project1 {
       background-image: url("/assets/img/launcher_iconlogo_circle 1.png"); }
     .colored-img__picture--project2 {

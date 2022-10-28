@@ -23,11 +23,13 @@ $ heroku login
 ```console
 $ heroku git:remote -a static-portfolio-abperez
 ```
-4. Push changes to heroku app
+4. Push changes to heroku app. 
+> note: **If changes have already been pushed to git repo, just execute git push heroku main `git push heroku main`**
+
 ```console
 $ git add . 
 $ git commit -m "your commit message" 
-$ git push heroku master
+$ git push heroku main
 ```
 
 Reference: https://www.geeksforgeeks.org/how-to-deploy-a-basic-static-html-website-to-heroku/
