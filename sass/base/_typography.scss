@@ -57,17 +57,16 @@
   font-family: $font-nuito;
 }
 
-// .hoverable-icon {
-//   color: $color-light-gray;
-//   transition: all .4s;
-//   font-size: 2.5rem;
-//   cursor: pointer;
+.hoverable-icon {
+  color: $color-light-gray;
+  transition: all .4s;
+  font-size: 2.5rem;
+  cursor: pointer;
 
-//   &:hover {
-//     color: $color-secondary;
-//   }
-
-// }
+  &:hover {
+    color: $color-secondary;
+  }
+}
 
 .font-paragraph-small {
   font-size: calc(#{$font-size-tiny} * 1.2);

@@ -73,6 +73,14 @@ main {
   font-size: 5rem;
   font-family: "Nunito", sans-serif; }
 
+.hoverable-icon {
+  color: #d3defb;
+  transition: all .4s;
+  font-size: 2.5rem;
+  cursor: pointer; }
+  .hoverable-icon:hover {
+    color: #ae2d68; }
+
 .font-paragraph-small {
   font-size: calc(1.2rem * 1.2);
   font-family: "Poppins", sans-serif; }
