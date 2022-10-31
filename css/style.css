@@ -176,7 +176,7 @@ main {
   .colored-img__box {
     position: relative;
     overflow: hidden;
-    z-index: 3000;
+    z-index: 1;
     border-radius: .5rem; }
     .colored-img__box--radius {
       border-radius: 3.5rem; }
@@ -209,7 +209,7 @@ main {
     position: absolute;
     top: 2rem;
     left: 2rem;
-    z-index: 2000;
+    z-index: 0;
     pointer-events: none;
     transition: all .3s; }
 
