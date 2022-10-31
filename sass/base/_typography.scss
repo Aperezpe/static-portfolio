@@ -2,7 +2,6 @@
   font-size: $font-size-small;
   color: $color-gray;
   font-family: $font-poppins;
-  margin-bottom: 2rem;
 }
 
 .company-position-title {
@@ -17,10 +16,19 @@
 }
 
 .project-title {
-  font-size: calc(#{$font-size-small} * 1.2);
   color: $color-light-gray;
   font-family: $font-poppins;
+  transition: color .3s;
 
+  
+  &--medium {
+    font-size: $font-size-medium;
+  }
+  
+  &--small {
+    font-size: calc(#{$font-size-medium} * .7);
+    font-weight: 500;
+  }
 }
 
 .text-tiny {
@@ -28,12 +36,40 @@
   font-size: $font-size-tiny;
 }
 
-.hoverable-icon {
-  color: $color-light-gray;
-  transition: all .3s;
-  font-size: 2.5rem;
+.text-small {
+  font-family: $font-mono;
+  font-size: $font-size-small;
+  
+  &--numbered {
+    counter-increment: section;
+    font-weight: 400;
 
-  &:hover {
-    color: $color-secondary;
+    &::before {
+      content: "0" counter(section) ".";
+      padding-right: 1rem;
+
+    }
   }
+}
+
+.header-big {
+  font-size: 5rem;
+  font-family: $font-nuito;
+}
+
+// .hoverable-icon {
+//   color: $color-light-gray;
+//   transition: all .4s;
+//   font-size: 2.5rem;
+//   cursor: pointer;
+
+//   &:hover {
+//     color: $color-secondary;
+//   }
+
+// }
+
+.font-paragraph-small {
+  font-size: calc(#{$font-size-tiny} * 1.2);
+  font-family: $font-poppins;
 }

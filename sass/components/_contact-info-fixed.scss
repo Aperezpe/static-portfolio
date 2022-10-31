@@ -1,0 +1,60 @@
+.contact-info-fixed {
+  &--left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+  }
+
+  &--right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__box {
+    width: $min-vertical-padding;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    
+  }
+
+  &__item {
+    &--rotate {
+      writing-mode: vertical-lr;
+    }
+  }
+  
+  &__link {
+    text-decoration: none;
+    padding-bottom: 2rem;
+    transition: all .3s ease;
+    @include tiny-text;
+    font-size: calc(#{$font-size-small} * .9);
+    
+    @include hoverable-link($color-secondary, -.3rem);
+  }
+
+  &__icon {
+    font-size: 2.5rem;
+  }
+
+  &__line {
+    width: 1px;
+    height: 10rem;
+    background-color: $color-gray;
+  }
+
+}

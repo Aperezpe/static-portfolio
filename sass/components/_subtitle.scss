@@ -1,5 +1,5 @@
 .subtitle {
-  font-size: $font-size-medium;
+  font-size: $font-size-medium-plus;
   color: $color-light-gray;
   font-family: $font-nuito;
 
@@ -22,4 +22,10 @@
     font-weight: 400;
     font-size: 80%;
   }
+}
+
+.subtitle-unnumbered {
+  font-size: $font-size-medium-plus;
+  color: $color-light-gray;
+  font-family: $font-nuito;
 }

@@ -35,8 +35,7 @@ main {
 .content-paragraph {
   font-size: 1.5rem;
   color: #9aa5c5;
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 2rem; }
+  font-family: "Poppins", sans-serif; }
 
 .company-position-title {
   font-size: calc(1.5rem * 1.2);
@@ -47,20 +46,36 @@ main {
     padding-left: 1rem; }
 
 .project-title {
-  font-size: calc(1.5rem * 1.2);
   color: #d3defb;
-  font-family: "Poppins", sans-serif; }
+  font-family: "Poppins", sans-serif;
+  transition: color .3s; }
+  .project-title--medium {
+    font-size: 2.5rem; }
+  .project-title--small {
+    font-size: calc(2.5rem * .7);
+    font-weight: 500; }
 
 .text-tiny {
   font-family: "IBM Plex Mono", monospace;
   font-size: 1.2rem; }
 
-.hoverable-icon {
-  color: #d3defb;
-  transition: all .3s;
-  font-size: 2.5rem; }
-  .hoverable-icon:hover {
-    color: #ae2d68; }
+.text-small {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.5rem; }
+  .text-small--numbered {
+    counter-increment: section;
+    font-weight: 400; }
+    .text-small--numbered::before {
+      content: "0" counter(section) ".";
+      padding-right: 1rem; }
+
+.header-big {
+  font-size: 5rem;
+  font-family: "Nunito", sans-serif; }
+
+.font-paragraph-small {
+  font-size: calc(1.2rem * 1.2);
+  font-family: "Poppins", sans-serif; }
 
 .u-margin-bottom-tinier {
   margin-bottom: 1rem; }
@@ -85,6 +100,15 @@ main {
 
 .u-font-color-gray {
   color: #9aa5c5; }
+
+.u-font-color-light-gray {
+  color: #d3defb; }
+
+.u-font-secondary {
+  font-family: "Poppins", sans-serif; }
+
+.u-text-justify-center {
+  text-align: center; }
 
 .btn {
   padding: 1.25rem 2.5rem;
@@ -113,6 +137,33 @@ main {
   .about-me__content {
     padding-right: 10rem; }
 
+.stack-list {
+  display: flex; }
+  .stack-list p:not(:last-child) {
+    padding-right: 2rem; }
+
+.noteworthy-project {
+  background-color: #463171;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: all .3s;
+  padding: 2.5rem; }
+  .noteworthy-project__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end; }
+  .noteworthy-project__left-icon {
+    font-size: 3.5rem;
+    color: #ae2d68; }
+  .noteworthy-project .noteworthy-project__right-icon:not(:last-child) {
+    padding-right: 1.5rem; }
+  .noteworthy-project:hover .project-title {
+    color: rgba(240, 89, 158, 0.8); }
+  .noteworthy-project:hover {
+    transform: translateY(-1rem); }
+
 .colored-img {
   position: relative; }
   .colored-img:hover .colored-img__back-border {
@@ -125,7 +176,7 @@ main {
   .colored-img__box {
     position: relative;
     overflow: hidden;
-    z-index: 1;
+    z-index: 3000;
     border-radius: .5rem; }
     .colored-img__box--radius {
       border-radius: 3.5rem; }
@@ -158,7 +209,7 @@ main {
     position: absolute;
     top: 2rem;
     left: 2rem;
-    z-index: 0;
+    z-index: 2000;
     pointer-events: none;
     transition: all .3s; }
 
@@ -199,8 +250,6 @@ main {
     display: flex;
     align-items: center;
     padding: 2rem;
-    font-size: calc(1.2rem * 1.2);
-    font-family: "Poppins", sans-serif;
     height: 12rem; }
     .project__description--right {
       background-color: #8267BC;
@@ -218,8 +267,7 @@ main {
       padding-right: 2rem; }
   .project__links {
     display: flex;
-    list-style: none;
-    cursor: pointer; }
+    list-style: none; }
   .project__link:not(:last-child) {
     padding-right: 2rem; }
 
@@ -254,6 +302,11 @@ main {
   .tabs__content {
     padding-left: 5rem; }
 
+.vertical-text {
+  transform: rotate(90deg);
+  /* Firefox */
+  -moz-transform: rotate(90deg); }
+
 .list {
   list-style: none;
   color: #9aa5c5;
@@ -269,13 +322,73 @@ main {
     font-size: 2rem; }
   .list__item--experience {
     font-family: "Poppins", sans-serif;
-    font-size: 115%;
+    font-size: 130%;
     font-weight: 300;
     line-height: 3rem;
     padding-bottom: 1.5rem; }
 
+.contact-info-fixed--left {
+  position: fixed;
+  bottom: 0;
+  left: 0; }
+
+.contact-info-fixed--right {
+  position: fixed;
+  bottom: 0;
+  right: 0; }
+
+.contact-info-fixed__box {
+  width: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center; }
+
+.contact-info-fixed__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.contact-info-fixed__item--rotate {
+  writing-mode: vertical-lr; }
+
+.contact-info-fixed__link {
+  text-decoration: none;
+  padding-bottom: 2rem;
+  transition: all .3s ease;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.2rem;
+  color: #9aa5c5;
+  font-size: calc(1.5rem * .9);
+  display: block; }
+  .contact-info-fixed__link:hover {
+    color: #ae2d68;
+    -webkit-transform: translateY(-0.3rem);
+    -moz-transform: translateY(-0.3rem);
+    -ms-transform: translateY(-0.3rem);
+    transform: translateY(-0.3rem); }
+
+.contact-info-fixed__icon {
+  font-size: 2.5rem; }
+
+.contact-info-fixed__line {
+  width: 1px;
+  height: 10rem;
+  background-color: #9aa5c5; }
+
+.footer {
+  margin-top: 10rem;
+  cursor: pointer; }
+  .footer__link {
+    text-decoration: none; }
+    .footer__link:hover p {
+      color: #ae2d68; }
+    .footer__link p {
+      transition: color .2s; }
+
 .subtitle {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #d3defb;
   font-family: "Nunito", sans-serif; }
   .subtitle::after {
@@ -294,6 +407,11 @@ main {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
     font-size: 80%; }
+
+.subtitle-unnumbered {
+  font-size: 3rem;
+  color: #d3defb;
+  font-family: "Nunito", sans-serif; }
 
 .navigation {
   display: flex;
@@ -314,20 +432,34 @@ main {
     font-family: "IBM Plex Mono", monospace;
     color: #d3defb;
     font-size: 1.2rem;
-    transition: color .3s; }
+    display: block; }
     .navigation__link:hover {
-      color: #ae2d68; }
+      color: #ae2d68;
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0); }
   .navigation__item-number {
     color: #ae2d68;
     padding-right: .8rem; }
 
+.grid-3-by-3 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  column-gap: 1.5rem;
+  row-gap: 1.5rem; }
+
 .intro {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin: 0 auto;
+  padding: 10rem 12rem;
+  justify-content: center;
   max-width: 110rem;
-  padding: 15rem 10rem;
   min-height: calc(100vh - 110px); }
   .intro__hello {
     font-size: 2rem;
@@ -336,14 +468,8 @@ main {
     padding-bottom: 2rem; }
   .intro__name {
     font-size: 6rem;
-    font-family: "Nunito", sans-serif;
     color: #d3defb;
     font-weight: 700; }
-  .intro__title {
-    font-size: 5rem;
-    font-family: "Nunito", sans-serif;
-    color: #ae2d68;
-    padding-bottom: 5rem; }
   .intro__description {
     font-size: 2rem;
     font-family: "Poppins", sans-serif;
@@ -379,3 +505,24 @@ main {
   padding: 10rem 12rem;
   max-width: calc(120rem * .90);
   align-items: stretch; }
+
+.section-noteworthy-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 10rem 12rem;
+  max-width: 120rem;
+  counter-reset: section-1;
+  align-items: center; }
+
+.section-whats-next {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 10rem 12rem;
+  max-width: calc(120rem * .70);
+  align-items: center; }

@@ -5,5 +5,23 @@
   align-items: flex-start;
 
   margin: 0 auto;
-  padding: 10rem 12rem;
+  padding: 10rem $min-vertical-padding;
+}
+
+@mixin tiny-text {
+  font-family: $font-mono;
+  font-size: $font-size-tiny;
+  color: $color-gray;
+}
+
+@mixin hoverable-link($color, $transformY) {
+  display: block;
+  
+  &:hover {
+    color: $color-secondary;
+    -webkit-transform: translateY($transformY);
+    -moz-transform: translateY($transformY);
+    -ms-transform: translateY($transformY);
+    transform: translateY($transformY);
+  }
 }

@@ -1,0 +1,16 @@
+.footer {
+  margin-top: 10rem;
+  cursor: pointer;
+
+  &__link {
+    text-decoration: none;
+
+    &:hover p {
+      color: $color-secondary;
+    }
+
+    & p {
+      transition: color .2s;
+    }
+  }
+}

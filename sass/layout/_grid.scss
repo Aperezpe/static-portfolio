@@ -1,0 +1,10 @@
+.grid-3-by-3 {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+
+  column-gap: $grid-gap;
+  row-gap: $grid-gap;
+}

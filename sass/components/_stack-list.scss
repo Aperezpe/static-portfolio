@@ -1,0 +1,7 @@
+.stack-list {
+  display: flex;
+
+  p:not(:last-child)  {
+    padding-right: 2rem;
+  }
+}

@@ -1,11 +1,9 @@
 .intro {
-  display: flex;
-  align-items: center;
+  @include section-layout;
   justify-content: center;
-  margin: 0 auto;
-  max-width: 110rem;
 
-  padding: 15rem 10rem;
+  
+  max-width: 110rem;
   //TODO: only 100vh after changing navbar to position fixed
   min-height: calc(100vh - #{$navbar-height});
 
@@ -18,17 +16,8 @@
 
   &__name {
     font-size: 6rem;
-    font-family: $font-nuito;
     color: $color-light-gray;
     font-weight: 700;
-  }
-
-  &__title {
-    font-size: 5rem;
-    font-family: $font-nuito;
-    color: $color-secondary;
-    padding-bottom: 5rem;
-
   }
 
   &__description {
@@ -58,4 +47,19 @@
   max-width: calc(#{$section-max-width} * .90);
 
   align-items: stretch;
+}
+
+.section-noteworthy-projects {
+  @include section-layout;
+  max-width: $section-max-width ;
+  counter-reset: section - 1;
+
+  align-items: center;
+}
+
+.section-whats-next {
+  @include section-layout;
+  max-width: calc(#{$section-max-width} * .70);
+
+  align-items: center;
 }

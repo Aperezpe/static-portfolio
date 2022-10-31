@@ -23,11 +23,8 @@
     font-family: $font-mono;
     color: $color-light-gray;
     font-size: $font-size-tiny;
-    transition: color .3s;
 
-    &:hover {
-      color: $color-secondary;
-    }
+    @include hoverable-link($color-secondary, 0);
   }
 
   &__item-number {
