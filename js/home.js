@@ -28,7 +28,7 @@ window.onload = () => {
   console.log(scrollElements);
 }
 
-window.onscroll = () => {
+window.addEventListener('scroll', () => {
   handleScrollAnimation();
-}
+})
 

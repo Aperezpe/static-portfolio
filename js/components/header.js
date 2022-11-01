@@ -2,7 +2,7 @@
 
 var prevScrollPos = window.scrollY;
 
-window.onscroll = function () {
+window.addEventListener('scroll', () => {
   var currentScrollPos = window.scrollY;
 
   // reset navbar when position pixels == 0. 
@@ -17,4 +17,4 @@ window.onscroll = function () {
     document.getElementsByTagName('header')[0].classList.add('navigation--transparent');
   }
   prevScrollPos = currentScrollPos;
-}
+})
