@@ -1,5 +1,6 @@
 .intro {
   @include section-layout;
+  margin-top: $navbar-height;
   justify-content: center;
 
   
@@ -69,4 +70,15 @@
   max-width: calc(#{$section-max-width} * .70);
 
   align-items: center;
+}
+
+.js-scroll {
+  opacity: 0;
+  transform: translateY(5rem);
+}
+
+.scrolled {
+  transition: all .6s ease;
+  opacity: 1;
+  transform: translateY(0);
 }

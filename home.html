@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/46ee3dcf79.js" crossorigin="anonymous"></script>
     <script src="js/components/header.js"></script>
+    <script src="js/home.js"></script>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.4.4.min.js"></script> 
     <script src="index.js"></script>
@@ -50,7 +51,7 @@
             <a href="mailto:aperezpe01@gmail.com" target="_blank" class="btn btn--medium">Say Hello!</a>
         </div>
 
-        <section class="section-about-me">
+        <section class="section-about-me js-scroll">
             <h3 class="subtitle u-margin-bottom-medium-plus">About me</h3>
 
             <div class="about-me">
@@ -82,7 +83,7 @@
             
         </section>
 
-        <section class="section-experience">
+        <section class="section-experience js-scroll">
             <h3 class="subtitle u-margin-bottom-medium-plus">Where I've worked</h3>
 
             <div class="tabs">
@@ -110,10 +111,10 @@
         </section>
 
         <section class="section-projects">
-            <h3 class="subtitle u-margin-bottom-medium-plus">Some things I've built</h3>
+            <h3 class="subtitle u-margin-bottom-medium-plus js-scroll">Some things I've built</h3>
 
             <!--------------------------- PROJECT 1 --------------------------------------->
-            <div class="project">
+            <div class="project js-scroll">
                 <div class="project__box project__box--right">
                     <div class="colored-img">
                         <div class="colored-img__box colored-img__box--radius">
@@ -134,7 +135,7 @@
                         <p class="text-tiny u-font-color-gray">Figma</p>
                     </div>
                     <div class="project__links">
-                        <a class="project__link" href="#0">
+                        <a class="project__link" target="_blank" rel="noopener" title="Gifterest" href="https://github.com/Aperezpe/gifterest">
                             <i class="fa-brands fa-github hoverable-icon"></i>
                         </a>
                     </div>
@@ -142,7 +143,7 @@
             </div>
 
             <!--------------------------- PROJECT 2 --------------------------------------->
-            <div class="project">
+            <div class="project js-scroll">
                 <div class="project__box project__box--left">
                     <div class="colored-img">
                         <div class="colored-img__box colored-img__box--radius">
@@ -164,7 +165,7 @@
                     </div>
 
                     <div class="project__links">
-                        <a class="project__link" href="">
+                        <a class="project__link" href="https://github.com/Aperezpe/static-portfolio" rel="noopener" title="Abraham Portfolio">
                             <i class="fa-brands fa-github hoverable-icon"></i>
                         </a>
                     </div>
@@ -173,15 +174,19 @@
         </section>
 
         <section class="section-noteworthy-projects">
-            <h3 class="subtitle-unnumbered u-margin-bottom-medium-plus">Other Noteworthy Projects</h3>
+            <h3 class="subtitle-unnumbered u-margin-bottom-medium-plus js-scroll">Other Noteworthy Projects</h3>
 
-            <div class="grid-3-by-3 u-margin-bottom-big">
-                <div class="noteworthy-project">
+            <div class="grid-3-by-3 u-margin-bottom-big js-scroll">
+                <div class="noteworthy-project js-scroll">
                     <div class="noteworthy-project__header u-margin-bottom-small">
                         <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
                         <div class="noteworthy-project__right-icons">
-                            <i class="fa-brands fa-github hoverable-icon noteworthy-project__right-icon"></i>
-                            <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-brands fa-github hoverable-icon "></i>
+                            </a>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
                         </div>
                     </div>
 
@@ -194,12 +199,16 @@
                     </div>
                 </div>
 
-                <div class="noteworthy-project">
+                <div class="noteworthy-project js-scroll">
                     <div class="noteworthy-project__header u-margin-bottom-small">
                         <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
                         <div class="noteworthy-project__right-icons">
-                            <i class="fa-brands fa-github hoverable-icon noteworthy-project__right-icon"></i>
-                            <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-brands fa-github hoverable-icon"></i>
+                            </a>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
                         </div>
                     </div>
     
@@ -217,11 +226,11 @@
         </section>
         
 
-        <section class="section-whats-next">
+        <section class="section-whats-next js-scroll">
             <h3 class="text-small text-small--numbered u-font-color-secondary u-margin-bottom-tiny">What's Next?</h3>
             <h6 class="header-big u-font-color-light-gray u-font-secondary u-margin-bottom-small">Get In Touch</h6>
             <p class="content-paragraph u-text-justify-center u-margin-bottom-medium-plus">Sapien faucibus et molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus viverra accumsan in nisl</p>
-            <button class="btn btn--medium">Say Hello!</button>
+            <a href="mailto:aperezpe01@gmail.com" target="_blank" class="btn btn--medium">Say Hello!</a>
         </section>
     </main>
 
@@ -235,10 +244,10 @@
         <div class="contact-info-fixed__box">
             <ul class="contact-info-fixed__list">
                 <li class="contact-info-fixed__item">
-                    <a href="#0" class="contact-info-fixed__link"><i class="fa-brands fa-github hoverable-icon hoverable-icon--translateY contact-info-fixed__icon"></i></a>
+                    <a href="https://github.com/Aperezpe" rel="noopener" target="_blank" title="Github" class="contact-info-fixed__link"><i class="fa-brands fa-github hoverable-icon hoverable-icon--translateY contact-info-fixed__icon"></i></a>
                 </li>
                 <li class="contact-info-fixed__item">
-                    <a href="#0" class="contact-info-fixed__link"><i class="fa-brands fa-linkedin-in hoverable-icon hoverable-icon--translateY contact-info-fixed__icon"></i></a>
+                    <a href="https://www.linkedin.com/in/aperezpe/" rel="noopener" target="_blank" title="Linkedin" class="contact-info-fixed__link"><i class="fa-brands fa-linkedin-in hoverable-icon hoverable-icon--translateY contact-info-fixed__icon"></i></a>
                 </li>
                 <li class="contact-info-fixed__item">
                     <div class="contact-info-fixed__line"></div>
@@ -251,7 +260,7 @@
         <div class="contact-info-fixed__box">
             <ul class="contact-info-fixed__list">
                 <li class="contact-info-fixed__item contact-info-fixed__item--rotate">
-                    <a href="#0" class="contact-info-fixed__link">aperezpe01@gmail.com</a>
+                    <a href="mailto:aperezpe01@gmail.com" target="_blank" class="contact-info-fixed__link">aperezpe01@gmail.com</a>
                 </li>
                 <li class="contact-info-fixed__item">
                     <div class="contact-info-fixed__line"></div>

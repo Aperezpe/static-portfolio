@@ -39,6 +39,14 @@
   100% {
     opacity: 1; } }
 
+@keyframes fadeInAndScale {
+  0% {
+    opacity: 0;
+    transform: scale(100%) translate(-50%, -50%); }
+  100% {
+    opacity: 1;
+    transform: scale(120%) translate(-50%, -50%); } }
+
 *,
 *::after,
 *::before {
@@ -527,12 +535,21 @@ main {
     padding-right: .8rem; }
 
 .splash-screen {
-  background-color: white;
+  background-color: #1f0544;
   height: 100vh;
   width: 100vw;
   z-index: 5000;
   position: fixed;
   top: 0; }
+  .splash-screen::after {
+    content: url(../../assets/img/LogoAP_logo.png);
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform-origin: top left;
+    transform: translate(-50%, -50%);
+    animation: fadeInAndScale 1500ms ease-in both; }
 
 .grid-3-by-3 {
   width: 100%;
@@ -549,6 +566,7 @@ main {
   align-items: flex-start;
   margin: 0 auto;
   padding: 10rem 12rem;
+  margin-top: 110px;
   justify-content: center;
   max-width: 110rem;
   min-height: calc(100vh - 110px); }
@@ -632,3 +650,12 @@ main {
   padding: 10rem 12rem;
   max-width: calc(120rem * .70);
   align-items: center; }
+
+.js-scroll {
+  opacity: 0;
+  transform: translateY(5rem); }
+
+.scrolled {
+  transition: all .6s ease;
+  opacity: 1;
+  transform: translateY(0); }
