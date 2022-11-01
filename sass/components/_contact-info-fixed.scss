@@ -3,13 +3,14 @@
     position: fixed;
     bottom: 0;
     left: 0;
-
+    animation: inFromBottom .5s ease #{$splash-screen-duration + 1.8s} backwards;
   }
-
+  
   &--right {
     position: fixed;
     bottom: 0;
     right: 0;
+    animation: inFromBottom .5s ease #{$splash-screen-duration + 1.8s} backwards;
   }
 
   &__box {

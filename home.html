@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/46ee3dcf79.js" crossorigin="anonymous"></script>
+    <script src="js/components/header.js"></script>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.4.4.min.js"></script> 
     <script src="index.js"></script>
@@ -22,9 +23,12 @@
 
 
 <body>
+    <div class="splash-screen">HELOOOO</div>
     <header class="navigation">
         <div class="navigation__logo-box">
-            <img class="navigation__logo" src="assets/img/LogoAP_logo.png" alt="Abraham Logo">
+            <a href="">
+                <img class="navigation__logo" src="assets/img/LogoAP_logo.png" alt="Abraham Logo">
+            </a> 
         </div>
         <nav class="navigation__nav">
             <ul class="navigation__list">
@@ -32,20 +36,18 @@
                 <li class="navigation__item"><a href="#0" class="navigation__link"><span class="navigation__item-number">02.</span>Experience</a></li>
                 <li class="navigation__item"><a href="#0" class="navigation__link"><span class="navigation__item-number">03.</span>Work</a></li>
                 <li class="navigation__item"><a href="#0" class="navigation__link"><span class="navigation__item-number">04.</span>Contact</a></li>
-                <li class="navigation__item"><button class="btn btn--default">Resume</button></li>
+                <li class="navigation__item"><a class="btn btn--default" href="./resume/AbrahamPerez.pdf">Resume</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <div class="intro">
-            <div class="intro__text-box">
-                <p class="intro__hello">Hello, my name is</p>
-                <h1 class="intro__name u-font-secondary">Abraham Perez</h1>
-                <h2 class="header-big u-font-secondary u-font-color-secondary u-margin-bottom-medium">I'm a Software Engineer</h2>
-                <p class="intro__description">I’m specilizing on web and mobile Full Stack development. I’m focused on building and maintaining web applications that increases supply chain fullfillment efficiency at Walmart.</p>
-                <button class="btn btn--medium">Say Hello!</button>
-            </div>
+            <p class="intro__hello">Hello, my name is</p>
+            <h1 class="intro__name u-font-secondary">Abraham Perez</h1>
+            <h2 class="header-big u-font-secondary u-font-color-secondary u-margin-bottom-medium">I'm a Software Engineer</h2>
+            <p class="intro__description">I’m specilizing on web and mobile Full Stack development. I’m focused on building and maintaining web applications that increases supply chain fullfillment efficiency at Walmart.</p>
+            <a href="mailto:aperezpe01@gmail.com" target="_blank" class="btn btn--medium">Say Hello!</a>
         </div>
 
         <section class="section-about-me">
@@ -244,7 +246,7 @@
             </ul>
         </div>
     </div>
-    
+
     <div class="contact-info-fixed--right">
         <div class="contact-info-fixed__box">
             <ul class="contact-info-fixed__list">
@@ -261,5 +263,4 @@
 
 
 
-<script src="js/components/header.js"></script>
 </html>

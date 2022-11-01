@@ -4,6 +4,7 @@
 
   &__link {
     text-decoration: none;
+    transition: color .3s ease;
 
     &:hover p {
       color: $color-secondary;

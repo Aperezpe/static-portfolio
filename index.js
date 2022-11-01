@@ -5,5 +5,4 @@ $(window).load(function() {
     $(this).remove();
   });
   
-  $("#navbar").css("top", "0");
 })

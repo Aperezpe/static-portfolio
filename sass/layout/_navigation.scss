@@ -1,0 +1,62 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  transform: translateY(0);
+  width: 100vw;
+  z-index: 3000;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-primary;
+  height: $navbar-height;
+  padding: 0 4rem;
+  transition: transform .4s ease, height .4s ease;
+
+  &--transparent {
+    opacity: .95;
+    box-shadow: 0 10px 30px -10px $color-primary-dark;
+    height: #{$navbar-height * .8};
+  }
+
+  &__logo {
+    height: 6rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    animation: fadeIn .8s ease $splash-screen-duration + .2s backwards;
+
+    &:hover {
+      filter: brightness(130%);
+    }
+  }
+
+  &__list {
+    @for $i from 1 through 5 {
+      & li:nth-child(#{$i}n) {
+        animation-delay: #{$splash-screen-duration + ($i * .15s)};
+      }
+    }
+  }
+
+  &__item {
+    animation: inFromTop .3s ease backwards;
+    display: inline-block;
+    padding-right: 5rem;
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-family: $font-mono;
+    color: $color-light-gray;
+    font-size: $font-size-tiny;
+    transition: color .3s ease;
+
+    @include hoverable-link($color-secondary, 0);
+  }
+
+  &__item-number {
+    color: $color-secondary;
+    padding-right: .8rem;
+  }
+}

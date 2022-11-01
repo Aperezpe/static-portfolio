@@ -7,15 +7,45 @@
   box-sizing: inherit;
 }
 
+::-webkit-scrollbar{ width: 1.2rem; }
+::-webkit-scrollbar-track{ background:$color-primary; }
+::-webkit-scrollbar-thumb{ 
+  background-color: rgba($color-light-gray, .4);
+  border: 3px solid $color-primary;
+  border-radius:10px; 
+}
+
 html {
   font-size: 62.5%;
+
+  -webkit-scrollbar-width:thin;
+  -moz-scrollbar-width:thin;
+  -ms-scrollbar-width:thin;
+  scrollbar-width:thin;
+  -webkit-scrollbar-color:rgba($color-light-gray, .4) $color-primary;
+  -moz-scrollbar-color:rgba($color-light-gray, .4) $color-primary;
+  -ms-scrollbar-color:rgba($color-light-gray, .4) $color-primary;
+  scrollbar-color:rgba($color-light-gray, .4) $color-primary;
 }
 
 body {
   box-sizing: border-box;
-  background-color: $color-primary-light;
+  background-color: $color-primary;
+
+  animation: hideOverflow .00001s #{$splash-screen-duration + .5s} backwards;
+
 }
 
 main {
   margin: 0 auto;
+}
+
+@keyframes hideOverflow {
+  0% {
+    overflow-y: hidden;
+  }
+
+  100% {
+    overflow-y: auto;
+  }
 }
