@@ -3,7 +3,7 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  transition: all .3s;
+  // transition: all .3s;
 
   padding: 2.5rem;
 
@@ -20,6 +20,7 @@
   }
 
   & &__right-icon:not(:last-child) {
+    text-decoration: none;
     padding-right: 1.5rem;
   } 
 
@@ -27,7 +28,8 @@
     color: rgba($color-secondary-light, .8);
   }
 
-  &:hover {
+  &.scroll-elem.scrolled:hover {
+    transition: transform .2s ease;
     transform: translateY(-1rem);
   }
 

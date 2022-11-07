@@ -25,3 +25,15 @@
     transform: translateY($transformY);
   }
 }
+
+@mixin scrolled-grid-elem-mixin($delay) {
+  transition: all .5s ease;
+  transition-delay: $delay;
+}
+
+@mixin grid-element-hover {
+  &:hover {
+    transition: transform .3s ease;
+    transform: translateY(-.7rem);
+  }
+}

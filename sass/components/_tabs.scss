@@ -2,26 +2,29 @@
   display: flex;
 
   &__menu {
+
     position: relative;
   }
 
   &__items {
     width: 15rem;
+    cursor: pointer;
 
     border-left: 1px solid $color-dark-gray;
-
-    // Pink line highliter
-    &::before {
-      content: "";
-      width: 2.5px;
-      height: 5.5rem;
-      background-color: $color-secondary;
-
-      position: absolute;
-      left: -.5px;
-    }
-
   }
+
+  &__line-selector {
+    transition: all .4s ease;
+    width: 2.5px;
+    height: 5.5rem;
+    background-color: $color-secondary;
+    position: absolute;
+
+    top: 0;
+    left: -.5px;
+  }
+
+
 
   // LI
   &__item {
@@ -50,7 +53,19 @@
     }
   }
 
+  &__content-box {
+    position: relative;
+    width: 500px;
+    transition: height .4s ease;
+  }
+  
+
   &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
     padding-left: 5rem;
   }
 }

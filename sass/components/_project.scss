@@ -89,3 +89,24 @@
   }
 
 }
+
+
+// .noteworty-project {
+//   &__row-1 {
+//     @for $i from 0 through 2 {
+//       & > .noteworthy-project:nth-child(#{$i + 1}) {
+//         opacity: 1;
+//         transform: translateY(0);
+//         @include scrolled-grid-elem-mixin('all .3s ease .#{$i}s');
+//       }
+//     }
+//   }
+
+//   &__row-2 {
+
+//   }
+
+//   &__row-3-plus {
+
+//   }
+// }

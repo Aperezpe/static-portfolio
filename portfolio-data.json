@@ -1,0 +1,118 @@
+{
+  "introText": "I’m specilizing on web and mobile Full Stack development. I’m focused on building and maintaining web applications that increases supply chain fullfillment efficiency at Walmart.",
+  "aboutMeText": [
+    "Hello! My name is Abraham and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!",
+    "Fast-forward to today, and I’ve had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.",
+    "I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.",
+    "Here are a few technologies I’ve been working with recently:"
+  ],
+  "aboutMeSkills": [
+    "HTML",
+    "CSS",
+    "Javascript",
+    "Typescript",
+    "Angular",
+    "Web Components"
+  ],
+  "experience": [
+    {
+      "companyName": "Walmart",
+      "title": "Full Stack",
+      "startDate": "2021-07-12",
+      "endDate": null,
+      "responsabilities": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices feugiat neque sit amet luctus. Ut pharetra nibh neque, eu.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed mi purus. Nullam sem felis, dapibus nec pretium vehicula, euismod vel mauris. Donec mattis auctor.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate ex eu tellus volutpat, a tristique est ultricies.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ex nec lectus lobortis porttitor. Etiam posuere ante in magna faucibus."
+      ]
+    },
+    {
+      "companyName": "ExxonMobil",
+      "title": "Full Stack Intern",
+      "startDate": "2020-08-12",
+      "endDate": "2020-05-12",
+      "responsabilities": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices feugiat neque sit amet luctus. Ut pharetra nibh neque, eu.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed mi purus. Nullam sem felis, dapibus nec pretium vehicula, euismod vel mauris. Donec mattis auctor.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate ex eu tellus volutpat, a tristique est ultricies.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ex nec lectus lobortis porttitor. Etiam posuere ante in magna faucibus."
+      ]
+    },
+    {
+      "companyName": "ExxonMobil",
+      "title": "Admin Analyst",
+      "startDate": "2019-08-12",
+      "endDate": "2019-05-12",
+      "responsabilities": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices feugiat neque sit amet luctus. Ut pharetra nibh neque, eu.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed mi purus. Nullam sem felis, dapibus nec pretium vehicula, euismod vel mauris. Donec mattis auctor.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate ex eu tellus volutpat, a tristique est ultricies.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ex nec lectus lobortis porttitor. Etiam posuere ante in magna faucibus."
+      ]
+    }
+  ],
+  "work": [
+    {
+      "title": "Gifterest",
+      "featuredProject": true,
+      "description": "A cross-platform mobile application that reminds the user of friend’s important events and generates gift recomendations for each friend based on their interests. It will be available in the App Store and Google Play",
+      "stack": [
+        "Flutter",
+        "Firebase",
+        "Figma"
+      ],
+      "links": {
+        "self": "#0",
+        "git": "https://github.com/Aperezpe/gifterest"
+      }
+    },
+    {
+      "title": "Personal Portfolio",
+      "featuredProject": true,
+      "description": "I developed my personal portfolio you're looking at right now from start to finish! With the design inspiration of Brittany Chiang, I developed the website using HTML, SCSS, and Vanilla JS only.",
+      "stack": [
+        "HTML",
+        "SCSS",
+        "Javascript"
+      ],
+      "links": {
+        "self": "#0",
+        "git": "https://github.com/Aperezpe/static-portfolio"
+      }
+    },
+    {
+      "title": "Amazing Project 1",
+      "featuredProject": false,
+      "description": "Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante.",
+      "stack": [
+        "HTML",
+        "SCSS",
+        "Javascript"
+      ],
+      "links": {
+        "self": "#0",
+        "git": "#0"
+      }
+    },
+    {
+      "title": "Amazing Project 2",
+      "featuredProject": false,
+      "description": "Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante.",
+      "stack": [
+        "HTML",
+        "SCSS",
+        "Javascript"
+      ],
+      "links": {
+        "self": "#0",
+        "git": "#0"
+      }
+    }
+  ],
+  "getInTouchText": "Sapien faucibus et molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus viverra accumsan in nisl",
+  "git": "https://github.com/Aperezpe",
+  "linkedIn": "https://www.linkedin.com/in/aperezpe/",
+  "email": "aperezpe01@gmail.com"
+
+}

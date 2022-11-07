@@ -33,3 +33,17 @@ $ git push heroku main
 ```
 
 Reference: https://www.geeksforgeeks.org/how-to-deploy-a-basic-static-html-website-to-heroku/
+
+## Update portfolio data
+
+### Resume
+Update resume and place in resume/AbrahamPerez.pdf, and it should automatically get it
+
+### Intro text
+Update json file field: introText.
+
+### About me
+Update corresponding json fields
+
+### Experience
+Update the experience object json file

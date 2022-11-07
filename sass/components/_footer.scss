@@ -1,17 +1,14 @@
 .footer {
   margin-top: 10rem;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 
   &__link {
     text-decoration: none;
     transition: color .3s ease;
+    color: $color-gray;
 
-    &:hover p {
-      color: $color-secondary;
-    }
-
-    & p {
-      transition: color .2s;
-    }
+    @include hoverable-link($color-secondary, '0rem');
   }
 }
