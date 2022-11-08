@@ -29,6 +29,12 @@
                 <img class="navigation__logo" src="assets/img/LogoAP_logo.png" alt="Abraham Logo">
             </a> 
         </div>
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle" checked>
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        
         <nav class="navigation__nav">
             <ul class="navigation__list">
                 <li class="navigation__item"><a href="#about-me" class="navigation__link"><span class="navigation__item-number">01.</span>About</a></li>
@@ -38,6 +44,7 @@
                 <li class="navigation__item"><a class="btn btn--default" href="./resume/AbrahamPerez.pdf">Resume</a></li>
             </ul>
         </nav>
+       
     </header>
 
     <main>
@@ -56,9 +63,9 @@
                 <div id="about-me-content" class="about-me__content">
                     <p class="content-paragraph u-margin-bottom-small">Hello! My name is Abraham and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!</p>
                     
-                    <!-- <p class="content-paragraph u-margin-bottom-small">Fast-forward to today, and I’ve had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.</p>
+                    <p class="content-paragraph u-margin-bottom-small">Fast-forward to today, and I’ve had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.</p>
                     <p class="content-paragraph u-margin-bottom-small">I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.</p>
-                    <p class="content-paragraph u-margin-bottom-small">Here are a few technologies I’ve been working with recently:</p> -->
+                    <p class="content-paragraph u-margin-bottom-small">Here are a few technologies I’ve been working with recently:</p>
 
                     <ul id="skills-list" class="list list--skills">
                         <li class="list__item text-tiny">HTML</li>
@@ -160,6 +167,9 @@
                         <a class="project__link" target="_blank" rel="noopener" title="Gifterest" href="https://github.com/Aperezpe/gifterest">
                             <i class="fa-brands fa-github hoverable-icon"></i>
                         </a>
+                        <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -189,6 +199,9 @@
                     <div class="project__links">
                         <a class="project__link" href="https://github.com/Aperezpe/static-portfolio" rel="noopener" title="Abraham Portfolio">
                             <i class="fa-brands fa-github hoverable-icon"></i>
+                        </a>
+                        <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
                         </a>
                     </div>
                 </div>
@@ -494,6 +507,7 @@
     </div>
 </body>
 
+<script src="js/navigation.js"></script>
 <script src="js/components/navbar.js"></script>
 <script src="js/scroll.js"></script>
 <script src="js/components/tabs.js"></script>

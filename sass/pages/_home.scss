@@ -19,12 +19,29 @@
     font-family: $font-mono;
     color: $color-secondary;
     padding-bottom: 2rem;
+
+    @include respond(lg-phone) {
+      font-size: 1.8rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
   }
 
   &__name {
     font-size: 6rem;
     color: $color-light-gray;
     font-weight: 700;
+
+    @include respond(lg-phone) {
+      font-size: 5.5rem;
+    }
+
+    @include respond(phone) {
+      font-size: 4.5rem;
+    }
+
   }
 
   &__description {
@@ -33,6 +50,14 @@
     color: $color-gray;
     font-weight: 300;
     padding-bottom: 4rem;
+
+    @include respond(lg-phone) {
+      font-size: 1.8rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
   }
 }
 
@@ -128,4 +153,3 @@
   }
 
 }
-

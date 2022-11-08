@@ -13,11 +13,21 @@
   padding: 0 4rem;
   transition: transform .4s ease, height .4s ease;
 
+  &__checkbox {
+    display: none;
+    // z-index: 4000;
+  }
+
   &--transparent {
     opacity: .95;
     box-shadow: 0 10px 30px -10px $color-primary-dark;
     height: #{$navbar-height * .8};
+
+    @include respond(lg-phone) {
+      opacity: 1;
+    }
   }
+
 
   &__logo {
     height: 6rem;
@@ -25,10 +35,15 @@
     transition: all .3s ease-in-out;
     animation: fadeIn .8s ease $splash-screen-duration + .2s backwards;
 
+    @include respond(lg-phone) {
+      height: 4.5rem;
+    }
+
     &:hover {
       filter: brightness(130%);
     }
   }
+
 
   &__list {
     @for $i from 1 through 5 {
@@ -36,12 +51,42 @@
         animation-delay: #{$splash-screen-duration + ($i * .15s)};
       }
     }
+
+    & > li:not(:last-child) {
+      padding-right: 5rem;
+    }
+
+    @include respond(lg-phone) {
+      height: 100vh;
+      width: 50rem;
+      background-color: $color-primary-light-plus;
+      position: fixed;
+      top: 0;
+      right: 0;
+      transition: all .3s ease;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25rem 0;
+      z-index: 3500;
+
+      & > li:not(:last-child) {
+        padding-right: 0;
+      }
+
+      & > li:last-child {
+        padding-top: 5rem;
+      }
+    }
+
   }
+
 
   &__item {
     animation: inFromTop .3s ease backwards;
     display: inline-block;
-    padding-right: 5rem;
     list-style: none;
   }
 
@@ -51,12 +96,94 @@
     color: $color-light-gray;
     font-size: $font-size-tiny;
     transition: color .3s ease;
+    
 
     @include hoverable-link($color-secondary, 0);
+    
+    @include respond(lg-phone) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 2rem;
+      line-height: 4rem;
+    }
+
   }
 
   &__item-number {
     color: $color-secondary;
     padding-right: .8rem;
+
+    @include respond(lg-phone) {
+      padding: 0;
+    }
   }
+
+  &__checkbox:checked ~ &__nav &__list {
+    @include respond(lg-phone) { 
+      right: -100%;
+    }
+  }
+
+  &__checkbox:not(:checked) + &__button &__icon {
+    background-color: transparent;
+
+    &::before {
+      top: 0;
+      transform: rotate(-225deg);
+      width: 4rem;
+    }
+
+    &::after {
+      top: 0;
+
+      transform: rotate(225deg);
+      width: 4rem;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 3.5rem;
+    top: 5.5rem;
+    display: none;
+    z-index: 4000;
+    @include respond(lg-phone) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+
+  &__icon {
+    animation: fadeIn .8s ease $splash-screen-duration + .2s backwards;
+    &, &::before, &::after {
+      width: 3.6rem;
+      height: 3px;
+      border-radius: 10rem;
+      background-color: $color-secondary;
+      display: inline-block;
+      transition: all .5s;
+    }
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+    }
+
+    &::before {
+      width: 4.5rem;
+      top: -1.5rem;
+    }
+    
+    &::after {
+      width: 3rem;
+      top: 1.5rem;
+    }
+
+  }
+
 }
