@@ -18,3 +18,39 @@ window.addEventListener('scroll', () => {
   }
   prevScrollPos = currentScrollPos;
 })
+
+const elementsToBlur = [
+  document.getElementById('navigation-logo-box'),
+  document.getElementById('main'),
+  document.getElementById('body'),
+  document.getElementById('footer'),
+  document.getElementById('contact-info-left'),
+  document.getElementById('contact-info-right')
+]
+
+$('.navigation__link').click(() => {
+  handlCloseMenu();
+});
+
+
+$('input[id=navi-toggle]').change(function () {
+  if ($(this).is(':checked')) {
+    elementsToBlur.forEach((el) => el.classList.remove('blur'));
+  } else {
+    elementsToBlur.forEach((el) => el.classList.add('blur'));
+    document.addEventListener('touchstart', onTouchOutsideMenu, true);
+  }
+});
+
+onTouchOutsideMenu = (e) => {
+  if ($(e.target).closest("#navigation-list").length === 0
+    && $(e.target).closest("#navigation-button").length === 0) {
+    handlCloseMenu();
+    document.removeEventListener('touchstart', onTouchOutsideMenu, true);
+  }
+}
+
+handlCloseMenu = () => {
+  document.getElementById('navi-toggle').checked = true;
+  elementsToBlur.forEach((el) => el.classList.remove('blur'));
+}

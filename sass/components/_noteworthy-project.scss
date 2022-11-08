@@ -5,6 +5,10 @@
   flex-direction: column;
   // transition: all .3s;
 
+  & ~ &:nth-of-type(1) {
+    background-color: white;
+  }
+
   padding: 2.5rem;
 
   &__header {

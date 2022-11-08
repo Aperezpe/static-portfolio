@@ -52,8 +52,17 @@ body {
   position: relative;
 }
 
+
 main {
   margin: 0rem auto;
+}
+
+.blur {
+  overflow: hidden;
+  
+  &:not(body) {
+    filter: blur(1px);
+  }
 }
 
 @keyframes hideOverflow {

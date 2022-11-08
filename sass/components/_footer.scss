@@ -1,8 +1,9 @@
 .footer {
-  margin-top: 10rem;
+  margin: 10rem 12rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
+  text-align: center;
 
   &__link {
     text-decoration: none;

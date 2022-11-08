@@ -21,22 +21,22 @@
 </head>
 
 
-<body>
+<body id="body">
     <div class="splash-screen"></div>
     <header id="navbar" class="navigation">
-        <div class="navigation__logo-box">
+        <div id="navigation-logo-box" class="navigation__logo-box">
             <a href="">
                 <img class="navigation__logo" src="assets/img/LogoAP_logo.png" alt="Abraham Logo">
             </a> 
         </div>
         <input type="checkbox" class="navigation__checkbox" id="navi-toggle" checked>
-        <label for="navi-toggle" class="navigation__button">
+        <label id="navigation-button" for="navi-toggle" class="navigation__button">
             <span class="navigation__icon">&nbsp;</span>
         </label>
 
         
         <nav class="navigation__nav">
-            <ul class="navigation__list">
+            <ul id="navigation-list" class="navigation__list">
                 <li class="navigation__item"><a href="#about-me" class="navigation__link"><span class="navigation__item-number">01.</span>About</a></li>
                 <li class="navigation__item"><a href="#experience" class="navigation__link"><span class="navigation__item-number">02.</span>Experience</a></li>
                 <li class="navigation__item"><a href="#work" class="navigation__link"><span class="navigation__item-number">03.</span>Work</a></li>
@@ -47,7 +47,7 @@
        
     </header>
 
-    <main>
+    <main id="main">
         <div class="intro">
             <p class="intro__hello">Hello, my name is</p>
             <h1 class="intro__name u-font-secondary">Abraham Perez</h1>
@@ -211,7 +211,7 @@
         <section class="section-noteworthy-projects">
             <h3 class="subtitle-unnumbered u-margin-bottom-medium-plus scroll-elem">Other Noteworthy Projects</h3>
 
-            <div id="grid-row" class="grid-3-by-3 scroll-elem">
+            <div id="grid-row" class="grid-3-by-3">
                 <div class="noteworthy-project scroll-elem">
                     <div class="noteworthy-project__header u-margin-bottom-small">
                         <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
@@ -277,31 +277,6 @@
                         <p class="text-tiny u-font-color-gray">Javascript</p>
                     </div>
                 </div>
-            </div>
-
-            <div id="grid-row" class="grid-3-by-3 scroll-elem">
-                <div class="noteworthy-project scroll-elem">
-                    <div class="noteworthy-project__header u-margin-bottom-small">
-                        <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
-                        <div class="noteworthy-project__right-icons">
-                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
-                                <i class="fa-brands fa-github hoverable-icon "></i>
-                            </a>
-                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
-                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-title project-title--small u-margin-bottom-tinier">Amazing Project</div>
-                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante</p>
-                    <div class="stack-list u-margin-bottom-small">
-                        <p class="text-tiny u-font-color-gray">HTML</p>
-                        <p class="text-tiny u-font-color-gray">SCSS</p>
-                        <p class="text-tiny u-font-color-gray">Javascript</p>
-                    </div>
-                </div>
-
                 <div class="noteworthy-project scroll-elem">
                     <div class="noteworthy-project__header u-margin-bottom-small">
                         <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
@@ -323,7 +298,27 @@
                         <p class="text-tiny u-font-color-gray">Javascript</p>
                     </div>
                 </div>
-                
+                <div class="noteworthy-project scroll-elem">
+                    <div class="noteworthy-project__header u-margin-bottom-small">
+                        <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
+                        <div class="noteworthy-project__right-icons">
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-brands fa-github hoverable-icon"></i>
+                            </a>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="project-title project-title--small u-margin-bottom-tinier">Amazing Project</div>
+                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante</p>
+                    <div class="stack-list u-margin-bottom-small">
+                        <p class="text-tiny u-font-color-gray">HTML</p>
+                        <p class="text-tiny u-font-color-gray">SCSS</p>
+                        <p class="text-tiny u-font-color-gray">Javascript</p>
+                    </div>
+                </div>
                 <div class="noteworthy-project scroll-elem">
                     <div class="noteworthy-project__header u-margin-bottom-small">
                         <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
@@ -471,13 +466,13 @@
         </section>
     </main>
 
-    <footer class="footer u-margin-bottom-medium">
+    <footer id="footer" class="footer u-margin-bottom-medium">
         <a class="footer__link text-tiny" href="#0">
             Design Inspiration by Brittany Chiang & Developed by Abraham Perez
         </a>
     </footer>
 
-    <div class="contact-info-fixed--left">
+    <div id="contact-info-left" class="contact-info-fixed--left">
         <div class="contact-info-fixed__box">
             <ul class="contact-info-fixed__list">
                 <li class="contact-info-fixed__item">
@@ -493,7 +488,7 @@
         </div>
     </div>
 
-    <div class="contact-info-fixed--right">
+    <div id="contact-info-right" class="contact-info-fixed--right">
         <div class="contact-info-fixed__box">
             <ul class="contact-info-fixed__list">
                 <li class="contact-info-fixed__item contact-info-fixed__item--rotate">
@@ -507,7 +502,6 @@
     </div>
 </body>
 
-<script src="js/navigation.js"></script>
 <script src="js/components/navbar.js"></script>
 <script src="js/scroll.js"></script>
 <script src="js/components/tabs.js"></script>

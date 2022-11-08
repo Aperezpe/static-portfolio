@@ -116,6 +116,11 @@ body {
 main {
   margin: 0rem auto; }
 
+.blur {
+  overflow: hidden; }
+  .blur:not(body) {
+    filter: blur(1px); }
+
 @keyframes hideOverflow {
   0% {
     overflow-y: hidden; }
@@ -285,6 +290,8 @@ main {
   display: flex;
   flex-direction: column;
   padding: 2.5rem; }
+  .noteworthy-project ~ .noteworthy-project:nth-of-type(1) {
+    background-color: white; }
   .noteworthy-project__header {
     display: flex;
     flex-direction: row;
@@ -526,10 +533,11 @@ main {
   background-color: #9aa5c5; }
 
 .footer {
-  margin-top: 10rem;
+  margin: 10rem 12rem;
   cursor: pointer;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  text-align: center; }
   .footer__link {
     text-decoration: none;
     transition: color .3s ease;
@@ -594,7 +602,8 @@ main {
   padding: 0 4rem;
   transition: transform .4s ease, height .4s ease; }
   .navigation__checkbox {
-    display: none; }
+    display: none;
+    z-index: 4000; }
   .navigation--transparent {
     opacity: .95;
     box-shadow: 0 10px 30px -10px #1f0544;
@@ -744,6 +753,9 @@ main {
   column-gap: 1.5rem;
   row-gap: 1.5rem;
   margin-bottom: 1.5rem; }
+  @media (max-width: 46.87em) {
+    .grid-3-by-3 {
+      grid-template-columns: repeat(2, 1fr); } }
 
 .intro {
   display: flex;
