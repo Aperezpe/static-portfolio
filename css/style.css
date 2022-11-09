@@ -1,9 +1,4 @@
 @charset "UTF-8";
-:root {
-  --splash-screen-duration: 2000ms;
-  --navbar-height: 110px;
-  --cur-grid-elements: 2; }
-
 /* 
 0 - 600px;       Phone
 600 - 750px;     Large Phone or small tablet
@@ -23,6 +18,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
+:root {
+  --splash-screen-duration: 2000ms; }
+
 @keyframes inFromLeft {
   0% {
     opacity: 0;
@@ -109,7 +107,7 @@ html {
 body {
   box-sizing: border-box;
   background-color: #280659;
-  padding-top: 110px;
+  padding-top: 11rem;
   animation: hideOverflow 0.00001s 2500ms backwards;
   position: relative; }
 
@@ -598,7 +596,7 @@ main {
   justify-content: space-between;
   align-items: center;
   background-color: #280659;
-  height: 110px;
+  height: 11rem;
   padding: 0 4rem;
   transition: transform .4s ease, height .4s ease; }
   .navigation__checkbox {
@@ -607,7 +605,7 @@ main {
   .navigation--transparent {
     opacity: .95;
     box-shadow: 0 10px 30px -10px #1f0544;
-    height: 88px; }
+    height: 8.8rem; }
     @media (max-width: 46.87em) {
       .navigation--transparent {
         opacity: 1; } }
@@ -756,6 +754,9 @@ main {
   @media (max-width: 46.87em) {
     .grid-3-by-3 {
       grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 37.5em) {
+    .grid-3-by-3 {
+      grid-template-columns: repeat(1, 1fr); } }
 
 .intro {
   display: flex;
@@ -766,7 +767,7 @@ main {
   padding: 10rem 12rem;
   justify-content: center;
   max-width: 110rem;
-  min-height: calc(100vh - 110px); }
+  min-height: calc(100vh - 11rem); }
   .intro :nth-child(1n) {
     animation: fadeInFromBottom .4s ease backwards;
     animation-delay: 3100ms; }
@@ -876,95 +877,48 @@ main {
   transform: translateY(0); }
 
 .scrolled-grid-elem {
+  transition: all .2s ease;
   opacity: 1;
-  transform: translateY(0); }
-  .scrolled-grid-elem > .noteworthy-project:nth-child(1) {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all .5s ease;
+  transform: translateY(0);
+  display: flex; }
+  .scrolled-grid-elem:hover {
+    transition: transform .3s ease;
+    transform: translateY(-0.7rem); }
+  .scrolled-grid-elem ~ .noteworthy-project:nth-of-type(1) {
     transition-delay: 0s; }
-    .scrolled-grid-elem > .noteworthy-project:nth-child(1):hover {
-      transition: transform .3s ease;
-      transform: translateY(-0.7rem); }
-  .scrolled-grid-elem > .noteworthy-project:nth-child(2) {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all .5s ease;
+  .scrolled-grid-elem ~ .noteworthy-project:nth-of-type(2) {
     transition-delay: 0.1s; }
-    .scrolled-grid-elem > .noteworthy-project:nth-child(2):hover {
-      transition: transform .3s ease;
-      transform: translateY(-0.7rem); }
-  .scrolled-grid-elem > .noteworthy-project:nth-child(3) {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all .5s ease;
+  .scrolled-grid-elem ~ .noteworthy-project:nth-of-type(3) {
     transition-delay: 0.2s; }
-    .scrolled-grid-elem > .noteworthy-project:nth-child(3):hover {
-      transition: transform .3s ease;
-      transform: translateY(-0.7rem); }
-
-.grid-collapse {
-  height: 0;
-  visibility: hidden;
-  opacity: 0; }
-  .grid-collapse > .noteworthy-project:nth-child(1) {
-    opacity: 0;
-    transform: translateY(5rem); }
-  .grid-collapse > .noteworthy-project:nth-child(2) {
-    opacity: 0;
-    transform: translateY(5rem); }
-  .grid-collapse > .noteworthy-project:nth-child(3) {
-    opacity: 0;
-    transform: translateY(5rem); }
-  .grid-collapse > .noteworthy-project:nth-child(4) {
-    opacity: 0;
-    transform: translateY(5rem); }
-  .grid-collapse > .noteworthy-project:nth-child(5) {
-    opacity: 0;
-    transform: translateY(5rem); }
-
-.grid-unfold {
-  opacity: 1;
-  visibility: visible;
-  height: 100%;
-  transition: opacity .4s ease; }
-  .grid-unfold > .noteworthy-project:nth-child(1) {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all .5s ease;
+  .scrolled-grid-elem ~ .noteworthy-project:nth-of-type(4) {
     transition-delay: 0s; }
-    .grid-unfold > .noteworthy-project:nth-child(1):hover {
-      transition: transform .3s ease;
-      transform: translateY(-0.7rem); }
-  .grid-unfold > .noteworthy-project:nth-child(2) {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all .5s ease;
+  .scrolled-grid-elem ~ .noteworthy-project:nth-of-type(5) {
     transition-delay: 0.1s; }
-    .grid-unfold > .noteworthy-project:nth-child(2):hover {
-      transition: transform .3s ease;
-      transform: translateY(-0.7rem); }
-  .grid-unfold > .noteworthy-project:nth-child(3) {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all .5s ease;
+  .scrolled-grid-elem ~ .noteworthy-project:nth-of-type(6) {
     transition-delay: 0.2s; }
-    .grid-unfold > .noteworthy-project:nth-child(3):hover {
-      transition: transform .3s ease;
-      transform: translateY(-0.7rem); }
-  .grid-unfold > .noteworthy-project:nth-child(4) {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all .5s ease;
-    transition-delay: 0.3s; }
-    .grid-unfold > .noteworthy-project:nth-child(4):hover {
-      transition: transform .3s ease;
-      transform: translateY(-0.7rem); }
-  .grid-unfold > .noteworthy-project:nth-child(5) {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all .5s ease;
-    transition-delay: 0.4s; }
-    .grid-unfold > .noteworthy-project:nth-child(5):hover {
-      transition: transform .3s ease;
-      transform: translateY(-0.7rem); }
+  @media (max-width: 46.87em) {
+    .scrolled-grid-elem ~ .noteworthy-project:nth-of-type(1) {
+      transition-delay: 0s; }
+    .scrolled-grid-elem ~ .noteworthy-project:nth-of-type(2) {
+      transition-delay: 0.1s; }
+    .scrolled-grid-elem ~ .noteworthy-project:nth-of-type(3) {
+      transition-delay: 0s; }
+    .scrolled-grid-elem ~ .noteworthy-project:nth-of-type(4) {
+      transition-delay: 0.1s; }
+    .scrolled-grid-elem ~ .noteworthy-project:nth-of-type(5) {
+      transition-delay: 0s; }
+    .scrolled-grid-elem ~ .noteworthy-project:nth-of-type(6) {
+      transition-delay: 0.1s; } }
+  @media (max-width: 37.5em) {
+    .scrolled-grid-elem ~ .noteworthy-project:nth-of-type(1) {
+      transition-delay: 0s; }
+    .scrolled-grid-elem ~ .noteworthy-project:nth-of-type(2) {
+      transition-delay: 0s; }
+    .scrolled-grid-elem ~ .noteworthy-project:nth-of-type(3) {
+      transition-delay: 0s; }
+    .scrolled-grid-elem ~ .noteworthy-project:nth-of-type(4) {
+      transition-delay: 0s; }
+    .scrolled-grid-elem ~ .noteworthy-project:nth-of-type(5) {
+      transition-delay: 0s; }
+    .scrolled-grid-elem ~ .noteworthy-project:nth-of-type(6) {
+      transition-delay: 0s; } }

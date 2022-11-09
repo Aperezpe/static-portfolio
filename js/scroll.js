@@ -28,7 +28,7 @@ const displayElement = (element, cl) => {
 window.addEventListener('scroll', () => {
   // For each '.scroll-elem' element found
   scrollElements.forEach(el => {
-    if (isGridElement(el) && elementInView(el, percentageScroll)) {
+    if (elementInView(el, percentageScroll) && isGridElement(el) ) {
       displayElement(el, 'scrolled-grid-elem');
     } 
     else if(elementInView(el, percentageScroll)) {
@@ -39,5 +39,5 @@ window.addEventListener('scroll', () => {
 })
 
 const isGridElement = (el) => {
-  return el.id == 'grid-row';
+  return el.classList.contains('noteworthy-project');
 }

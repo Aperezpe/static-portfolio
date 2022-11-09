@@ -14,7 +14,7 @@ $color-light-gray:#d3defb;
 $color-dark-gray: #e3e3e328;
 
 
-$navbar-height: 110px;
+$navbar-height: 11rem; 
 $width-colored-img: 30rem;
 $height-colored-img: 30rem;
 $min-vertical-padding: 12rem;
@@ -29,7 +29,9 @@ $font-size-medium-plus: 3rem;
 
 // GRID
 $grid-gap: 1.5rem;
-$cur-grid-elements: 2;
+$grid-columns-large: 3;
+$grid-columns-medium: 2;
+$grid-columns-small: 1;
 
 // SECTIONS
 $section-max-width: 120rem;
@@ -41,6 +43,4 @@ $intro-duration: #{$splash-screen-duration + 1.5s}; // Splash screen duration + 
 // Export variables to use on JS
 :root {
   --splash-screen-duration: #{$splash-screen-duration};
-  --navbar-height: #{$navbar-height};
-  --cur-grid-elements: #{$cur-grid-elements};
 }
