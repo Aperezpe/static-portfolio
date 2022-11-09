@@ -1,6 +1,11 @@
 .colored-img {
   position: relative;
 
+  @include respond(lg-phone) {
+    width: 100%;
+    height: 100%;
+  }
+
   &:hover &__back-border {
     top: 1rem;
     left: 1rem;
@@ -20,30 +25,49 @@
     z-index: 1;
     border-radius: .5rem;
 
+    &:not(.colored-img__box--headshot) {
+      cursor: pointer;
+    }
+
     &--radius {
       border-radius: 3.5rem;
     }
+
+    @include respond(lg-phone) {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      &--radius {
+        border-radius: 1rem;
+      }
+    }
+    
   }
 
   &__picture {
     filter: grayscale(100%);
     transition: all .3s;
+    display: block;
     background-blend-mode: screen;
     background-size: cover;
     height: $height-colored-img;
-    width: $width-colored-img;
-    
+    max-width: $width-colored-img;
+
     &--headshot {
-      background-image:url('https://raw.githubusercontent.com/Aperezpe/static-portfolio/main/assets/img/headshot.JPG');
+      max-width: #{$width-colored-img * .85};
     }
 
-    &--project1 {
-      background-image:url('/assets/img/launcher_iconlogo_circle\ 1.png');
+    @include respond(lg-phone) {
+      &--project {
+        max-width: 100%;
+        height: max-content;
+        width: 100%;
+        filter: grayscale(100%) brightness(50%) opacity(50%);
+      }
     }
 
-    &--project2 {
-      background-image:url('/assets/img/squared_my-logo.png');
-    }
   }
 
   &__overlay {
@@ -54,6 +78,12 @@
     top: 0;
     left:0;
     transition: all .3s;
+
+    @include respond(lg-phone) {
+      &:not(.colored-img--headshot) {
+        background-color: rgba($color-purple, .4);
+      }
+    }
     
   }
 

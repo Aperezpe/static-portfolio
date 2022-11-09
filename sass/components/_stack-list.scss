@@ -4,4 +4,8 @@
   p:not(:last-child)  {
     padding-right: 2rem;
   }
+
+  & p.u-font-color-gray {
+    color: $color-light-gray !important;
+  }
 }
