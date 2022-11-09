@@ -39,6 +39,10 @@
       height: 4.5rem;
     }
 
+    @include respond(phone) {
+      height: 4rem;
+    }
+
     &:hover {
       filter: brightness(130%);
     }
@@ -145,7 +149,7 @@
   &__button {
     position: absolute;
     right: 3.5rem;
-    top: 5.5rem;
+    top: 50%;
     display: none;
     z-index: 4000;
     @include respond(lg-phone) {

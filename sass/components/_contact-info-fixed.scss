@@ -59,3 +59,14 @@
   }
 
 }
+
+#contact-info-left {
+  @include respond(lg-phone) {
+    display: none;
+  }
+}
+#contact-info-right {
+  @include respond(lg-phone) {
+    display: none;
+  }
+}

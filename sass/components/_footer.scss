@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  flex-direction: column;
 
   &__link {
     text-decoration: none;
@@ -11,5 +12,26 @@
     color: $color-gray;
 
     @include hoverable-link($color-secondary, '0rem');
+  }
+
+  &__social-media {
+    display: none;
+
+    @include respond(lg-phone) {
+      display: block;
+    }
+
+    &__list &__item:not(:last-child) {
+        padding-right: 2rem;
+    }
+
+    &__list {
+      list-style: none;
+      display: inline-flex;
+    }
+
+    &__item {
+      display: inline;
+    }
   }
 }
