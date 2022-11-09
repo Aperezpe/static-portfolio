@@ -276,6 +276,15 @@ main {
   width: 95%; }
   .about-me__content {
     padding-right: 10rem; }
+    @media (max-width: 46.87em) {
+      .about-me__content {
+        padding-right: 0;
+        padding-bottom: 5rem; } }
+  @media (max-width: 46.87em) {
+    .about-me {
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
 
 .stack-list {
   display: flex; }

@@ -4,6 +4,17 @@
 
   &__content {
     padding-right: 10rem;
+
+    @include respond(lg-phone) {
+      padding-right: 0;
+      padding-bottom: 5rem;
+    }
+  }
+
+  @include respond(lg-phone) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
 }
