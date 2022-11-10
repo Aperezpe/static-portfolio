@@ -20,7 +20,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
 */
 :root {
   --splash-screen-duration: 2000ms;
-  --lg-phone: 46.87em; }
+  --lg-phone: 46.87em;
+  --phone: 37.5em; }
 
 @keyframes inFromLeft {
   0% {
@@ -138,7 +139,7 @@ main {
       font-size: 1.65rem; } }
 
 .company-position-title {
-  font-size: calc(1.5rem * 1.2);
+  font-size: calc(2.5rem * .8);
   color: #d3defb;
   font-family: "Poppins", sans-serif; }
   .company-position-title span {
@@ -161,13 +162,13 @@ main {
 .text-tiny {
   font-family: "IBM Plex Mono", monospace;
   font-size: 1.3rem; }
+  @media (max-width: 56.25em) {
+    .text-tiny {
+      font-size: 1.43rem; } }
 
 .text-small {
   font-family: "IBM Plex Mono", monospace;
   font-size: 1.5rem; }
-  @media (max-width: 46.87em) {
-    .text-small {
-      font-size: 1.3rem; } }
   .text-small--numbered {
     counter-increment: section;
     font-weight: 400; }
@@ -204,7 +205,7 @@ main {
   font-family: "Poppins", sans-serif; }
   @media (max-width: 46.87em) {
     .font-paragraph-small {
-      font-size: 1.3rem; } }
+      font-size: 1.5rem; } }
 
 .u-margin-bottom-tinier {
   margin-bottom: 1rem !important; }
@@ -255,6 +256,9 @@ main {
   background-color: transparent;
   cursor: pointer;
   display: block; }
+  @media (max-width: 46.87em) {
+    .btn {
+      font-size: 1.5rem; } }
   @media (max-width: 46.87em) {
     .btn--default {
       font-size: 1.6rem;
@@ -489,15 +493,19 @@ main {
       flex-direction: column; } }
   .tabs__menu {
     position: relative; }
+    @media (max-width: 37.5em) {
+      .tabs__menu {
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 1rem; } }
   .tabs__items {
-    width: 15rem;
     cursor: pointer;
-    border-left: 1px solid #e3e3e328; }
+    border: 1px solid #e3e3e328;
+    border-width: 0 0 0 1px; }
     @media (max-width: 37.5em) {
       .tabs__items {
-        width: auto;
-        overflow-x: auto;
-        display: flex; } }
+        display: flex;
+        border-width: 0 0 1px 0; } }
   .tabs__line-selector {
     transition: all .4s ease;
     width: 2.5px;
@@ -506,6 +514,12 @@ main {
     position: absolute;
     top: 0;
     left: -.5px; }
+    @media (max-width: 37.5em) {
+      .tabs__line-selector {
+        width: 16rem;
+        height: 2.5px;
+        top: 5.5rem;
+        left: 0; } }
   .tabs__item {
     list-style: none; }
   .tabs__link {
@@ -514,23 +528,28 @@ main {
     color: #9aa5c5;
     text-decoration: none;
     line-height: 5.5rem;
-    padding-left: 2.5rem; }
+    padding: 0 2.5rem; }
     .tabs__link:hover {
       background-color: rgba(174, 45, 104, 0.1);
       color: #ae2d68; }
     .tabs__link:focus {
       background-color: rgba(174, 45, 104, 0.1);
       color: #ae2d68; }
+    @media (max-width: 37.5em) {
+      .tabs__link {
+        width: 16rem;
+        text-align: center; } }
   .tabs__content-box {
     position: relative;
     transition: height .4s ease;
-    width: 100%; }
-    @media (max-width: 46.87em) {
-      .tabs__content-box {
-        width: 42rem; } }
+    width: 100%;
+    min-height: 45rem; }
   .tabs__content {
     display: block;
-    padding-left: 3rem; }
+    padding: 0 2.5rem; }
+    @media (max-width: 37.5em) {
+      .tabs__content {
+        padding: 4rem 0; } }
 
 .list {
   list-style: none;
@@ -547,13 +566,13 @@ main {
     font-size: 2rem; }
   .list__item--experience {
     font-family: "Poppins", sans-serif;
-    font-size: 130%;
-    font-weight: 300;
+    font-size: 1.4rem;
+    font-weight: 200;
     line-height: 3rem;
     padding-bottom: 1.5rem; }
-    @media (max-width: 46.87em) {
+    @media (max-width: 56.25em) {
       .list__item--experience {
-        font-size: 120%; } }
+        font-size: 1.5rem; } }
 
 .contact-info-fixed--left {
   position: fixed;
@@ -927,12 +946,9 @@ main {
     color: #9aa5c5;
     font-weight: 300;
     padding-bottom: 4rem; }
-    @media (max-width: 46.87em) {
-      .intro__description {
-        font-size: 1.8rem; } }
     @media (max-width: 37.5em) {
       .intro__description {
-        font-size: 1.6rem; } }
+        font-size: 1.8rem; } }
 
 .section-about-me {
   display: flex;

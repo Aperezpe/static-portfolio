@@ -21,13 +21,13 @@
 
     &--experience {
       font-family: $font-poppins;
-      font-size: 130%;
-      font-weight: 300;
+      font-size: 1.4rem;
+      font-weight: 200;
       line-height: 3rem;
       padding-bottom: 1.5rem;
 
-      @include respond(lg-phone) {
-        font-size: 120%;
+      @include respond(tab-port) {
+        font-size: 1.5rem;
       }
     }
   }

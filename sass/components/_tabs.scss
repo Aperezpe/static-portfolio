@@ -9,18 +9,26 @@
 
   &__menu {
     position: relative;
+
+    @include respond(phone) {
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding-bottom: 1rem;
+
+    }
+
   }
 
   &__items {
-    width: 15rem;
     cursor: pointer;
 
-    border-left: 1px solid $color-dark-gray;
+    border: 1px solid $color-dark-gray;
+    border-width: 0 0 0 1px;
 
     @include respond(phone) {
-      width: auto;
-      overflow-x: auto;
+      // width: 16rem;
       display: flex;
+      border-width: 0 0 1px 0;
     }
   }
 
@@ -33,6 +41,13 @@
 
     top: 0;
     left: -.5px;
+
+    @include respond(phone) {
+      width: 16rem;
+      height: 2.5px;
+      top: 5.5rem;
+      left: 0;
+    }
   }
 
 
@@ -50,7 +65,8 @@
     text-decoration: none;
     
     line-height: 5.5rem;
-    padding-left: 2.5rem;
+    padding: 0 2.5rem;
+
 
     &:hover {
       background-color: rgba($color-secondary, .1);
@@ -62,27 +78,30 @@
       background-color: rgba($color-secondary, .1);
       color: $color-secondary;
     }
+
+    @include respond(phone) {
+      width: 16rem;
+      text-align: center;
+    }
+
   }
 
   &__content-box {
     position: relative;
     transition: height .4s ease;
     width: 100%;
-
-    @include respond(lg-phone) {
-      width: 42rem;
-
-    }
+    min-height: 45rem;
   }
   
 
   &__content {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
     display: block;
-    padding-left: 3rem;
-    // height: 100%;
+    padding: 0 2.5rem;
+
+
+    @include respond(phone) {
+      padding: 4rem 0;
+    }
 
   }
 }

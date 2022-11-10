@@ -13,7 +13,7 @@
 }
 
 .company-position-title {
-  font-size: calc(#{$font-size-small} * 1.2);
+  font-size: calc(#{$font-size-medium} * .8);
   color: $color-light-gray;
   font-family: $font-poppins;
 
@@ -46,16 +46,16 @@
 .text-tiny {
   font-family: $font-mono;
   font-size: $font-size-tiny;
+
+  @include respond(tab-port) {
+    font-size: #{$font-size-tiny * 1.1};
+  }
 }
 
 .text-small {
   font-family: $font-mono;
   font-size: $font-size-small;
 
-  @include respond(lg-phone) {
-    font-size: $font-size-small - .2rem;
-  }
-  
   &--numbered {
     counter-increment: section;
     font-weight: 400;
@@ -105,6 +105,6 @@
   font-family: $font-poppins;
 
   @include respond(lg-phone) {
-    font-size: $font-size-tiny;
+    font-size: $font-size-small;
   }
 }
