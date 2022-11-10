@@ -1087,7 +1087,7 @@ main {
       top: 1.5rem; }
 
 .splash-screen {
-  background-color: red;
+  background-color: #1f0544;
   filter: brightness(70%);
   height: 100vh;
   width: 100vw;
@@ -1099,7 +1099,7 @@ main {
   align-items: center; }
   .splash-screen__logo {
     animation: fadeInAndScale 1500ms ease-out both;
-    filter: brightness(0); }
+    filter: brightness(200%); }
 
 .grid-3-by-3 {
   width: 100%;

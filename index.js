@@ -1,4 +1,5 @@
 $(document).ready(() => {
+  //TODO: Do this dynamically
   // var msDuration = $('html').css('--splash-screen-duration').slice(0, 5);
 
   setTimeout(() => {
