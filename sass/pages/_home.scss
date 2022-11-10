@@ -1,6 +1,8 @@
 .intro {
   @include section-layout;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 12rem;
+  // justify-content: center;
 
   
   max-width: 100rem;
@@ -12,6 +14,13 @@
       animation: fadeInFromBottom .4s ease backwards;
       animation-delay: #{$splash-screen-duration + 1s + ($i * .1s)};
     }
+  }
+
+  @include respond(tab-port) {
+    padding-top: 15rem;
+  }
+  @include respond(lg-phone) {
+    padding-top: 10rem;
   }
 
   &__hello {

@@ -869,7 +869,8 @@ main {
   align-items: flex-start;
   margin: 0 auto;
   padding: 10rem 12rem;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 12rem;
   max-width: 100rem;
   min-height: calc(100vh - 11rem); }
   @media (max-width: 46.87em) {
@@ -893,6 +894,12 @@ main {
   .intro :nth-child(5n) {
     animation: fadeInFromBottom .4s ease backwards;
     animation-delay: 3500ms; }
+  @media (max-width: 56.25em) {
+    .intro {
+      padding-top: 15rem; } }
+  @media (max-width: 46.87em) {
+    .intro {
+      padding-top: 10rem; } }
   .intro__hello {
     font-size: 2rem;
     font-family: "IBM Plex Mono", monospace;
