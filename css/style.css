@@ -1099,7 +1099,7 @@ main {
   align-items: center; }
   .splash-screen__logo {
     animation: fadeInAndScale 1500ms ease-out both;
-    filter: brightness(200%); }
+    filter: brightness(0); }
 
 .grid-3-by-3 {
   width: 100%;

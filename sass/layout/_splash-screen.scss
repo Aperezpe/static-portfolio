@@ -13,6 +13,8 @@
 
   &__logo {
     animation: fadeInAndScale #{$splash-screen-duration - .5s} ease-out both;
-    filter: brightness(200%);
+    // filter: brightness(200%);
+    filter: brightness(0);
   }
+
 }
