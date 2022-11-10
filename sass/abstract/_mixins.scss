@@ -6,6 +6,14 @@
 
   margin: 0 auto;
   padding: 10rem $min-vertical-padding;
+
+  @include respond(lg-phone) {
+    padding: 10rem 7rem;
+  }
+
+  @include respond(s-phone) {
+    padding: 10rem 4rem;
+  }
 }
 
 @mixin tiny-text {
@@ -61,6 +69,10 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 
 @mixin respond($breakpoint) {
+  @if $breakpoint == s-phone {
+    @media (max-width: $s-phone) { @content };   // 480px
+  }
+
   @if $breakpoint == phone {
     @media (max-width: $phone) { @content };   // 600px
   }

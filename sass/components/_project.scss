@@ -1,6 +1,5 @@
 .project {
   position: relative;
-  // width: 80%;
   margin-bottom: 12rem;
   
   @include respond(lg-phone) {
@@ -22,7 +21,6 @@
     }
 
     @include respond(lg-phone) {
-      // display: none;
       justify-content: stretch;
       position: absolute;
       width: 100%;

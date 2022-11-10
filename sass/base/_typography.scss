@@ -3,12 +3,12 @@
   color: $color-gray;
   font-family: $font-poppins;
 
-  @include respond(lg-phone) {
-    font-size: #{$font-size-small - .3rem};
+  @include respond(tab-port) {
+    font-size: #{$font-size-small * 1.2};
   }
 
   @include respond(phone) {
-    font-size: $font-size-tiny;
+    font-size: #{$font-size-small * 1.1}
   }
 }
 

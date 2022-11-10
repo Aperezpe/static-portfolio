@@ -3,7 +3,7 @@
   justify-content: center;
 
   
-  max-width: 110rem;
+  max-width: 100rem;
   //TODO: only 100vh after changing navbar to position fixed
   min-height: calc(100vh - #{$navbar-height});
 

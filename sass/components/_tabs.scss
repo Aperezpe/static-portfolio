@@ -1,8 +1,13 @@
 .tabs {
   display: flex;
+  width: 100%;
+  height: 100%;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
 
   &__menu {
-
     position: relative;
   }
 
@@ -11,6 +16,12 @@
     cursor: pointer;
 
     border-left: 1px solid $color-dark-gray;
+
+    @include respond(phone) {
+      width: auto;
+      overflow-x: auto;
+      display: flex;
+    }
   }
 
   &__line-selector {
@@ -34,7 +45,7 @@
   // A
   &__link {
     display: block;
-
+    white-space: nowrap;
     color: $color-gray;
     text-decoration: none;
     
@@ -55,16 +66,23 @@
 
   &__content-box {
     position: relative;
-    width: 55rem;
     transition: height .4s ease;
+    width: 100%;
+
+    @include respond(lg-phone) {
+      width: 42rem;
+
+    }
   }
   
 
   &__content {
-    position: absolute;
-    top: 0;
-    left: 0;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
     display: block;
     padding-left: 3rem;
+    // height: 100%;
+
   }
 }

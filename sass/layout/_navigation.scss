@@ -85,6 +85,10 @@
       }
     }
 
+    @include respond(phone) {
+      width: 70vw;
+    }
+
   }
 
 

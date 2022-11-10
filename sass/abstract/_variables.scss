@@ -22,7 +22,7 @@ $min-vertical-padding: 12rem;
 $font-mono: 'IBM Plex Mono', monospace;
 $font-nuito: 'Nunito', sans-serif;
 $font-poppins: 'Poppins', sans-serif;
-$font-size-tiny: 1.2rem;
+$font-size-tiny: 1.3rem;
 $font-size-small: 1.5rem;
 $font-size-medium: 2.5rem;
 $font-size-medium-plus: 3rem;
@@ -41,6 +41,7 @@ $splash-screen-duration: 2000ms;
 $intro-duration: #{$splash-screen-duration + 1.5s}; // Splash screen duration + 1s intro delay + .5s delay for all intro childs
 
 // MEDIA QUERIES
+$s-phone: 30em;
 $phone: 37.5em;
 $lg-phone: 46.87em;
 $tab-port: 56.25em;
