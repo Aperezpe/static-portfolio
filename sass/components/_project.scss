@@ -109,6 +109,7 @@
   &__links {
     display: flex;
     list-style: none;
+    z-index: 5000;
   }
 
   &__link:not(:last-child) {

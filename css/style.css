@@ -192,12 +192,6 @@ main {
   transition: all .4s;
   font-size: 2.5rem;
   cursor: pointer; }
-  @media (max-width: 46.87em) {
-    .hoverable-icon {
-      font-size: 2rem; } }
-  @media (max-width: 37.5em) {
-    .hoverable-icon {
-      font-size: 1.8rem; } }
   .hoverable-icon:hover {
     color: #ae2d68; }
 
@@ -311,7 +305,8 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end; }
+    align-items: flex-end;
+    z-index: 5000; }
   .noteworthy-project__left-icon {
     font-size: 3.5rem;
     color: #ae2d68; }
@@ -474,7 +469,8 @@ main {
         color: #d3defb; } }
   .project__links {
     display: flex;
-    list-style: none; }
+    list-style: none;
+    z-index: 5000; }
   .project__link:not(:last-child) {
     padding-right: 2rem; }
   @media (max-width: 46.87em) {
