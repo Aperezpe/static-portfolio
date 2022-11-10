@@ -63,10 +63,10 @@ ORDER: Base + typography > general layout + grid > page layout > components
 @keyframes fadeInAndScale {
   0% {
     opacity: 0;
-    transform: scale(100%) translate(-50%, -50%); }
+    transform: scale(100%); }
   100% {
     opacity: 1;
-    transform: scale(120%) translate(-50%, -50%); } }
+    transform: scale(120%); } }
 
 *,
 *::after,
@@ -1086,20 +1086,18 @@ main {
 
 .splash-screen {
   background-color: #1f0544;
+  filter: brightness(70%);
   height: 100vh;
   width: 100vw;
   z-index: 5000;
   position: fixed;
-  top: 0; }
-  .splash-screen::after {
-    content: url(../../assets/img/LogoAP_logo.png);
-    position: absolute;
-    display: block;
-    top: 50%;
-    left: 50%;
-    transform-origin: top left;
-    transform: translate(-50%, -50%);
-    animation: fadeInAndScale 1500ms ease-in both; }
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .splash-screen__logo {
+    animation: fadeInAndScale 1500ms ease-out both;
+    filter: brightness(200%); }
 
 .grid-3-by-3 {
   width: 100%;
