@@ -2,6 +2,6 @@ $(document).ready(() => {
   var msDuration = $('html').css('--splash-screen-duration').slice(0, 5);
   
   setTimeout(() => {
-    $(".splash-screen").remove();
+    // $(".splash-screen").remove();
   }, msDuration);
 });
