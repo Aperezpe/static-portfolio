@@ -68,6 +68,12 @@
       }
     }
 
+    @include respond(phone) {
+      &--project {
+        display: none;
+      }
+    }
+
   }
 
   &__overlay {

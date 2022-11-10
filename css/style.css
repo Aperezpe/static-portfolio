@@ -371,6 +371,9 @@ main {
         height: max-content;
         width: 100%;
         filter: grayscale(100%) brightness(50%) opacity(50%); } }
+    @media (max-width: 37.5em) {
+      .colored-img__picture--project {
+        display: none; } }
   .colored-img__overlay {
     background-color: rgba(240, 89, 158, 0.3);
     height: 100%;
