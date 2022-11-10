@@ -27,6 +27,11 @@ $font-size-small: 1.5rem;
 $font-size-medium: 2.5rem;
 $font-size-medium-plus: 3rem;
 
+// TABS
+$tab-height: 5.5rem;
+$tab-width: 16rem;
+$n-tabs: 3;
+
 // GRID
 $grid-gap: 1.5rem;
 $grid-columns-large: 3;
@@ -48,9 +53,12 @@ $tab-port: 56.25em;
 $tab-land: 75em;
 $big-desktop: 112.5em;
 
+
+
 // Export variables to use on JS
 :root {
   --splash-screen-duration: #{$splash-screen-duration};
   --lg-phone: #{$lg-phone};
   --phone: #{$phone};
+  --n-tabs: #{$n-tabs};
 }

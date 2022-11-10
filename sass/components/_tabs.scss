@@ -8,83 +8,106 @@
   }
 
   &__menu {
+    display: flex;
+    flex-direction: column;
     position: relative;
 
+
     @include respond(phone) {
+      box-sizing: border-box;
+      flex-direction: row;
       overflow-x: auto;
       overflow-y: hidden;
       padding-bottom: 1rem;
 
     }
 
+
   }
 
-  &__items {
-    cursor: pointer;
-
-    border: 1px solid $color-dark-gray;
-    border-width: 0 0 0 1px;
-
-    @include respond(phone) {
-      // width: 16rem;
-      display: flex;
-      border-width: 0 0 1px 0;
-    }
+  &__radio:focus + &__button {
+    background-color: rgba($color-secondary, .1);
+    color: $color-secondary;
   }
 
-  &__line-selector {
-    transition: all .4s ease;
-    width: 2.5px;
-    height: 5.5rem;
-    background-color: $color-secondary;
-    position: absolute;
+  &__radio {
+    display: none;
+  }
 
-    top: 0;
-    left: -.5px;
-
-    @include respond(phone) {
-      width: 16rem;
-      height: 2.5px;
-      top: 5.5rem;
-      left: 0;
+  // TODO: Replace 45 with n-tabs that are available in file
+  // Replace it once I find how to dynamically set this value on sass
+  @for $i from 0 to 45 {
+    input[id="exp-tab-#{$i}"]:checked ~ &__line-selector {
+      transform: translateY(#{$i * $tab-height});
+      
+      @include respond(phone) {
+        transform: translateX(#{$i * $tab-width});
+      }
     }
   }
 
 
-
-  // LI
-  &__item {
-    list-style: none;
-  }
-  
-  // A
-  &__link {
+  &__button {
     display: block;
     white-space: nowrap;
     color: $color-gray;
     text-decoration: none;
+    transition: all .3s ease;
     
     line-height: 5.5rem;
     padding: 0 2.5rem;
-
 
     &:hover {
       background-color: rgba($color-secondary, .1);
       color: $color-secondary;
     }
-    
-
-    &:focus {
-      background-color: rgba($color-secondary, .1);
-      color: $color-secondary;
-    }
 
     @include respond(phone) {
-      width: 16rem;
+      min-width: $tab-width;
       text-align: center;
     }
 
   }
+
+  &__line-selector {
+    transition: all .4s ease;
+    width: 3px;
+    height: $tab-height;
+    background-color: $color-secondary;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+
+    @include respond(phone) {
+      width: $tab-width;
+      top: $tab-height + .2rem;
+      height: 3px;
+      left: 0;
+    }
+  }
+
+  // TODO: Here I also need the n-tabs variable
+  // Maybe just populate this class with JS
+  &__line-border {
+    position: absolute;
+    width: 1px;
+    height: #{3 * $tab-height};
+    background-color: $color-dark-gray;
+    top: 0;
+    left: .1rem;
+    
+    @include respond(phone) {
+      left: 0;
+      top: $tab-height + .4rem;
+
+      width: #{3 * $tab-width};
+      height: 1px;
+    }
+
+  }
+
 
   &__content-box {
     position: relative;

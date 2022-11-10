@@ -21,7 +21,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
 :root {
   --splash-screen-duration: 2000ms;
   --lg-phone: 46.87em;
-  --phone: 37.5em; }
+  --phone: 37.5em;
+  --n-tabs: 3; }
 
 @keyframes inFromLeft {
   0% {
@@ -492,53 +493,288 @@ main {
     .tabs {
       flex-direction: column; } }
   .tabs__menu {
+    display: flex;
+    flex-direction: column;
     position: relative; }
     @media (max-width: 37.5em) {
       .tabs__menu {
+        box-sizing: border-box;
+        flex-direction: row;
         overflow-x: auto;
         overflow-y: hidden;
         padding-bottom: 1rem; } }
-  .tabs__items {
-    cursor: pointer;
-    border: 1px solid #e3e3e328;
-    border-width: 0 0 0 1px; }
+  .tabs__radio:focus + .tabs__button {
+    background-color: rgba(174, 45, 104, 0.1);
+    color: #ae2d68; }
+  .tabs__radio {
+    display: none; }
+  input[id="exp-tab-0"]:checked ~ .tabs__line-selector {
+    transform: translateY(0rem); }
     @media (max-width: 37.5em) {
-      .tabs__items {
-        display: flex;
-        border-width: 0 0 1px 0; } }
-  .tabs__line-selector {
-    transition: all .4s ease;
-    width: 2.5px;
-    height: 5.5rem;
-    background-color: #ae2d68;
-    position: absolute;
-    top: 0;
-    left: -.5px; }
+      input[id="exp-tab-0"]:checked ~ .tabs__line-selector {
+        transform: translateX(0rem); } }
+  input[id="exp-tab-1"]:checked ~ .tabs__line-selector {
+    transform: translateY(5.5rem); }
     @media (max-width: 37.5em) {
-      .tabs__line-selector {
-        width: 16rem;
-        height: 2.5px;
-        top: 5.5rem;
-        left: 0; } }
-  .tabs__item {
-    list-style: none; }
-  .tabs__link {
+      input[id="exp-tab-1"]:checked ~ .tabs__line-selector {
+        transform: translateX(16rem); } }
+  input[id="exp-tab-2"]:checked ~ .tabs__line-selector {
+    transform: translateY(11rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-2"]:checked ~ .tabs__line-selector {
+        transform: translateX(32rem); } }
+  input[id="exp-tab-3"]:checked ~ .tabs__line-selector {
+    transform: translateY(16.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-3"]:checked ~ .tabs__line-selector {
+        transform: translateX(48rem); } }
+  input[id="exp-tab-4"]:checked ~ .tabs__line-selector {
+    transform: translateY(22rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-4"]:checked ~ .tabs__line-selector {
+        transform: translateX(64rem); } }
+  input[id="exp-tab-5"]:checked ~ .tabs__line-selector {
+    transform: translateY(27.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-5"]:checked ~ .tabs__line-selector {
+        transform: translateX(80rem); } }
+  input[id="exp-tab-6"]:checked ~ .tabs__line-selector {
+    transform: translateY(33rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-6"]:checked ~ .tabs__line-selector {
+        transform: translateX(96rem); } }
+  input[id="exp-tab-7"]:checked ~ .tabs__line-selector {
+    transform: translateY(38.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-7"]:checked ~ .tabs__line-selector {
+        transform: translateX(112rem); } }
+  input[id="exp-tab-8"]:checked ~ .tabs__line-selector {
+    transform: translateY(44rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-8"]:checked ~ .tabs__line-selector {
+        transform: translateX(128rem); } }
+  input[id="exp-tab-9"]:checked ~ .tabs__line-selector {
+    transform: translateY(49.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-9"]:checked ~ .tabs__line-selector {
+        transform: translateX(144rem); } }
+  input[id="exp-tab-10"]:checked ~ .tabs__line-selector {
+    transform: translateY(55rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-10"]:checked ~ .tabs__line-selector {
+        transform: translateX(160rem); } }
+  input[id="exp-tab-11"]:checked ~ .tabs__line-selector {
+    transform: translateY(60.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-11"]:checked ~ .tabs__line-selector {
+        transform: translateX(176rem); } }
+  input[id="exp-tab-12"]:checked ~ .tabs__line-selector {
+    transform: translateY(66rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-12"]:checked ~ .tabs__line-selector {
+        transform: translateX(192rem); } }
+  input[id="exp-tab-13"]:checked ~ .tabs__line-selector {
+    transform: translateY(71.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-13"]:checked ~ .tabs__line-selector {
+        transform: translateX(208rem); } }
+  input[id="exp-tab-14"]:checked ~ .tabs__line-selector {
+    transform: translateY(77rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-14"]:checked ~ .tabs__line-selector {
+        transform: translateX(224rem); } }
+  input[id="exp-tab-15"]:checked ~ .tabs__line-selector {
+    transform: translateY(82.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-15"]:checked ~ .tabs__line-selector {
+        transform: translateX(240rem); } }
+  input[id="exp-tab-16"]:checked ~ .tabs__line-selector {
+    transform: translateY(88rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-16"]:checked ~ .tabs__line-selector {
+        transform: translateX(256rem); } }
+  input[id="exp-tab-17"]:checked ~ .tabs__line-selector {
+    transform: translateY(93.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-17"]:checked ~ .tabs__line-selector {
+        transform: translateX(272rem); } }
+  input[id="exp-tab-18"]:checked ~ .tabs__line-selector {
+    transform: translateY(99rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-18"]:checked ~ .tabs__line-selector {
+        transform: translateX(288rem); } }
+  input[id="exp-tab-19"]:checked ~ .tabs__line-selector {
+    transform: translateY(104.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-19"]:checked ~ .tabs__line-selector {
+        transform: translateX(304rem); } }
+  input[id="exp-tab-20"]:checked ~ .tabs__line-selector {
+    transform: translateY(110rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-20"]:checked ~ .tabs__line-selector {
+        transform: translateX(320rem); } }
+  input[id="exp-tab-21"]:checked ~ .tabs__line-selector {
+    transform: translateY(115.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-21"]:checked ~ .tabs__line-selector {
+        transform: translateX(336rem); } }
+  input[id="exp-tab-22"]:checked ~ .tabs__line-selector {
+    transform: translateY(121rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-22"]:checked ~ .tabs__line-selector {
+        transform: translateX(352rem); } }
+  input[id="exp-tab-23"]:checked ~ .tabs__line-selector {
+    transform: translateY(126.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-23"]:checked ~ .tabs__line-selector {
+        transform: translateX(368rem); } }
+  input[id="exp-tab-24"]:checked ~ .tabs__line-selector {
+    transform: translateY(132rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-24"]:checked ~ .tabs__line-selector {
+        transform: translateX(384rem); } }
+  input[id="exp-tab-25"]:checked ~ .tabs__line-selector {
+    transform: translateY(137.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-25"]:checked ~ .tabs__line-selector {
+        transform: translateX(400rem); } }
+  input[id="exp-tab-26"]:checked ~ .tabs__line-selector {
+    transform: translateY(143rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-26"]:checked ~ .tabs__line-selector {
+        transform: translateX(416rem); } }
+  input[id="exp-tab-27"]:checked ~ .tabs__line-selector {
+    transform: translateY(148.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-27"]:checked ~ .tabs__line-selector {
+        transform: translateX(432rem); } }
+  input[id="exp-tab-28"]:checked ~ .tabs__line-selector {
+    transform: translateY(154rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-28"]:checked ~ .tabs__line-selector {
+        transform: translateX(448rem); } }
+  input[id="exp-tab-29"]:checked ~ .tabs__line-selector {
+    transform: translateY(159.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-29"]:checked ~ .tabs__line-selector {
+        transform: translateX(464rem); } }
+  input[id="exp-tab-30"]:checked ~ .tabs__line-selector {
+    transform: translateY(165rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-30"]:checked ~ .tabs__line-selector {
+        transform: translateX(480rem); } }
+  input[id="exp-tab-31"]:checked ~ .tabs__line-selector {
+    transform: translateY(170.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-31"]:checked ~ .tabs__line-selector {
+        transform: translateX(496rem); } }
+  input[id="exp-tab-32"]:checked ~ .tabs__line-selector {
+    transform: translateY(176rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-32"]:checked ~ .tabs__line-selector {
+        transform: translateX(512rem); } }
+  input[id="exp-tab-33"]:checked ~ .tabs__line-selector {
+    transform: translateY(181.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-33"]:checked ~ .tabs__line-selector {
+        transform: translateX(528rem); } }
+  input[id="exp-tab-34"]:checked ~ .tabs__line-selector {
+    transform: translateY(187rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-34"]:checked ~ .tabs__line-selector {
+        transform: translateX(544rem); } }
+  input[id="exp-tab-35"]:checked ~ .tabs__line-selector {
+    transform: translateY(192.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-35"]:checked ~ .tabs__line-selector {
+        transform: translateX(560rem); } }
+  input[id="exp-tab-36"]:checked ~ .tabs__line-selector {
+    transform: translateY(198rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-36"]:checked ~ .tabs__line-selector {
+        transform: translateX(576rem); } }
+  input[id="exp-tab-37"]:checked ~ .tabs__line-selector {
+    transform: translateY(203.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-37"]:checked ~ .tabs__line-selector {
+        transform: translateX(592rem); } }
+  input[id="exp-tab-38"]:checked ~ .tabs__line-selector {
+    transform: translateY(209rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-38"]:checked ~ .tabs__line-selector {
+        transform: translateX(608rem); } }
+  input[id="exp-tab-39"]:checked ~ .tabs__line-selector {
+    transform: translateY(214.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-39"]:checked ~ .tabs__line-selector {
+        transform: translateX(624rem); } }
+  input[id="exp-tab-40"]:checked ~ .tabs__line-selector {
+    transform: translateY(220rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-40"]:checked ~ .tabs__line-selector {
+        transform: translateX(640rem); } }
+  input[id="exp-tab-41"]:checked ~ .tabs__line-selector {
+    transform: translateY(225.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-41"]:checked ~ .tabs__line-selector {
+        transform: translateX(656rem); } }
+  input[id="exp-tab-42"]:checked ~ .tabs__line-selector {
+    transform: translateY(231rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-42"]:checked ~ .tabs__line-selector {
+        transform: translateX(672rem); } }
+  input[id="exp-tab-43"]:checked ~ .tabs__line-selector {
+    transform: translateY(236.5rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-43"]:checked ~ .tabs__line-selector {
+        transform: translateX(688rem); } }
+  input[id="exp-tab-44"]:checked ~ .tabs__line-selector {
+    transform: translateY(242rem); }
+    @media (max-width: 37.5em) {
+      input[id="exp-tab-44"]:checked ~ .tabs__line-selector {
+        transform: translateX(704rem); } }
+  .tabs__button {
     display: block;
     white-space: nowrap;
     color: #9aa5c5;
     text-decoration: none;
+    transition: all .3s ease;
     line-height: 5.5rem;
     padding: 0 2.5rem; }
-    .tabs__link:hover {
-      background-color: rgba(174, 45, 104, 0.1);
-      color: #ae2d68; }
-    .tabs__link:focus {
+    .tabs__button:hover {
       background-color: rgba(174, 45, 104, 0.1);
       color: #ae2d68; }
     @media (max-width: 37.5em) {
-      .tabs__link {
-        width: 16rem;
+      .tabs__button {
+        min-width: 16rem;
         text-align: center; } }
+  .tabs__line-selector {
+    transition: all .4s ease;
+    width: 3px;
+    height: 5.5rem;
+    background-color: #ae2d68;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    @media (max-width: 37.5em) {
+      .tabs__line-selector {
+        width: 16rem;
+        top: 5.7rem;
+        height: 3px;
+        left: 0; } }
+  .tabs__line-border {
+    position: absolute;
+    width: 1px;
+    height: 16.5rem;
+    background-color: #e3e3e328;
+    top: 0;
+    left: .1rem; }
+    @media (max-width: 37.5em) {
+      .tabs__line-border {
+        left: 0;
+        top: 5.9rem;
+        width: 48rem;
+        height: 1px; } }
   .tabs__content-box {
     position: relative;
     transition: height .4s ease;

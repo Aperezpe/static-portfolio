@@ -5,6 +5,7 @@
 
 let tabHeight = 5.5;
 let tabWidth = 16;
+
 let curTabIndex = 0;
 $(document).ready(() => {
   // Clone and remove all tab contents from DOM
@@ -17,20 +18,11 @@ $(document).ready(() => {
 })
 
 
-$(".tabs__item").click(tab => {
+$(".tabs__radio").click(tab => {
   let classList = tab.target.classList;
 
-  let selectedTabIndex = 0;
-  classList.forEach((cl) => {
-    selectedTabIndex = hasNumber(cl) ? parseInt(cl.slice(-1)) : selectedTabIndex;
-  });
-
-  /** Move tab selector left to righ if in phone screen, else top to bottom */ 
-  if (mediaQuery.phone.matches) {
-    $('#tab-line-selector').css('left', `${selectedTabIndex * tabWidth}rem`);
-  } else {
-    $('#tab-line-selector').css('top', `${selectedTabIndex * tabHeight}rem`);
-  }
+  let selectedTabIndex = 
+    parseInt(document.querySelector('input[name="experience-tab"]:checked').value);
 
 
   if (curTabIndex != selectedTabIndex) {
