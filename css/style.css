@@ -91,6 +91,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  height: -webkit-fill-available;
   -webkit-scrollbar-width: thin;
   -moz-scrollbar-width: thin;
   -ms-scrollbar-width: thin;
@@ -112,6 +113,7 @@ html {
 body {
   box-sizing: border-box;
   background-color: #280659;
+  height: -webkit-fill-available;
   padding-top: 11rem;
   animation: hideOverflow 0.00001s 2500ms backwards;
   position: relative; }
@@ -1089,7 +1091,7 @@ main {
 .splash-screen {
   background-color: #1f0544;
   filter: brightness(70%);
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   z-index: 5000;
   position: fixed;
