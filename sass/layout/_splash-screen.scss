@@ -12,10 +12,13 @@
   justify-content: center;
   align-items: center;
 
-  &__logo {
-    animation: fadeInAndScale #{$splash-screen-duration - .5s} ease-out both;
-    filter: brightness(200%);
+  @include respond(lg-phone) {
+    padding-bottom: $navbar-height;
+  }
 
+  &__logo {
+    animation: fadeInAndScale #{$splash-screen-duration - 500ms} ease-out both;
+    filter: brightness(200%);
   }
 
 }

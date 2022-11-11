@@ -42,8 +42,8 @@ $grid-columns-small: 1;
 $section-max-width: 120rem;
 
 // ANIMATIONS
-$splash-screen-duration: 2000ms;
-$intro-duration: #{$splash-screen-duration + 1.5s}; // Splash screen duration + 1s intro delay + .5s delay for all intro childs
+$splash-screen-duration: 2000;
+$intro-duration: #{$splash-screen-duration + 1500ms}; // Splash screen duration + 1s intro delay + .5s delay for all intro childs
 
 // MEDIA QUERIES
 $s-phone: 30em;

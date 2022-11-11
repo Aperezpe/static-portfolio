@@ -46,11 +46,12 @@ html {
 body {
   box-sizing: border-box;
   background-color: $color-primary;
-  height: -webkit-fill-available;
+  height: 100%;
+  overflow: hidden;
 
   padding-top: $navbar-height;
 
-  animation: hideOverflow .00001s #{$splash-screen-duration + .5s} backwards;
+  animation: hideOverflow .00001s #{$splash-screen-duration + 500ms} backwards;
   position: relative;
 
 }
@@ -61,10 +62,10 @@ main {
 }
 
 .blur {
-  overflow: hidden;
+  height: 100%;
   
   &:not(body) {
-    filter: blur(1px);
+    filter: blur(5px);
   }
 }
 

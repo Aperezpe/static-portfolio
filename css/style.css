@@ -19,7 +19,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 :root {
-  --splash-screen-duration: 2000ms;
+  --splash-screen-duration: 2000;
   --lg-phone: 46.87em;
   --phone: 37.5em;
   --n-tabs: 3; }
@@ -113,7 +113,8 @@ html {
 body {
   box-sizing: border-box;
   background-color: #280659;
-  height: -webkit-fill-available;
+  height: 100%;
+  overflow: hidden;
   padding-top: 11rem;
   animation: hideOverflow 0.00001s 2500ms backwards;
   position: relative; }
@@ -122,9 +123,9 @@ main {
   margin: 0rem auto; }
 
 .blur {
-  overflow: hidden; }
+  height: 100%; }
   .blur:not(body) {
-    filter: blur(1px); }
+    filter: blur(5px); }
 
 @keyframes hideOverflow {
   0% {
@@ -1100,6 +1101,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media (max-width: 46.87em) {
+    .splash-screen {
+      padding-bottom: 11rem; } }
   .splash-screen__logo {
     animation: fadeInAndScale 1500ms ease-out both;
     filter: brightness(200%); }

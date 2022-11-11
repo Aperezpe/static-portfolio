@@ -20,7 +20,7 @@ window.addEventListener('scroll', () => {
 })
 
 const elementsToBlur = [
-  document.getElementById('navigation-logo-box'),
+  // document.getElementById('navigation-logo-box'),
   document.getElementById('main'),
   document.getElementById('body'),
   document.getElementById('footer'),
@@ -36,8 +36,11 @@ $('.navigation__link').click(() => {
 $('input[id=navi-toggle]').change(function () {
   if ($(this).is(':checked')) {
     elementsToBlur.forEach((el) => el.classList.remove('blur'));
+    document.body.style.overflow = 'auto';
+
   } else {
     elementsToBlur.forEach((el) => el.classList.add('blur'));
+    document.body.style.overflow = 'hidden';
     document.addEventListener('touchstart', onTouchOutsideMenu, true);
   }
 });
@@ -53,4 +56,6 @@ onTouchOutsideMenu = (e) => {
 handlCloseMenu = () => {
   document.getElementById('navi-toggle').checked = true;
   elementsToBlur.forEach((el) => el.classList.remove('blur'));
+  document.body.style.overflow = 'auto';
+
 }

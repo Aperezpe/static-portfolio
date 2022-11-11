@@ -33,7 +33,7 @@
     height: 6rem;
     cursor: pointer;
     transition: all .3s ease-in-out;
-    animation: fadeIn .8s ease $splash-screen-duration + .2s backwards;
+    animation: fadeIn .8s ease $splash-screen-duration + 200ms backwards;
 
     @include respond(lg-phone) {
       height: 4.5rem;
@@ -52,7 +52,7 @@
   &__list {
     @for $i from 1 through 5 {
       & li:nth-child(#{$i}n) {
-        animation-delay: #{$splash-screen-duration + ($i * .15s)};
+        animation-delay: #{$splash-screen-duration + ($i * 150ms)};
       }
     }
 
@@ -166,7 +166,7 @@
   }
 
   &__icon {
-    animation: fadeIn .8s ease $splash-screen-duration + .2s backwards;
+    animation: fadeIn .8s ease $splash-screen-duration + 200ms backwards;
     &, &::before, &::after {
       width: 3.6rem;
       height: 3px;
