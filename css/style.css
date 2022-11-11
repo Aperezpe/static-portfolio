@@ -75,7 +75,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  touch-action: manipulation; }
 
 ::-webkit-scrollbar {
   width: 1.2rem; }
@@ -117,7 +118,8 @@ body {
   overflow: hidden;
   padding-top: 11rem;
   animation: hideOverflow 0.00001s 2500ms backwards;
-  position: relative; }
+  position: relative;
+  overflow-x: hidden; }
 
 main {
   margin: 0rem auto; }
@@ -1017,6 +1019,9 @@ main {
     animation: inFromTop .3s ease backwards;
     display: inline-block;
     list-style: none; }
+    @media (max-width: 46.87em) {
+      .navigation__item:not(:last-child) {
+        width: 100%; } }
   .navigation__link {
     text-decoration: none;
     font-family: "IBM Plex Mono", monospace;
@@ -1035,6 +1040,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
         font-size: 2rem;
         line-height: 4rem; } }
   .navigation__item-number {

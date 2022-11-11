@@ -5,6 +5,7 @@
   padding: 0;
 
   box-sizing: inherit;
+  touch-action: manipulation;
 }
 
 ::-webkit-scrollbar{ width: 1.2rem; }
@@ -53,7 +54,7 @@ body {
 
   animation: hideOverflow .00001s #{$splash-screen-duration + 500ms} backwards;
   position: relative;
-
+  overflow-x: hidden;
 }
 
 
