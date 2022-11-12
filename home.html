@@ -11,13 +11,12 @@
     <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600&display=swap"
     rel="stylesheet">
-    
-    <script src="//unpkg.com/alpinejs" defer></script>
+
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/tailwind/output.css">
     <script src="https://kit.fontawesome.com/46ee3dcf79.js" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.0.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> 
     <script src="js/media-queries.js"></script>
     <script src="index.js"></script>
 
@@ -26,8 +25,7 @@
 </head>
 
 
-<body id="body" x-data="{portfolioData: {}}" x-init="portfolioData = await getPorfolioData()" onload="onLoad()">
-
+<body id="body" x-data="{portfolioData: {}}" x-init="portfolioData = await (await fetch('portfolio-data.json')).json()">
     <div class="splash-screen">
         <img class="splash-screen__logo" src="assets/img/LogoAP_logo.png" alt="Abraham Logo">
     </div>
@@ -56,7 +54,6 @@
     </header>
 
     <main id="main" >
-        
         <div class="intro">
             <p class="intro__hello">Hello, my name is</p>
             <h1 class="intro__name u-font-secondary">Abraham Perez</h1>
@@ -96,145 +93,404 @@
         <section id="experience" class="section-experience scroll-elem">
             <h3 class="subtitle u-margin-bottom-medium-plus">Where I've worked</h3>
 
-            <div class="tabs" x-data="{selectedTabIndex: '0'}">
-                <div class="tabs__menu" >
+            <div class="tabs">
+                <div class="tabs__menu">
                     <template x-for="(experience, index) in portfolioData.experience">
-                        <input class="tabs__radio" type="radio" x-bind:id="'exp-tab-' + index" name="experience-tab" x-bind:value="index" x-model="selectedTabIndex">
+                        <input class="tabs__radio" type="radio" x-bind:id="'exp-tab-' + index" name="experience-tab" x-bind:value="index">
                     </template>
                     <template x-for="(experience, index) in portfolioData.experience">
-                        <label class="tabs__button text-tiny" x-bind:for="'exp-tab-' + index" x-text="experience.companyName"></label>
-                    </template> 
+                        <label class="tabs__button text-tiny" x-bind:for="'exp-tab-' + index" x-text="experience[index-1].companyName"></label>
+                    </template>
+                
                     <div id="tab-line-selector" class="tabs__line-selector"></div>
                     <div id="tab-line-border" class="tabs__line-border"></div>
                 </div>
-                <div id="tabs-content-box" class="tabs__content-box" x-effect="handleLabelClick(selectedTabIndex)">
-                    <template x-for="(experience, index) in portfolioData.experience">
-
-                        <div class="tabs__content"  x-show="initShow(index)">
-                            <h5 class="company-position-title u-margin-bottom-tiny" x-data="{company: `${experience.title}<span>@ ${experience.companyName}</span>`}" x-html="company"></h5>
-                            <p class="text-tiny u-font-color-gray u-margin-bottom-small" x-text="generateDateRange(JSON.stringify(experience))"></p>
-                            <ul class="list">
-                                <template x-for="responsability in experience.responsabilities">
-                                    <li class="list__item list__item--experience" x-text="responsability"></li>
-                                </template>
-                            </ul>
-                        </div>
-
-                    </template> 
+                <div id="tabs-content-box" class="tabs__content-box">
+                    <div class="tabs__content">
+                        <h5 class="company-position-title u-margin-bottom-tiny">Full Stack <span>@ Walmart</span></h5>
+                        <p class="text-tiny u-font-color-gray u-margin-bottom-small">Jul 2021 - Present</p>
+                        <ul class="list">
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices feugiat neque sit amet luctus. Ut pharetra nibh neque, eu.</li>
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed mi purus. Nullam sem felis, dapibus nec pretium vehicula, euismod vel mauris. Donec mattis auctor.</li>
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate ex eu tellus volutpat, a tristique est ultricies.</li>
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ex nec lectus lobortis porttitor. Etiam posuere ante in magna faucibus.</li>
+                        </ul>
+                    </div>
+                    <div class="tabs__content">
+                        <h5 class="company-position-title u-margin-bottom-tiny">Full Stack <span>@ Exxon1</span></h5>
+                        <p class="text-tiny u-font-color-gray u-margin-bottom-small">Jul 2021 - Present</p>
+                        <ul class="list">
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices feugiat neque sit amet luctus. Ut pharetra nibh neque, eu.</li>
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed mi purus. Nullam sem felis, dapibus nec pretium vehicula, euismod vel mauris. Donec mattis auctor.</li>
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate ex eu tellus volutpat, a tristique est ultricies.</li>
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ex nec lectus lobortis porttitor. Etiam posuere ante in magna faucibus.</li>
+                        </ul>
+                    </div>
+                    <div class="tabs__content">
+                        <h5 class="company-position-title u-margin-bottom-tiny">Full Stack <span>@ Exxon2</span></h5>
+                        <p class="text-tiny u-font-color-gray u-margin-bottom-small">Jul 2021 - Present</p>
+                        <ul class="list">
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices feugiat neque sit amet luctus. Ut pharetra nibh neque, eu.</li>
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed mi purus. Nullam sem felis, dapibus nec pretium vehicula, euismod vel mauris. Donec mattis auctor.</li>
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate ex eu tellus volutpat, a tristique est ultricies.</li>
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ex nec lectus lobortis porttitor. Etiam posuere ante in magna faucibus.</li>
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ex nec lectus lobortis porttitor. Etiam posuere ante in magna faucibus.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
 
         </section>
 
-        <section id="work" class="section-projects" >
+        <section id="work" class="section-projects">
             <h3 class="subtitle u-margin-bottom-medium-plus scroll-elem">Some things I've built</h3>
 
-            <template x-for="(work, index) in portfolioData.work" :key="work.id" x-data="{ position: { true: 'right', false: 'left' } }">
-                <template x-if="work.featuredProject">
+            <!--------------------------- PROJECT 1 --------------------------------------->
+            <div class="project scroll-elem">
+                <div class="project__box project__box--right">
+                    <div class="colored-img">
+                        <a href="#0">
+                            <div class="colored-img__box colored-img__box--radius">
+                                <img class="colored-img__picture colored-img__picture--project" src="/assets/img/launcher_iconlogo_circle 1.png" alt="Gifterest Logo">
+                                <div class="colored-img__overlay"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="project__content project__content--right">
+                    <a href="#0" class="project__clickable-div"></a>
+                    <p class="text-tiny u-font-color-secondary u-margin-bottom-tinier">Featured Project</p>
+                    <h4 class="project-title project-title--medium u-margin-bottom-small">Gifterest</h4>
+                    <div class="project__description project__description--right u-margin-bottom-small">
+                        <p class="font-paragraph-small">A cross-platform mobile application that reminds the user of friend’s important events and generates gift recomendations for each friend based on their interests. It will be available in the App Store and Google Play</p>
+                    </div>
+                    <div class="stack-list u-margin-bottom-small">
+                        <p class="text-tiny u-font-color-gray">Flutter</p>
+                        <p class="text-tiny u-font-color-gray">Firebase</p>
+                        <p class="text-tiny u-font-color-gray">Figma</p>
+                    </div>
+                    <div class="project__links">
+                        <a class="project__link" target="_blank" rel="noopener" title="Gifterest" href="https://github.com/Aperezpe/gifterest">
+                            <i class="fa-brands fa-github hoverable-icon"></i>
+                        </a>
+                        <a class="project__link" href="#0" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-                    <div class="project scroll-elem">
-                        <div x-bind:class="'project__box project__box--' + position[(index % 2 == 0)]">
-                            <div class="colored-img">
-                                <a x-bind:href="work.links[0].url">
-                                    <div class="colored-img__box colored-img__box--radius">
-                                        <img class="colored-img__picture colored-img__picture--project" x-bind:src="work.imgUrl" x-bind:alt="work.title + ' Logo'">
-                                        <div class="colored-img__overlay"></div>
-                                    </div>
-                                </a>
+            <!--------------------------- PROJECT 2 --------------------------------------->
+            <div class="project scroll-elem">
+                <div class="project__box project__box--left">
+                    <div class="colored-img">
+                        <a href="#0">
+                            <div class="colored-img__box colored-img__box--radius">
+                                <img class="colored-img__picture colored-img__picture--project" src="/assets/img/squared_my-logo.png" alt="Abraham Logo">
+                                <div class="colored-img__overlay"></div>
                             </div>
-                        </div>
-                        <div x-bind:class="'project__content project__content--' + position[(index % 2 == 0)]">
-                            <a href="#0" class="project__clickable-div"></a>
-                            <p class="text-tiny u-font-color-secondary u-margin-bottom-tinier">Featured Project</p>
-                            <h4 class="project-title project-title--medium u-margin-bottom-small" x-text="work.title"></h4>
-                            <div x-bind:class="'project__description u-margin-bottom-small project__description--' +  position[(index % 2 == 0)]">
-                                <p class="font-paragraph-small" x-text="work.description"></p>
-                            </div>
-                            <div class="stack-list u-margin-bottom-small">
-                                <template x-for="stackItem in work.stack">
-                                    <p class="text-tiny u-font-color-gray" x-text="stackItem"></p>
-                                </template>
-                            </div>
-                            <div class="project__links">
-
-                                <template x-for="link in work.links">
-                                    <template x-if="link.type == 'git'">
-                                        <a class="project__link" target="_blank" rel="noopener" x-bind:title="work.title + ' Repo'" x-bind:href="link.url">
-                                            <i class="fa-brands fa-github hoverable-icon"></i>
-                                        </a>
-                                    </template>
-                                </template>
-
-                                <template x-for="link in work.links">
-                                    <template x-if="link.type == 'self'">
-                                        <a class="project__link" target="_blank" rel="noopener" x-bind:title="work.title" x-bind:href="link.url">
-                                            <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
-                                        </a>
-                                    </template>
-                                </template>
-                                
-                            </div>
-                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="project__content project__content--left">
+                    <a href="#0" class="project__clickable-div"></a>
+                    <p class="text-tiny u-font-color-secondary u-margin-bottom-tinier">Featured Project</p>
+                    <h4 class="project-title project-title--medium u-margin-bottom-small">Personal Portfolio</h4>
+                    <div class="project__description project__description--left u-margin-bottom-small"> 
+                        <p class="font-paragraph-small">I developed my personal portfolio you're looking at right now from start to finish! With the design inspiration of Brittany Chiang, I developed the website using HTML, SCSS, and Vanilla JS only.</p>
+                    </div>
+                    <div class="stack-list u-margin-bottom-small">
+                        <p class="text-tiny u-font-color-gray">HTML</p>
+                        <p class="text-tiny u-font-color-gray">SCSS</p>
+                        <p class="text-tiny u-font-color-gray">Javascript</p>
                     </div>
 
-                </template>
-            </template>
+                    <div class="project__links">
+                        <a class="project__link" href="https://github.com/Aperezpe/static-portfolio" rel="noopener" title="Abraham Portfolio">
+                            <i class="fa-brands fa-github hoverable-icon"></i>
+                        </a>
+                        <a class="project__link" href="#0" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="section-noteworthy-projects" x-data="{noteworthyProjects: [], showMore: false}" x-init="noteworthyProjects = await getNoteworthyProjects()">
+        <section class="section-noteworthy-projects">
             <h3 class="subtitle-unnumbered u-margin-bottom-medium-plus scroll-elem">Other Noteworthy Projects</h3>
 
             <div id="noteworthy-projects" class="grid-3-by-3">
-                <template x-for="(project, index) in noteworthyProjects" :key="project.id">
-                        <div 
-                            x-show="showProject(showMore, index)" 
-                            x-bind:class="generateGridElemClass(index)"
-                            x-transition:enter="transition ease-out duration-300"
-                            x-transition:enter-start="opacity-0 scale-90"
-                            x-transition:enter-end="opacity-100 scale-100"
-                            x-transition:leave="transition ease-in duration-300"
-                            x-transition:leave-start="opacity-100 scale-100"
-                            x-transition:leave-end="opacity-0 scale-90"
-                        >
-                            <a x-bind:href="project.links[0].url" class="noteworthy-project__clickable-div" target="_blank"></a>
-                            <div class="noteworthy-project__header u-margin-bottom-small">
-                                <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
-                                <div class="noteworthy-project__right-icons">
-
-                                    <template x-for="link in project.links">
-                                        <template x-if="link.type == 'git'">
-                                            <a class="noteworthy-project__right-icon" x-bind:href="link.url" rel="noopener" x-bind:title="project.title + ' Repo'" target="_blank">
-                                                <i class="fa-brands fa-github hoverable-icon "></i>
-                                            </a>
-                                        </template>
-                                    </template>
-
-                                    <template x-for="link in project.links">
-                                        <template x-if="link.type == 'self'">
-                                            <a class="noteworthy-project__right-icon" x-bind:href="link.url" rel="noopener" x-bind:title="project.title" target="_blank">
-                                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
-                                            </a>
-                                        </template>
-                                    </template>
-
-                                </div>
-                            </div>
-        
-                            <div class="project-title project-title--small u-margin-bottom-tinier" x-text="project.title"></div>
-                            <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small" x-text="project.description"></p>
-                            <div class="stack-list u-margin-bottom-small">
-
-                                <template x-for="stackItem in project.stack"> 
-                                    <p class="text-tiny u-font-color-gray" x-text="stackItem">HTML</p>
-                                </template>
-
-                            </div>
+                <div class="noteworthy-project scroll-elem">
+                    <a href="#0" class="noteworthy-project__clickable-div"></a>
+                    <div class="noteworthy-project__header u-margin-bottom-small">
+                        <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
+                        <div class="noteworthy-project__right-icons">
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-brands fa-github hoverable-icon "></i>
+                            </a>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
                         </div>
-                </template>
+                    </div>
+
+                    <div class="project-title project-title--small u-margin-bottom-tinier">Amazing Project</div>
+                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante</p>
+                    <div class="stack-list u-margin-bottom-small">
+                        <p class="text-tiny u-font-color-gray">HTML</p>
+                        <p class="text-tiny u-font-color-gray">SCSS</p>
+                        <p class="text-tiny u-font-color-gray">Javascript</p>
+                    </div>
+                </div>
+
+                <div class="noteworthy-project scroll-elem">
+                    <a href="#0" class="noteworthy-project__clickable-div"></a>
+                    <div class="noteworthy-project__header u-margin-bottom-small">
+                        <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
+                        <div class="noteworthy-project__right-icons">
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-brands fa-github hoverable-icon"></i>
+                            </a>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="project-title project-title--small u-margin-bottom-tinier">Amazing Project</div>
+                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante</p>
+                    <div class="stack-list u-margin-bottom-small">
+                        <p class="text-tiny u-font-color-gray">HTML</p>
+                        <p class="text-tiny u-font-color-gray">SCSS</p>
+                        <p class="text-tiny u-font-color-gray">Javascript</p>
+                    </div>
+                </div>
+                <div class="noteworthy-project scroll-elem">
+                    <a href="#0" class="noteworthy-project__clickable-div"></a>
+                    <div class="noteworthy-project__header u-margin-bottom-small">
+                        <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
+                        <div class="noteworthy-project__right-icons">
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-brands fa-github hoverable-icon"></i>
+                            </a>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="project-title project-title--small u-margin-bottom-tinier">Amazing Project</div>
+                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante</p>
+                    <div class="stack-list u-margin-bottom-small">
+                        <p class="text-tiny u-font-color-gray">HTML</p>
+                        <p class="text-tiny u-font-color-gray">SCSS</p>
+                        <p class="text-tiny u-font-color-gray">Javascript</p>
+                    </div>
+                </div>
+                <div class="noteworthy-project scroll-elem">
+                    <a href="#0" class="noteworthy-project__clickable-div"></a>
+                    <div class="noteworthy-project__header u-margin-bottom-small">
+                        <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
+                        <div class="noteworthy-project__right-icons">
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-brands fa-github hoverable-icon"></i>
+                            </a>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="project-title project-title--small u-margin-bottom-tinier">Amazing Project</div>
+                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante</p>
+                    <div class="stack-list u-margin-bottom-small">
+                        <p class="text-tiny u-font-color-gray">HTML</p>
+                        <p class="text-tiny u-font-color-gray">SCSS</p>
+                        <p class="text-tiny u-font-color-gray">Javascript</p>
+                    </div>
+                </div>
+                <div class="noteworthy-project scroll-elem">
+                    <a href="#0" class="noteworthy-project__clickable-div"></a>
+                    <div class="noteworthy-project__header u-margin-bottom-small">
+                        <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
+                        <div class="noteworthy-project__right-icons">
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-brands fa-github hoverable-icon"></i>
+                            </a>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="project-title project-title--small u-margin-bottom-tinier">Amazing Project</div>
+                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante</p>
+                    <div class="stack-list u-margin-bottom-small">
+                        <p class="text-tiny u-font-color-gray">HTML</p>
+                        <p class="text-tiny u-font-color-gray">SCSS</p>
+                        <p class="text-tiny u-font-color-gray">Javascript</p>
+                    </div>
+                </div>
+                <div class="noteworthy-project scroll-elem">
+                    <a href="#0" class="noteworthy-project__clickable-div"></a>
+                    <div class="noteworthy-project__header u-margin-bottom-small">
+                        <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
+                        <div class="noteworthy-project__right-icons">
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-brands fa-github hoverable-icon"></i>
+                            </a>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="project-title project-title--small u-margin-bottom-tinier">Amazing Project</div>
+                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante</p>
+                    <div class="stack-list u-margin-bottom-small">
+                        <p class="text-tiny u-font-color-gray">HTML</p>
+                        <p class="text-tiny u-font-color-gray">SCSS</p>
+                        <p class="text-tiny u-font-color-gray">Javascript</p>
+                    </div>
+                </div>
+                <div class="noteworthy-project scroll-elem">
+                    <a href="#0" class="noteworthy-project__clickable-div"></a>
+                    <div class="noteworthy-project__header u-margin-bottom-small">
+                        <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
+                        <div class="noteworthy-project__right-icons">
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-brands fa-github hoverable-icon"></i>
+                            </a>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="project-title project-title--small u-margin-bottom-tinier">Amazing Project</div>
+                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante</p>
+                    <div class="stack-list u-margin-bottom-small">
+                        <p class="text-tiny u-font-color-gray">HTML</p>
+                        <p class="text-tiny u-font-color-gray">SCSS</p>
+                        <p class="text-tiny u-font-color-gray">Javascript</p>
+                    </div>
+                </div>
+                <div class="noteworthy-project scroll-elem">
+                    <a href="#0" class="noteworthy-project__clickable-div"></a>
+                    <div class="noteworthy-project__header u-margin-bottom-small">
+                        <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
+                        <div class="noteworthy-project__right-icons">
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-brands fa-github hoverable-icon"></i>
+                            </a>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="project-title project-title--small u-margin-bottom-tinier">Amazing Project</div>
+                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante</p>
+                    <div class="stack-list u-margin-bottom-small">
+                        <p class="text-tiny u-font-color-gray">HTML</p>
+                        <p class="text-tiny u-font-color-gray">SCSS</p>
+                        <p class="text-tiny u-font-color-gray">Javascript</p>
+                    </div>
+                </div>
+                <div class="noteworthy-project scroll-elem">
+                    <a href="#0" class="noteworthy-project__clickable-div"></a>
+                    <div class="noteworthy-project__header u-margin-bottom-small">
+                        <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
+                        <div class="noteworthy-project__right-icons">
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-brands fa-github hoverable-icon"></i>
+                            </a>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="project-title project-title--small u-margin-bottom-tinier">Amazing Project</div>
+                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante</p>
+                    <div class="stack-list u-margin-bottom-small">
+                        <p class="text-tiny u-font-color-gray">HTML</p>
+                        <p class="text-tiny u-font-color-gray">SCSS</p>
+                        <p class="text-tiny u-font-color-gray">Javascript</p>
+                    </div>
+                </div>
+                <div class="noteworthy-project scroll-elem">
+                    <a href="#0" class="noteworthy-project__clickable-div"></a>
+                    <div class="noteworthy-project__header u-margin-bottom-small">
+                        <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
+                        <div class="noteworthy-project__right-icons">
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-brands fa-github hoverable-icon"></i>
+                            </a>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="project-title project-title--small u-margin-bottom-tinier">Amazing Project</div>
+                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante</p>
+                    <div class="stack-list u-margin-bottom-small">
+                        <p class="text-tiny u-font-color-gray">HTML</p>
+                        <p class="text-tiny u-font-color-gray">SCSS</p>
+                        <p class="text-tiny u-font-color-gray">Javascript</p>
+                    </div>
+                </div>
+                <div class="noteworthy-project scroll-elem">
+                    <a href="#0" class="noteworthy-project__clickable-div"></a>
+                    <div class="noteworthy-project__header u-margin-bottom-small">
+                        <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
+                        <div class="noteworthy-project__right-icons">
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-brands fa-github hoverable-icon"></i>
+                            </a>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="project-title project-title--small u-margin-bottom-tinier">Amazing Project</div>
+                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante</p>
+                    <div class="stack-list u-margin-bottom-small">
+                        <p class="text-tiny u-font-color-gray">HTML</p>
+                        <p class="text-tiny u-font-color-gray">SCSS</p>
+                        <p class="text-tiny u-font-color-gray">Javascript</p>
+                    </div>
+                </div>
+                <div class="noteworthy-project scroll-elem">
+                    <a href="#0" class="noteworthy-project__clickable-div"></a>
+                    <div class="noteworthy-project__header u-margin-bottom-small">
+                        <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
+                        <div class="noteworthy-project__right-icons">
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-brands fa-github hoverable-icon"></i>
+                            </a>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="project-title project-title--small u-margin-bottom-tinier">Amazing Project</div>
+                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante</p>
+                    <div class="stack-list u-margin-bottom-small">
+                        <p class="text-tiny u-font-color-gray">HTML</p>
+                        <p class="text-tiny u-font-color-gray">SCSS</p>
+                        <p class="text-tiny u-font-color-gray">Javascript</p>
+                    </div>
+                </div>
+
             </div>
 
-            <button id="grid-show-btn" class="btn u-margin-top-big" x-show="displayShowMore(JSON.stringify(portfolioData))" x-on:click="showMore = !showMore">Show More</button>
+            <button id="grid-show-btn" class="btn u-margin-top-big">Show More</button>
         </section>
         
 
