@@ -1,6 +1,13 @@
 // SCROLL: Fade in on scroll functionallity
 
-const scrollElements = document.querySelectorAll('.scroll-elem');
+let scrollElements = [];
+
+const storeScrollElements = () => {
+  scrollElements = document.querySelectorAll('.scroll-elem');
+  sessionStorage.setItem('scroll-elements', JSON.stringify(scrollElements));
+
+  console.log(scrollElements);
+}
 
 /**
  * Percentage that the component have to be scrolled in order to appear on page
@@ -27,6 +34,11 @@ const displayElement = (element, cl) => {
 
 window.addEventListener('scroll', () => {
   // For each '.scroll-elem' element found
+
+  scrollElements = scrollElements 
+    ? Array.from(scrollElements) 
+    : Array.from(JSON.parse(sessionStorage.getItem('scroll-elements')));
+  
   scrollElements.forEach(el => {
     if (elementInView(el, percentageScroll) && isGridElement(el) ) {
       displayElement(el, 'scrolled-grid-elem');
