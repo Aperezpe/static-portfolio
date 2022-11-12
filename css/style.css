@@ -1,4 +1,7 @@
 @charset "UTF-8";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* 
 0 - 600px;       Phone
 600 - 750px;     Large Phone or small tablet
