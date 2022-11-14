@@ -4,12 +4,14 @@
   "description": "Personal Portfolio",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:tailwind": "npx tailwindcss -i css/style.css -o css/tailwind/output.css --watch"
   },
   "author": "Abraham",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^7.0.1"
+    "node-sass": "^7.0.1",
+    "tailwindcss": "^3.2.4"
   },
   "dependencies": {}
 }

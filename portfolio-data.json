@@ -16,44 +16,49 @@
   ],
   "experience": [
     {
+      "id": "exp0",
       "companyName": "Walmart",
       "title": "Full Stack",
       "startDate": "2021-07-12",
       "endDate": null,
       "responsabilities": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices feugiat neque sit amet luctus. Ut pharetra nibh neque, eu.",
+        "Wlmrt ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices feugiat neque sit amet luctus. Ut pharetra nibh neque, eu.",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed mi purus. Nullam sem felis, dapibus nec pretium vehicula, euismod vel mauris. Donec mattis auctor.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate ex eu tellus volutpat, a tristique est ultricies.",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate ex eu tellus volutpat, a tristique est ultricies.",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ex nec lectus lobortis porttitor. Etiam posuere ante in magna faucibus."
       ]
     },
     {
+      "id": "exp1",
       "companyName": "ExxonMobil",
       "title": "Full Stack Intern",
-      "startDate": "2020-08-12",
-      "endDate": "2020-05-12",
+      "startDate": "2020-06-18",
+      "endDate": "2020-08-12",
       "responsabilities": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices feugiat neque sit amet luctus. Ut pharetra nibh neque, eu.",
+        "Exxn1 ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices feugiat neque sit amet luctus. Ut pharetra nibh neque, eu.",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed mi purus. Nullam sem felis, dapibus nec pretium vehicula, euismod vel mauris. Donec mattis auctor.",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate ex eu tellus volutpat, a tristique est ultricies.",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ex nec lectus lobortis porttitor. Etiam posuere ante in magna faucibus."
       ]
     },
     {
+      "id": "exp2",
       "companyName": "ExxonMobil",
-      "title": "Admin Analyst",
-      "startDate": "2019-08-12",
-      "endDate": "2019-05-12",
+      "title": "Admin Analyst Intern",
+      "startDate": "2019-05-12",
+      "endDate": "2019-08-12",
       "responsabilities": [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices feugiat neque sit amet luctus. Ut pharetra nibh neque, eu.",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed mi purus. Nullam sem felis, dapibus nec pretium vehicula, euismod vel mauris. Donec mattis auctor.",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate ex eu tellus volutpat, a tristique est ultricies.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ex nec lectus lobortis porttitor. Etiam posuere ante in magna faucibus."
+        "Exxn2 ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ex nec lectus lobortis porttitor. Etiam posuere ante in magna faucibus."
       ]
     }
   ],
   "work": [
     {
+      "id": 0,
       "title": "Gifterest",
       "featuredProject": true,
       "description": "A cross-platform mobile application that reminds the user of friend’s important events and generates gift recomendations for each friend based on their interests. It will be available in the App Store and Google Play",
@@ -62,12 +67,14 @@
         "Firebase",
         "Figma"
       ],
-      "links": {
-        "self": "#0",
-        "git": "https://github.com/Aperezpe/gifterest"
-      }
+      "links": [
+        { "id": 0, "url": "#0", "type": "self" },
+        { "id": 1, "url": "https://github.com/Aperezpe/gifterest", "type": "git" }
+      ],
+      "imgUrl": "/assets/img/launcher_iconlogo_circle 1.png"
     },
     {
+      "id": 1,
       "title": "Personal Portfolio",
       "featuredProject": true,
       "description": "I developed my personal portfolio you're looking at right now from start to finish! With the design inspiration of Brittany Chiang, I developed the website using HTML, SCSS, and Vanilla JS only.",
@@ -76,38 +83,176 @@
         "SCSS",
         "Javascript"
       ],
-      "links": {
-        "self": "#0",
-        "git": "https://github.com/Aperezpe/static-portfolio"
-      }
+      "links": [
+        { "id": 0, "url": "#0", "type": "self" },
+        { "id": 1, "url": "https://github.com/Aperezpe/static-portfolio", "type": "git" }
+      ],
+      "imgUrl": "/assets/img/squared_my-logo.png"
     },
     {
+      "id": 2,
       "title": "Amazing Project 1",
       "featuredProject": false,
-      "description": "Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante.",
+      "description": "Tempus1 egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante.",
       "stack": [
         "HTML",
         "SCSS",
         "Javascript"
       ],
-      "links": {
-        "self": "#0",
-        "git": "#0"
-      }
+      "links": [
+        { "id": 0, "url": "#0", "type": "self" },
+        { "id": 1, "url": "#0", "type": "git" }
+      ]
     },
     {
+      "id": 3,
       "title": "Amazing Project 2",
       "featuredProject": false,
-      "description": "Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante.",
+      "description": "Tempus2 egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante.",
       "stack": [
         "HTML",
         "SCSS",
-        "Javascript"
+        "Typescript"
       ],
-      "links": {
-        "self": "#0",
-        "git": "#0"
-      }
+      "links": [
+        { "id": 0, "url": "#0", "type": "self" },
+        { "id": 1, "url": "#0", "type": "git" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Amazing Project 2",
+      "featuredProject": false,
+      "description": "Tempus2 egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante.",
+      "stack": [
+        "HTML",
+        "SCSS",
+        "Typescript"
+      ],
+      "links": [
+        { "id": 0, "url": "#0", "type": "self" },
+        { "id": 1, "url": "#0", "type": "git" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Amazing Project 2",
+      "featuredProject": false,
+      "description": "Tempus2 egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante.",
+      "stack": [
+        "HTML",
+        "SCSS",
+        "Typescript"
+      ],
+      "links": [
+        { "id": 0, "url": "#0", "type": "self" },
+        { "id": 1, "url": "#0", "type": "git" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Amazing Project 2",
+      "featuredProject": false,
+      "description": "Tempus2 egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante.",
+      "stack": [
+        "HTML",
+        "SCSS",
+        "Typescript"
+      ],
+      "links": [
+        { "id": 0, "url": "#0", "type": "self" },
+        { "id": 1, "url": "#0", "type": "git" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Amazing Project 2",
+      "featuredProject": false,
+      "description": "Tempus2 egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante.",
+      "stack": [
+        "HTML",
+        "SCSS",
+        "Typescript"
+      ],
+      "links": [
+        { "id": 0, "url": "#0", "type": "self" },
+        { "id": 1, "url": "#0", "type": "git" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Amazing Project 3",
+      "featuredProject": false,
+      "description": "Tempus3 egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante.",
+      "stack": [
+        "HTML",
+        "SCSS",
+        "Flask"
+      ],
+      "links": [
+        { "id": 0, "url": "#0", "type": "self" },
+        { "id": 1, "url": "#0", "type": "git" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Amazing Project 3",
+      "featuredProject": false,
+      "description": "Tempus3 egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante.",
+      "stack": [
+        "HTML",
+        "SCSS",
+        "Flask"
+      ],
+      "links": [
+        { "id": 0, "url": "#0", "type": "self" },
+        { "id": 1, "url": "#0", "type": "git" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Amazing Project 3",
+      "featuredProject": false,
+      "description": "Tempus3 egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante.",
+      "stack": [
+        "HTML",
+        "SCSS",
+        "Flask"
+      ],
+      "links": [
+        { "id": 0, "url": "#0", "type": "self" },
+        { "id": 1, "url": "#0", "type": "git" }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Amazing Project 3",
+      "featuredProject": false,
+      "description": "Tempus3 egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante.",
+      "stack": [
+        "HTML",
+        "SCSS",
+        "Flask"
+      ],
+      "links": [
+        { "id": 0, "url": "#0", "type": "self" },
+        { "id": 1, "url": "#0", "type": "git" }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Amazing Project 3",
+      "featuredProject": false,
+      "description": "Tempus3 egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante.",
+      "stack": [
+        "HTML",
+        "SCSS",
+        "Flask"
+      ],
+      "links": [
+        { "id": 0, "url": "#0", "type": "self" },
+        { "id": 1, "url": "#0", "type": "git" }
+      ]
     }
   ],
   "getInTouchText": "Sapien faucibus et molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus viverra accumsan in nisl",
