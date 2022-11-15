@@ -180,9 +180,11 @@
                     <div class="noteworthy-project__header u-margin-bottom-small">
                         <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
                         <div class="noteworthy-project__right-icons">
-                            <a class="noteworthy-project__right-icon" href="{{project.links["github"]}}" target="_blank">
+                            {% if project.links["git"] %}
+                            <a class="noteworthy-project__right-icon" href="{{project.links["git"]}}" target="_blank">
                                 <i class="fa-brands fa-github hoverable-icon "></i>
                             </a>
+                            {% endif %}
                             <a class="noteworthy-project__right-icon" href="{{project.links["self"]}}" target="_blank">
                                 <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
                             </a>

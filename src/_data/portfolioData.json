@@ -115,8 +115,8 @@
         "Terraform"
       ],
       "links": {
-        "git": "#0",
-        "self": "#0"
+        "git": "",
+        "self": "https://ppjosue14.wixsite.com/abraham/qdash"
       }
     },
     {
@@ -130,8 +130,8 @@
         "SQLite"
       ],
       "links": {
-        "git": "#0",
-        "self": "#0"
+        "git": "https://github.com/Aperezpe/musikcolab",
+        "self": "https://ppjosue14.wixsite.com/abraham/musikcolab"
       }
     }
   ],
