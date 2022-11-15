@@ -176,7 +176,7 @@
                 {% for project in portfolioData.work %}
                 {% if not project.featuredProject %}
                 <div class="noteworthy-project scroll-elem">
-                    <a href="{{ project.links["self"] }}" class="noteworthy-project__clickable-div"></a>
+                    <a href="{{ project.links["self"] }}" class="noteworthy-project__clickable-div" target="_blank"></a>
                     <div class="noteworthy-project__header u-margin-bottom-small">
                         <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
                         <div class="noteworthy-project__right-icons">
@@ -189,8 +189,8 @@
                         </div>
                     </div>
 
-                    <div class="project-title project-title--small u-margin-bottom-tinier">Amazing Project</div>
-                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante</p>
+                    <div class="project-title project-title--small u-margin-bottom-tinier">{{ project.title }}</div>
+                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">{{ project.description }}</p>
                     <div class="stack-list u-margin-bottom-small">
                         {% for stackItem in project.stack%}
                         <p class="text-tiny u-font-color-gray">{{stackItem}}</p>
@@ -211,7 +211,7 @@
         <section  id="contact" class="section-whats-next scroll-elem">
             <h3 class="text-small text-small--numbered u-font-color-secondary u-margin-bottom-tiny">What's Next?</h3>
             <h6 class="header-big u-font-color-light-gray u-font-secondary u-margin-bottom-small">Get In Touch</h6>
-            <p class="content-paragraph u-text-justify-center u-margin-bottom-medium-plus">Sapien faucibus et molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus viverra accumsan in nisl</p>
+            <p class="content-paragraph u-text-justify-center u-margin-bottom-medium-plus">{{ portfolioData.getInTouchText }}</p>
             <a href="mailto:{{ portfolioData.email }}" target="_blank" class="btn btn--medium">Say Hello!</a>
         </section>
     </main>
