@@ -58,7 +58,7 @@
             <h1 class="intro__name u-font-secondary">{{ portfolioData.name }}</h1>
             <h2 class="header-big u-font-secondary u-font-color-secondary u-margin-bottom-medium">I'm a Software Engineer</h2>
             <p id="intro-description" class="intro__description">{{ portfolioData.introText }}</p>
-            <a href="mailto:aperezpe01@gmail.com" target="_blank" class="btn btn--medium">Say Hello!</a>
+            <a href="mailto:{{ portfolioData.email }}" target="_blank" class="btn btn--medium">Say Hello!</a>
         </div>
 
         <section id="about-me" class="section-about-me scroll-elem">
@@ -212,7 +212,7 @@
             <h3 class="text-small text-small--numbered u-font-color-secondary u-margin-bottom-tiny">What's Next?</h3>
             <h6 class="header-big u-font-color-light-gray u-font-secondary u-margin-bottom-small">Get In Touch</h6>
             <p class="content-paragraph u-text-justify-center u-margin-bottom-medium-plus">Sapien faucibus et molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus viverra accumsan in nisl</p>
-            <a href="mailto:aperezpe01@gmail.com" target="_blank" class="btn btn--medium">Say Hello!</a>
+            <a href="mailto:{{ portfolioData.email }}" target="_blank" class="btn btn--medium">Say Hello!</a>
         </section>
     </main>
 
@@ -256,7 +256,7 @@
         <div class="contact-info-fixed__box">
             <ul class="contact-info-fixed__list">
                 <li class="contact-info-fixed__item contact-info-fixed__item--rotate">
-                    <a href="mailto:aperezpe01@gmail.com" target="_blank" class="contact-info-fixed__link">aperezpe01@gmail.com</a>
+                    <a href="mailto:{{ portfolioData.email }}" target="_blank" class="contact-info-fixed__link">{{ portfolioData.email }}</a>
                 </li>
                 <li class="contact-info-fixed__item">
                     <div class="contact-info-fixed__line"></div>

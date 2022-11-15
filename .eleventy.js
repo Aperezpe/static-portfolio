@@ -6,6 +6,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("resume");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("index.js");
+  eleventyConfig.addPassthroughCopy("app.json");
+  eleventyConfig.addPassthroughCopy("index.php");
 
   eleventyConfig.addNunjucksFilter('niceDate', (dateObj) => {
     return DateTime.fromJSDate(new Date(dateObj)).toFormat("LLL yyyy");
