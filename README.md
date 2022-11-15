@@ -19,13 +19,8 @@ https://abperez.netlify.app/
 ## Update portfolio data
 
 ### Resume
-Update resume and place in resume/AbrahamPerez.pdf, and it should automatically get it
+This is updated on Google Drive, just right click on resume and go to Manage versions. There you can upload new version. This way, the resume link will never change.
+Look [here](https://sao.hsu.edu.hk/faq/how-to-update-files-in-google-drive-without-changing-the-shared-link/) for a more detailed tutorial 
 
-### Intro text
-Update json file field: introText.
-
-### About me
-Update corresponding json fields
-
-### Experience
-Update the experience object json file
+### Data
+To update any other data on portfolio, just update the portfolioData.json file inside the _data directory.
