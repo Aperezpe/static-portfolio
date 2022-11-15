@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height">
+    <link rel="icon" href="/assets/img/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/46ee3dcf79.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.0.min.js"></script> 
+    <script src="js/media-queries.js"></script>
+
+    <title>Abraham Perez</title>
+</head>
+
+
+<body id="body">
+
+    <div class="splash-screen">
+        <img class="splash-screen__logo" src="https://raw.githubusercontent.com/Aperezpe/static-portfolio/main/assets/img/LogoAP_logo.png" alt="Abraham Logo">
+    </div>
+    <header id="navbar" class="navigation">
+        <div id="navigation-logo-box" class="navigation__logo-box">
+            <a href="">
+                <img class="navigation__logo" src="https://raw.githubusercontent.com/Aperezpe/static-portfolio/main/assets/img/LogoAP_logo.png" alt="Abraham Logo">
+            </a> 
+        </div>
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle" checked>
+        <label id="navigation-button" for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        
+        <nav class="navigation__nav">
+            <ul id="navigation-list" class="navigation__list">
+                <li class="navigation__item"><a href="#about-me" class="navigation__link"><span class="navigation__item-number">01.</span>About</a></li>
+                <li class="navigation__item"><a href="#experience" class="navigation__link"><span class="navigation__item-number">02.</span>Experience</a></li>
+                <li class="navigation__item"><a href="#work" class="navigation__link"><span class="navigation__item-number">03.</span>Work</a></li>
+                <li class="navigation__item"><a href="#contact" class="navigation__link"><span class="navigation__item-number">04.</span>Contact</a></li>
+                <li class="navigation__item"><a class="btn btn--default" href="/">Resume</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+
+
+    <main id="main">
+        <div class="intro">
+            <p class="intro__hello">Hello, my name is</p>
+            <h1 class="intro__name u-font-secondary">Abraham Perez</h1>
+            <h2 class="header-big u-font-secondary u-font-color-secondary u-margin-bottom-medium">I'm a Software Engineer</h2>
+            <p id="intro-description" class="intro__description">I’m specilizing on web and mobile Full Stack development. I’m focused on building and maintaining web applications that increases supply chain fullfillment efficiency at Walmart.</p>
+            <a href="mailto:aperezpe01@gmail.com" target="_blank" class="btn btn--medium">Say Hello!</a>
+        </div>
+
+        <section id="about-me" class="section-about-me scroll-elem">
+            <h3 class="subtitle u-margin-bottom-medium-plus">About me</h3>
+
+            <div class="about-me">
+                <div id="about-me-content" class="about-me__content">
+                    
+                    <p class="content-paragraph u-margin-bottom-small">Hello! My name is Abraham and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML &amp; CSS!</p>
+                    
+                    <p class="content-paragraph u-margin-bottom-small">Fast-forward to today, and I’ve had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.</p>
+                    
+                    <p class="content-paragraph u-margin-bottom-small">I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node &amp; React.</p>
+                    
+                    <p class="content-paragraph u-margin-bottom-small">Here are a few technologies I’ve been working with recently:</p>
+                    
+
+                    <ul id="skills-list" class="list list--skills">
+                        
+                        <li class="list__item text-tiny">HTML</li>
+                        
+                        <li class="list__item text-tiny">CSS</li>
+                        
+                        <li class="list__item text-tiny">Javascript</li>
+                        
+                        <li class="list__item text-tiny">Typescript</li>
+                        
+                        <li class="list__item text-tiny">Angular</li>
+                        
+                        <li class="list__item text-tiny">Web Components</li>
+                        
+                    </ul>
+                </div>
+                <div class="about-me__img">
+                    <div class="colored-img">
+                        <div class="colored-img__box colored-img__box--headshot">
+                            <img class="colored-img__picture colored-img__picture--headshot" src="https://raw.githubusercontent.com/Aperezpe/static-portfolio/main/assets/img/headshot.JPG" alt="Abraham Logo">
+                            <div class="colored-img__overlay colored-img--headshot"></div>
+                        </div>
+                        <div class="colored-img__back-border"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="experience" class="section-experience scroll-elem">
+            <h3 class="subtitle u-margin-bottom-medium-plus">Where I've worked</h3>
+
+            <div class="tabs">
+                <div class="tabs__menu">
+
+                    
+                    <input class="tabs__radio" type="radio" id="exp-tab-0" name="experience-tab" value="0">
+                    <label class="tabs__button text-tiny" for="exp-tab-0">Walmart</label>
+                    
+                    <input class="tabs__radio" type="radio" id="exp-tab-1" name="experience-tab" value="1">
+                    <label class="tabs__button text-tiny" for="exp-tab-1">ExxonMobil</label>
+                    
+                    <input class="tabs__radio" type="radio" id="exp-tab-2" name="experience-tab" value="2">
+                    <label class="tabs__button text-tiny" for="exp-tab-2">ExxonMobil</label>
+                    
+
+                    <div id="tab-line-selector" class="tabs__line-selector"></div>
+                    <div id="tab-line-border" class="tabs__line-border"></div>
+                </div>
+                <div id="tabs-content-box" class="tabs__content-box">
+                    
+                    <div class="tabs__content">
+                        <h5 class="company-position-title u-margin-bottom-tiny">Full Stack<span>@ Walmart</span></h5>
+                        <p class="text-tiny u-font-color-gray u-margin-bottom-small">
+                            Jul 2021 -  Present 
+                        </p>
+                        <ul class="list">
+                            
+                            <li class="list__item list__item--experience">Loremwmt ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices feugiat neque sit amet luctus. Ut pharetra nibh neque, eu.</li>
+                            
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed mi purus. Nullam sem felis, dapibus nec pretium vehicula, euismod vel mauris. Donec mattis auctor.</li>
+                            
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate ex eu tellus volutpat, a tristique est ultricies.</li>
+                            
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ex nec lectus lobortis porttitor. Etiam posuere ante in magna faucibus.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="tabs__content">
+                        <h5 class="company-position-title u-margin-bottom-tiny">Full Stack Intern<span>@ ExxonMobil</span></h5>
+                        <p class="text-tiny u-font-color-gray u-margin-bottom-small">
+                            Aug 2020 -  May 2020 
+                        </p>
+                        <ul class="list">
+                            
+                            <li class="list__item list__item--experience">Loremex1 ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices feugiat neque sit amet luctus. Ut pharetra nibh neque, eu.</li>
+                            
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed mi purus. Nullam sem felis, dapibus nec pretium vehicula, euismod vel mauris. Donec mattis auctor.</li>
+                            
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate ex eu tellus volutpat, a tristique est ultricies.</li>
+                            
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ex nec lectus lobortis porttitor. Etiam posuere ante in magna faucibus.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="tabs__content">
+                        <h5 class="company-position-title u-margin-bottom-tiny">Admin Analyst<span>@ ExxonMobil</span></h5>
+                        <p class="text-tiny u-font-color-gray u-margin-bottom-small">
+                            Aug 2019 -  May 2019 
+                        </p>
+                        <ul class="list">
+                            
+                            <li class="list__item list__item--experience">Loremex2 ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices feugiat neque sit amet luctus. Ut pharetra nibh neque, eu.</li>
+                            
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed mi purus. Nullam sem felis, dapibus nec pretium vehicula, euismod vel mauris. Donec mattis auctor.</li>
+                            
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate ex eu tellus volutpat, a tristique est ultricies.</li>
+                            
+                            <li class="list__item list__item--experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat ex nec lectus lobortis porttitor. Etiam posuere ante in magna faucibus.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+        </section>
+
+        <section id="work" class="section-projects">
+            <h3 class="subtitle u-margin-bottom-medium-plus scroll-elem">Some things I've built</h3>
+
+            
+            
+                 
+                
+                <div class="project scroll-elem">
+                    <div class="project__box project__box--right">
+                        <div class="colored-img">
+                            <a target="_blank" rel="noopener" href="#0">
+                                <div class="colored-img__box colored-img__box--radius">
+                                    <img class="colored-img__picture colored-img__picture--project" src="/assets/img/launcher_iconlogo_circle 1.png" alt="Gifterest Logo">
+                                    <div class="colored-img__overlay"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__content project__content--right">
+                        <a target="_blank" rel="noopener" href="#0" class="project__clickable-div"></a>
+                        <p class="text-tiny u-font-color-secondary u-margin-bottom-tinier">Featured Project</p>
+                        <h4 class="project-title project-title--medium u-margin-bottom-small">Gifterest</h4>
+                        <div class="project__description project__description--right u-margin-bottom-small">
+                            <p class="font-paragraph-small">A cross-platform mobile application that reminds the user of friend’s important events and generates gift recomendations for each friend based on their interests. It will be available in the App Store and Google Play</p>
+                        </div>
+                        <div class="stack-list u-margin-bottom-small">
+                            
+                            <p class="text-tiny u-font-color-gray">Flutter</p>
+                            
+                            <p class="text-tiny u-font-color-gray">Firebase</p>
+                            
+                            <p class="text-tiny u-font-color-gray">Figma</p>
+                            
+                        </div>
+                        <div class="project__links">
+                            <a class="project__link" target="_blank" rel="noopener" title="Gifterest Repo" href="https://github.com/Aperezpe/gifterest" >
+                                <i class="fa-brands fa-github hoverable-icon"></i>
+                            </a>
+                            <a class="project__link" target="_blank" rel="noopener" title="Gifterest" href="#0" >
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+            
+            
+                 
+                
+                <div class="project scroll-elem">
+                    <div class="project__box project__box--left">
+                        <div class="colored-img">
+                            <a target="_blank" rel="noopener" href="/">
+                                <div class="colored-img__box colored-img__box--radius">
+                                    <img class="colored-img__picture colored-img__picture--project" src="/assets/img/squared_my-logo.png" alt="Gifterest Logo">
+                                    <div class="colored-img__overlay"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__content project__content--left">
+                        <a target="_blank" rel="noopener" href="/" class="project__clickable-div"></a>
+                        <p class="text-tiny u-font-color-secondary u-margin-bottom-tinier">Featured Project</p>
+                        <h4 class="project-title project-title--medium u-margin-bottom-small">Personal Portfolio</h4>
+                        <div class="project__description project__description--left u-margin-bottom-small">
+                            <p class="font-paragraph-small">I developed my personal portfolio you&#39;re looking at right now from start to finish! With the design inspiration of Brittany Chiang, I developed the website using HTML, SCSS, and Vanilla JS only.</p>
+                        </div>
+                        <div class="stack-list u-margin-bottom-small">
+                            
+                            <p class="text-tiny u-font-color-gray">HTML</p>
+                            
+                            <p class="text-tiny u-font-color-gray">SCSS</p>
+                            
+                            <p class="text-tiny u-font-color-gray">Javascript</p>
+                            
+                        </div>
+                        <div class="project__links">
+                            <a class="project__link" target="_blank" rel="noopener" title="Personal Portfolio Repo" href="https://github.com/Aperezpe/static-portfolio" >
+                                <i class="fa-brands fa-github hoverable-icon"></i>
+                            </a>
+                            <a class="project__link" target="_blank" rel="noopener" title="Personal Portfolio" href="/" >
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+            
+            
+            
+            
+            
+            
+            
+
+        </section>
+
+        <section class="section-noteworthy-projects">
+            <h3 class="subtitle-unnumbered u-margin-bottom-medium-plus scroll-elem">Other Noteworthy Projects</h3>
+
+            <div id="noteworthy-projects" class="grid-3-by-3">
+                
+                
+                
+                
+                
+                
+                <div class="noteworthy-project scroll-elem">
+                    <a href="#0" class="noteworthy-project__clickable-div"></a>
+                    <div class="noteworthy-project__header u-margin-bottom-small">
+                        <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
+                        <div class="noteworthy-project__right-icons">
+                            <a class="noteworthy-project__right-icon" href="" target="_blank">
+                                <i class="fa-brands fa-github hoverable-icon "></i>
+                            </a>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-title project-title--small u-margin-bottom-tinier">Amazing Project</div>
+                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante</p>
+                    <div class="stack-list u-margin-bottom-small">
+                        
+                        <p class="text-tiny u-font-color-gray">HTML</p>
+                        
+                        <p class="text-tiny u-font-color-gray">SCSS</p>
+                        
+                        <p class="text-tiny u-font-color-gray">Javascript</p>
+                        
+                    </div>
+                </div>
+                
+                
+                
+                <div class="noteworthy-project scroll-elem">
+                    <a href="#0" class="noteworthy-project__clickable-div"></a>
+                    <div class="noteworthy-project__header u-margin-bottom-small">
+                        <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
+                        <div class="noteworthy-project__right-icons">
+                            <a class="noteworthy-project__right-icon" href="" target="_blank">
+                                <i class="fa-brands fa-github hoverable-icon "></i>
+                            </a>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-title project-title--small u-margin-bottom-tinier">Amazing Project</div>
+                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante</p>
+                    <div class="stack-list u-margin-bottom-small">
+                        
+                        <p class="text-tiny u-font-color-gray">HTML</p>
+                        
+                        <p class="text-tiny u-font-color-gray">SCSS</p>
+                        
+                        <p class="text-tiny u-font-color-gray">Typescript</p>
+                        
+                    </div>
+                </div>
+                
+                
+                
+                <div class="noteworthy-project scroll-elem">
+                    <a href="#0" class="noteworthy-project__clickable-div"></a>
+                    <div class="noteworthy-project__header u-margin-bottom-small">
+                        <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
+                        <div class="noteworthy-project__right-icons">
+                            <a class="noteworthy-project__right-icon" href="" target="_blank">
+                                <i class="fa-brands fa-github hoverable-icon "></i>
+                            </a>
+                            <a class="noteworthy-project__right-icon" href="#0" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-title project-title--small u-margin-bottom-tinier">Amazing Project</div>
+                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante</p>
+                    <div class="stack-list u-margin-bottom-small">
+                        
+                        <p class="text-tiny u-font-color-gray">HTML</p>
+                        
+                        <p class="text-tiny u-font-color-gray">SCSS</p>
+                        
+                        <p class="text-tiny u-font-color-gray">Typescript</p>
+                        
+                    </div>
+                </div>
+                
+                
+
+            </div>
+
+            
+        </section>
+        
+
+        <section  id="contact" class="section-whats-next scroll-elem">
+            <h3 class="text-small text-small--numbered u-font-color-secondary u-margin-bottom-tiny">What's Next?</h3>
+            <h6 class="header-big u-font-color-light-gray u-font-secondary u-margin-bottom-small">Get In Touch</h6>
+            <p class="content-paragraph u-text-justify-center u-margin-bottom-medium-plus">Sapien faucibus et molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus viverra accumsan in nisl</p>
+            <a href="mailto:aperezpe01@gmail.com" target="_blank" class="btn btn--medium">Say Hello!</a>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer u-margin-bottom-medium">
+        <div class="footer__social-media">
+            <ul class="footer__social-media__list">
+                <li class="footer__social-media__item">
+                    <a href="https://github.com/Aperezpe" rel="noopener" target="_blank" title="Github" class="contact-info-fixed__link">
+                        <i class="fa-brands fa-github hoverable-icon hoverable-icon--translateY contact-info-fixed__icon"></i>
+                    </a>
+                </li>
+                <li class="footer__social-media__item">
+                    <a href="https://www.linkedin.com/in/aperezpe/" rel="noopener" target="_blank" title="Linkedin" class="contact-info-fixed__link">
+                        <i class="fa-brands fa-linkedin-in hoverable-icon hoverable-icon--translateY contact-info-fixed__icon"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <a class="footer__link text-tiny" rel="noopener" target="_blank" href="https://github.com/Aperezpe/static-portfolio">
+            Design Inspiration by Brittany Chiang & Developed by Abraham Perez
+        </a>
+    </footer>
+
+    <div id="contact-info-left" class="contact-info-fixed--left">
+        <div class="contact-info-fixed__box">
+            <ul class="contact-info-fixed__list">
+                <li class="contact-info-fixed__item">
+                    <a href="https://github.com/Aperezpe" rel="noopener" target="_blank" title="Github" class="contact-info-fixed__link"><i class="fa-brands fa-github hoverable-icon hoverable-icon--translateY contact-info-fixed__icon"></i></a>
+                </li>
+                <li class="contact-info-fixed__item">
+                    <a href="https://www.linkedin.com/in/aperezpe/" rel="noopener" target="_blank" title="Linkedin" class="contact-info-fixed__link"><i class="fa-brands fa-linkedin-in hoverable-icon hoverable-icon--translateY contact-info-fixed__icon"></i></a>
+                </li>
+                <li class="contact-info-fixed__item">
+                    <div class="contact-info-fixed__line"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="contact-info-right" class="contact-info-fixed--right">
+        <div class="contact-info-fixed__box">
+            <ul class="contact-info-fixed__list">
+                <li class="contact-info-fixed__item contact-info-fixed__item--rotate">
+                    <a href="mailto:aperezpe01@gmail.com" target="_blank" class="contact-info-fixed__link">aperezpe01@gmail.com</a>
+                </li>
+                <li class="contact-info-fixed__item">
+                    <div class="contact-info-fixed__line"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+<script src="index.js" defer></script>
+<script src="js/components/navbar.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/components/tabs.js"></script>
+<script src="js/components/grid.js"></script>
+
+</html>
