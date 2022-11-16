@@ -33,8 +33,8 @@
     {
       "companyName": "ExxonMobil",
       "title": "Full Stack Intern",
-      "startDate": "2020-08-12",
-      "endDate": "2020-05-12",
+      "startDate": "2020-05-12",
+      "endDate": "2020-08-12",
       "responsabilities": [
         "Completed PoC to MVP transition making web app scalable and production-ready",
         "Automated infrastructure of a React.js web app with Terraform",
@@ -49,7 +49,7 @@
       "companyName": "ExxonMobil",
       "title": "Admin Analyst",
       "startDate": "2019-08-12",
-      "endDate": "2019-05-12",
+      "endDate": "2019-08-12",
       "responsabilities": [
         "Combined previous data visualizations into one automated and manageable web dashboard with Flask",
         "Automated software delivery process by setting up CI/CD pipeline in OpenShift Container Platform",
