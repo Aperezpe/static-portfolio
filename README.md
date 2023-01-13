@@ -7,10 +7,20 @@ You can look at the deployed site at:\
 https://static-portfolio-abperez.herokuapp.com/
 
 ## Run project
-
-1. `npm i`
-2. `npm run compile:sass`
-3. Run `home.html` in live server
+In Project directory:
+1. Install dependencies
+```
+npm i
+```
+2. Run sass preprocessor if you're doing sass changes
+```
+npm run compile:sass 
+```
+3. Run eleventy server
+```
+npx @11ty/eleventy --serve
+```
+4. Do any changes in the project and it should hot reload automatically and reflect changes
 
 ## Deployed URL
 

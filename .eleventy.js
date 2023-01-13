@@ -15,6 +15,37 @@ module.exports = function(eleventyConfig) {
     return notewortyProjects.filter(notewortyProject => !notewortyProject.featuredProject).length;
   });
 
+  // It generates a git, appleStore, googlePlay, or normal link
+  // className = name of class that <a> tag will have
+  eleventyConfig.addNunjucksShortcode("generateLink", function(projectTitle , linkKey, linkUrl) {
+
+    let linkElement = '';
+    if (linkKey === "git") {
+      linkElement =  `
+      <a class="project__link" target="_blank" rel="noopener" title="${projectTitle} Repo" href="${linkUrl}" >
+        <i class="fa-brands fa-github hoverable-icon"></i>
+      </a>`;
+    } else if (linkKey === "appleStore") {
+      linkElement =  `
+      <a class="project__link" target="_blank" rel="noopener" title="${projectTitle} Apple Store" href="${linkUrl}" >
+        <i class="fa-brands fa-app-store-ios hoverable-icon noteworthy-project__right-icon"></i>
+      </a>`;
+    } else if (linkKey === "googlePlay") {
+      linkElement =  `
+      <a class="project__link" target="_blank" rel="noopener" title="${projectTitle} Google Play" href="${linkUrl}" >
+        <i class="fa-brands fa-google-play hoverable-icon noteworthy-project__right-icon"></i>
+      </a>`;
+    } else {
+      linkElement = `
+        <a class="project__link" target="_blank" rel="noopener" title="${projectTitle}" href="${linkUrl}" >
+          <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
+        </a>`
+    }
+
+    return linkElement;
+
+  });
+
   return {
     passThroughFileCopy: true,
     dir: {

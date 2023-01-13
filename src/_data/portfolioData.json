@@ -68,8 +68,9 @@
         "Figma"
       ],
       "links": {
-        "git": "https://github.com/Aperezpe/gifterest",
-        "self": "https://apps.apple.com/us/app/gifterest-mindful-gifts/id1575798313"
+        "appleStore": "https://apps.apple.com/us/app/gifterest-mindful-gifts/id1575798313",
+        "googlePlay": "https://play.google.com/store/apps/details?id=com.aperezpe.bonobo",
+        "git": "https://github.com/Aperezpe/gifterest"
       },
       "imgUrl": "/assets/img/launcher_iconlogo_circle 1.png"
 
@@ -115,8 +116,7 @@
         "Terraform"
       ],
       "links": {
-        "git": "",
-        "self": "https://ppjosue14.wixsite.com/abraham/qdash"
+        "self": "https://q.exxonmobil.com/"
       }
     },
     {

@@ -154,13 +154,12 @@
                             <p class="text-tiny u-font-color-gray">{{ stackItem }}</p>
                             {% endfor %}
                         </div>
+
                         <div class="project__links">
-                            <a class="project__link" target="_blank" rel="noopener" title="{{ work.title }} Repo" href="{{ work.links["git"] }}" >
-                                <i class="fa-brands fa-github hoverable-icon"></i>
-                            </a>
-                            <a class="project__link" target="_blank" rel="noopener" title="{{ work.title }}" href="{{ work.links["self"] }}" >
-                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
-                            </a>
+                            {% for linkKey, linkUrl in work.links %}
+                                {% generateLink work.title, linkKey, linkUrl %}
+                            {% endfor %}
+                            
                         </div>
                     </div>
                 </div>
@@ -180,14 +179,11 @@
                     <div class="noteworthy-project__header u-margin-bottom-small">
                         <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
                         <div class="noteworthy-project__right-icons">
-                            {% if project.links["git"] %}
-                            <a class="noteworthy-project__right-icon" href="{{project.links["git"]}}" target="_blank">
-                                <i class="fa-brands fa-github hoverable-icon "></i>
-                            </a>
-                            {% endif %}
-                            <a class="noteworthy-project__right-icon" href="{{project.links["self"]}}" target="_blank">
-                                <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
-                            </a>
+
+                            {% for linkKey, linkUrl in project.links %}
+                                {% generateLink project.title, linkKey, linkUrl %}
+                            {% endfor %}
+
                         </div>
                     </div>
 
