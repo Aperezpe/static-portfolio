@@ -17,7 +17,7 @@ module.exports = function(eleventyConfig) {
 
   // It generates a git, appleStore, googlePlay, or normal link
   // className = name of class that <a> tag will have
-  eleventyConfig.addNunjucksShortcode("generateLink", function(projectTitle , linkKey, linkUrl) {
+  eleventyConfig.addNunjucksShortcode("generateLink", function(projectTitle , linkKey, linkUrl, showSelfLink) {
 
     let linkElement = '';
     if (linkKey === "git") {
@@ -36,10 +36,11 @@ module.exports = function(eleventyConfig) {
         <i class="fa-brands fa-google-play hoverable-icon noteworthy-project__right-icon"></i>
       </a>`;
     } else {
-      linkElement = `
+
+      linkElement = showSelfLink == null || showSelfLink == true ? `
         <a class="project__link" target="_blank" rel="noopener" title="${projectTitle}" href="${linkUrl}" >
           <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
-        </a>`
+        </a>` : ``;
     }
 
     return linkElement;

@@ -73,6 +73,7 @@
         "git": "https://github.com/Aperezpe/gifterest",
         "self": "https://apps.apple.com/us/app/gifterest-mindful-gifts/id1575798313"
       },
+      "showSelfLink": false,
       "imgUrl": "/assets/img/launcher_iconlogo_circle 1.png"
 
     },
