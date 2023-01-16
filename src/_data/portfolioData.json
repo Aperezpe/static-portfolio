@@ -61,7 +61,7 @@
     {
       "title": "Gifterest",
       "featuredProject": true,
-      "description": "A cross-platform mobile application that reminds the user of friend’s important events and generates gift recomendations for each friend based on their interests. It will be available for both iOS and Android",
+      "description": "A cross-platform mobile application that I developed on my free time. It reminds the user of friend’s important events and generates gift recomendations for each friend based on their interests. You can find it in the Appstore and Google Play!",
       "stack": [
         "Flutter",
         "Firebase",
