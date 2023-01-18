@@ -22,11 +22,10 @@
       "startDate": "2021-07-12",
       "endDate": null,
       "responsabilities": [
-        "Working within International Supply Chain Fulfillment in Digital Transformation, maintaining SCPACE, an application that helps distribution center managers monitor operations and associate efficiency",
-        "Successfully convey technical concepts to non-technical users and identify customer needs to communicate to developers",
-        "Mentored two high school interns into developing chatbot PoC",
-        "Designed, developed, and deployed chatbot system, publishing UI as npm package for reusability and developing backend using Flask framework (Python)",
-        "Improved incident management by creating incident visualization",
+        "Worked within Supply Chain Fulfillment, maintaining Angular UI and Java Backend of an enterprise application launched to multiple international markets",
+        "Mentored two high school interns into developing chatbot PoC from the ground up",
+        "Designed, built, and deployed chatbot system, publishing UI as Web Component for reusability, and Python backend",
+        "Improved incident management by creating incident visualization with Angular",
         "Authenticated and connected 3rd party API in Spring Boot to develop incident API and display it into the Angular front end"
       ]
     },
@@ -36,12 +35,10 @@
       "startDate": "2020-05-12",
       "endDate": "2020-08-12",
       "responsabilities": [
-        "Completed PoC to MVP transition making web app scalable and production-ready",
-        "Automated infrastructure of a React.js web app with Terraform",
+        "Developed a serverless application on Azure for refineries. This application launched into 8 refineries globally",
+        "Automated infrastructure of React.js app with Terraform",
         "Efficiently worked as a Scrum team using Azure DevOps for versioning control, project management, and CI/CD",
-        "Increased app maintainability by adding performance management",
-        "Increased Azure Functions reliability by migrating it from JS to TS",
-        "Hardened authentication and authorization by replacing 3rd party libraries with Azure Active Directory and User Groups",
+        "Hardened app by migrating current authentication to a role-based authentication",
         "Lowered replication cost by redesigning the entire database using Azure Table Storage"
       ]
     },
@@ -61,7 +58,7 @@
     {
       "title": "Gifterest",
       "featuredProject": true,
-      "description": "A cross-platform mobile application that I developed on my free time. It reminds the user of friend’s important events and generates gift recomendations for each friend based on their interests. You can find it in the Appstore and Google Play!",
+      "description": "A cross-platform mobile application that I developed on my free time. It reminds of friend’s important events and generates gift recomendations for each friend based on their interests. You can find it in the Appstore and Google Play!",
       "stack": [
         "Flutter",
         "Firebase",
@@ -80,7 +77,7 @@
     {
       "title": "Personal Portfolio",
       "featuredProject": true,
-      "description": "I developed my personal portfolio you're looking at right now from start to finish! With the design inspiration of Brittany Chiang, I developed the website using HTML, SCSS, Vanilla JS, and Eleventy.",
+      "description": "With the design inspiration of Brittany Chiang, I developed this personal portfolio from the ground up by using classic HTML, SCSS, Vanilla JS, and Eleventy.",
       "stack": [
         "HTML",
         "SCSS",
@@ -137,7 +134,7 @@
       }
     }
   ],
-  "getInTouchText": "Currently I'm looking for a remote job opportunity, so please contact me if you want me to help your team. Otherwise, if you just have a question or want to say hi, my inbox is always open.",
+  "getInTouchText": "Currently I'm actively looking for a remote Frontend opportunity, so please contact me if you think I can fit in your team! Otherwise, if you just feel like saying hi, my inbox is always open! (:",
   "git": "https://github.com/Aperezpe",
   "portfolioRepoUrl": "https://github.com/Aperezpe/static-portfolio",
   "resumeUrl": "https://drive.google.com/file/d/1F9ofe8iJi7yOJn8dkmj09AvBu0SsS2DM/view",
