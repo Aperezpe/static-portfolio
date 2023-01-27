@@ -93,6 +93,20 @@
 
     },
     {
+      "title": "Fancy Tic Tac Toe",
+      "featuredProject": false,
+      "description": "Developed a nice looking Tic Tac Toe UI and coded the entire business logic using my own solution",
+      "stack": [
+        "React.js",
+        "SCSS",
+        "Typescript"
+      ],
+      "links": {
+        "git": "https://github.com/Aperezpe/tic-tac-toe",
+        "self": "https://main--resplendent-tulumba-f52091.netlify.app/"
+      }
+    },
+    {
       "title": "Time Tracker App",
       "featuredProject": false,
       "description": "Time Tracker is a cross-platform mobile application that helps to keep track of time and salary earned per job.",
