@@ -93,6 +93,20 @@
 
     },
     {
+      "title": "IP Address Tracker",
+      "featuredProject": false,
+      "description": "Developed an IP address tracker with Next.js for FrontendMentor challenge. Consumed third-party APIs to get IP address data and generate maps",
+      "stack": [
+        "Next.js",
+        "Tailwind",
+        "Typescript"
+      ],
+      "links": {
+        "git": "https://github.com/Aperezpe/ip-address-tracker",
+        "self": "https://ip-address-tracker-gray-psi.vercel.app/"
+      }
+    },
+    {
       "title": "Fancy Tic Tac Toe",
       "featuredProject": false,
       "description": "Developed a nice looking Tic Tac Toe UI and coded the entire business logic using my own solution",
