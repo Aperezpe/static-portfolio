@@ -93,6 +93,19 @@
 
     },
     {
+      "title": "Qdash",
+      "featuredProject": false,
+      "description": "During my ExxonMobil IT internship, I developed a serverless application on Azure for refineries. This application launched into 8 refineries globally.",
+      "stack": [
+        "React.js",
+        "Azure",
+        "Terraform"
+      ],
+      "links": {
+        "self": "https://q.exxonmobil.com/"
+      }
+    },
+    {
       "title": "IP Address Tracker",
       "featuredProject": false,
       "description": "Developed an IP address tracker with Next.js for FrontendMentor challenge. Consumed third-party APIs to get IP address data and generate maps",
@@ -119,48 +132,8 @@
         "git": "https://github.com/Aperezpe/tic-tac-toe",
         "self": "https://main--resplendent-tulumba-f52091.netlify.app/"
       }
-    },
-    {
-      "title": "Time Tracker App",
-      "featuredProject": false,
-      "description": "Time Tracker is a cross-platform mobile application that helps to keep track of time and salary earned per job.",
-      "stack": [
-        "Flutter",
-        "Firebase"
-      ],
-      "links": {
-        "git": "https://github.com/Aperezpe/time_tracker",
-        "self": "https://ppjosue14.wixsite.com/abraham/timetracker"
-      }
-    },
-    {
-      "title": "Qdash",
-      "featuredProject": false,
-      "description": "During my ExxonMobil IT internship, I developed a serverless application on Azure for refineries. This application launched into 8 refineries globally.",
-      "stack": [
-        "React.js",
-        "Azure",
-        "Terraform"
-      ],
-      "links": {
-        "self": "https://q.exxonmobil.com/"
-      }
-    },
-    {
-      "title": "MusikColab",
-      "featuredProject": false,
-      "description": "This was my internet programming project where I learned Back-End and Front-End with Express.js, JavaScript, HTML, and CSS",
-      "stack": [
-        "Node.js",
-        "HTML",
-        "JS",
-        "SQLite"
-      ],
-      "links": {
-        "git": "https://github.com/Aperezpe/musikcolab",
-        "self": "https://ppjosue14.wixsite.com/abraham/musikcolab"
-      }
     }
+    
   ],
   "getInTouchText": "Currently I'm actively looking for a remote Frontend opportunity, so please contact me if you think I can fit in your team! Otherwise, if you just feel like saying hi, my inbox is always open! (:",
   "git": "https://github.com/Aperezpe",
