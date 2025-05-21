@@ -3,8 +3,8 @@
 This is a static site portfolio developed using only html, css, and javascript. The porfolio is still in development.
 
 ## Deployed portfolio
-You can look at the deployed site at:\
-https://abperez.netlify.app/
+This project is hosted by Netlify, but the sice can be accessed by the following URL:
+https://portfolio.abperez.com/
 
 ## Run project
 In Project directory:
@@ -21,10 +21,6 @@ npm run compile:sass
 npx @11ty/eleventy --serve
 ```
 4. Do any changes in the project and it should hot reload automatically and reflect changes
-
-## Deployed URL
-
-https://abperez.netlify.app/
 
 ## Update portfolio data
 
