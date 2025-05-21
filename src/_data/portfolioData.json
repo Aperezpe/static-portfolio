@@ -1,6 +1,6 @@
 {
   "name": "Abraham Perez",
-  "introText": "I specialize on web and mobile development. I'm currently looking for a job opportunity as Front-end or Full-stack developer!",
+  "introText": "I specialize on web and mobile development. I'm actively looking for a job opportunity as Front-end or Full-stack developer!",
   "aboutMeText": [
     "Hello! My name is Abraham and I enjoy creating things that live on the internet. My interest in web development started back in 2018 when I was exposed to basic concepts of Web Development such as jQuery, HTML, and CSS on my Internet Programming class. I was amazed to know that I can create any interface only using a computer!",
     "Fast-forward to today, and I’ve had the privilege of having two internships at ExxonMobil, one as an Admin Analyst and the other one as Full Stack intern. My main focus these days is develop and support the international market distribution centers with web applications that help them improve their supply chain opperation's efficiency.",
@@ -8,12 +8,13 @@
     "Here are a few technologies I’ve been working with recently:"
   ],
   "aboutMeSkills": [
-    "HTML",
-    "SASS",
-    "Javascript",
+    "React",
+    "React Native",
     "Typescript",
-    "Eleventy",
-    "Angular"
+    "Android Native",
+    "HTML & CSS",
+    "SQL \\ No SQL",
+    "Flutter"
   ],
   "experience": [
     {
@@ -22,11 +23,11 @@
       "startDate": "2021-07-12",
       "endDate": null,
       "responsabilities": [
-        "Worked within Supply Chain Fulfillment, maintaining Angular UI and Java Backend of an enterprise application launched to multiple international markets",
-        "Mentored two high school interns into developing chatbot PoC from the ground up",
-        "Designed, built, and deployed chatbot system, publishing UI as Web Component for reusability, and Python backend",
-        "Improved incident management by creating incident visualization with Angular",
-        "Authenticated and connected 3rd party API in Spring Boot to develop incident API and display it into the Angular front end"
+        "Led a team of 4 frontend engineers in supporting the international Warehouse Management System (WMS)",
+        "Oversaw developers in a multi-flavor micro-services system, ensuring high code quality and adherence to configuration management for reliable app releases",
+        "Leveraged React & Android Native expertise to train teammates, boosting code delivery speed by 30%",
+        "Reduced tech-debt by 25% through proactive refactoring and upgrading dependencies and CI/CDs",
+        "Collaborated with cross-functional teams in designing and grooming user stories"
       ]
     },
     {
@@ -56,6 +57,25 @@
   ],
   "work": [
     {
+      "title": "Flex Job Reports",
+      "featuredProject": true,
+      "description": "App for HVAC companies to streamline job reporting with dynamic forms, smart AI summaries, email reports, and a user-friendly UI. Coming soon to the App Store.",
+      "stack": [
+        "React-Native",
+        "Supabase",
+        "Gen-AI",
+        "Figma"
+      ],
+      "links": {
+        "appleStore": "https://in-progress.dummy.com",
+        "git": "https://github.com/Aperezpe/flex-job-reports-mobile",
+        "self": "https://github.com/Aperezpe/flex-job-reports-mobile"
+      },
+      "showSelfLink": false,
+      "imgUrl": "/assets/img/flex-job-reports-img.png"
+
+    },
+    {
       "title": "Gifterest",
       "featuredProject": true,
       "description": "A cross-platform mobile application that I developed on my free time. It reminds of friend’s important events and generates gift recomendations for each friend based on their interests. You can find it in the Appstore and Google Play!",
@@ -65,10 +85,10 @@
         "Figma"
       ],
       "links": {
-        "appleStore": "https://apps.apple.com/us/app/gifterest-mindful-gifts/id1575798313",
-        "googlePlay": "https://play.google.com/store/apps/details?id=com.aperezpe.bonobo",
+        "appleStore": "https://discontinued",
+        "googlePlay": "https://discontinued",
         "git": "https://github.com/Aperezpe/gifterest",
-        "self": "https://apps.apple.com/us/app/gifterest-mindful-gifts/id1575798313"
+        "self": "https://github.com/Aperezpe/gifterest"
       },
       "showSelfLink": false,
       "imgUrl": "/assets/img/launcher_iconlogo_circle 1.png"
