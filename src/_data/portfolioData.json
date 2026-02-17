@@ -152,6 +152,19 @@
         "git": "https://github.com/Aperezpe/tic-tac-toe",
         "self": "https://main--resplendent-tulumba-f52091.netlify.app/"
       }
+    },
+    {
+      "title": "Maze Generator & Solver",
+      "featuredProject": false,
+      "description": "Interactive maze app that generates mazes and solves them with pathfinding logic.",
+      "stack": [
+        "Javascript",
+        "Algorithms",
+        "Vercel"
+      ],
+      "links": {
+        "self": "https://maze-game-calude-db4ns5sph-aperezpes-projects.vercel.app/"
+      }
     }
     
   ],
