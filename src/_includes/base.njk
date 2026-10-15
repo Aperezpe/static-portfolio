@@ -1,283 +1,234 @@
+{%- set d = portfolioData -%}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, height=device-height">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ d.name }} · {{ d.role }}</title>
+    <meta name="description" content="{{ d.introText }}">
+    <meta name="theme-color" content="#1f0544">
 
-    <meta property='og:title' content='{{ portfolioData.name }}'/>
-    <meta property='og:image' content='https://raw.githubusercontent.com/Aperezpe/static-portfolio/main/assets/img/Thumbnail.png'/>
-    <meta property='og:description' content='Abraham Perez Digital Portfolio'/>
-    <meta property='og:url' content='https://abperez.netlify.app'/>
-    <meta property='og:image:width' content='1200' />
-    <meta property='og:image:height' content='627' />
-    <meta property="og:type" content='website'/>
+    <meta property="og:title" content="{{ d.name }} · {{ d.role }}">
+    <meta property="og:description" content="{{ d.introText }}">
+    <meta property="og:image" content="https://portfolio.abperez.com/assets/img/Thumbnail.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="627">
+    <meta property="og:url" content="https://portfolio.abperez.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
 
     <link rel="icon" href="/assets/img/favicon-16x16.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Nunito:wght@700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/46ee3dcf79.js" crossorigin="anonymous"></script>
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.0.min.js"></script> 
-    <script src="js/media-queries.js"></script>
-
-
-    <title>{{ portfolioData.name }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/46ee3dcf79.js" crossorigin="anonymous" defer></script>
+    <script>
+        // Runs before paint so hidden-until-revealed content and the one-time splash never flash.
+        document.documentElement.classList.add("js");
+        try {
+            if (sessionStorage.getItem("splash-seen")) {
+                document.documentElement.classList.add("seen");
+                document.documentElement.style.setProperty("--splash", "0s");
+            }
+            sessionStorage.setItem("splash-seen", "1");
+        } catch (e) {}
+    </script>
+    <script src="/js/main.js" defer></script>
 </head>
 
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-<body id="body">
-
-    <div class="splash-screen">
-        <img class="splash-screen__logo" src="https://raw.githubusercontent.com/Aperezpe/static-portfolio/main/assets/img/LogoAP_logo.png" alt="Abraham Logo">
+    <div class="splash" aria-hidden="true">
+        <img class="splash__logo" src="/assets/img/LogoAP_logo.png" alt="">
     </div>
-    <header id="navbar" class="navigation">
-        <div id="navigation-logo-box" class="navigation__logo-box">
-            <a href="">
-                <img class="navigation__logo" src="https://raw.githubusercontent.com/Aperezpe/static-portfolio/main/assets/img/LogoAP_logo.png" alt="Abraham Logo">
-            </a> 
-        </div>
-        <input type="checkbox" class="navigation__checkbox" id="navi-toggle" checked>
-        <label id="navigation-button" for="navi-toggle" class="navigation__button">
-            <span class="navigation__icon">&nbsp;</span>
-        </label>
 
-        
-        <nav class="navigation__nav">
-            <ul id="navigation-list" class="navigation__list">
-                <li class="navigation__item"><a href="#about-me" class="navigation__link"><span class="navigation__item-number">01.</span>About</a></li>
-                <li class="navigation__item"><a href="#experience" class="navigation__link"><span class="navigation__item-number">02.</span>Experience</a></li>
-                <li class="navigation__item"><a href="#work" class="navigation__link"><span class="navigation__item-number">03.</span>Work</a></li>
-                <li class="navigation__item"><a href="#contact" class="navigation__link"><span class="navigation__item-number">04.</span>Contact</a></li>
-                <li class="navigation__item"><a class="btn btn--default" target="_blank" href="{{ portfolioData.resumeUrl }}">Resume</a></li>
-            </ul>
+    <div class="spotlight" aria-hidden="true"></div>
+
+    <header class="nav" id="nav">
+        <a class="nav__logo" href="#top" aria-label="Back to top">
+            <img src="/assets/img/LogoAP_logo.png" alt="Abraham Perez logo" width="98" height="75">
+        </a>
+
+        <button class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+            <span></span>
+        </button>
+
+        <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+            <ol class="nav__list">
+                <li><a class="nav__link" href="#about">About</a></li>
+                <li><a class="nav__link" href="#experience">Experience</a></li>
+                <li><a class="nav__link" href="#work">Work</a></li>
+                <li><a class="nav__link" href="#contact">Contact</a></li>
+            </ol>
+            <a class="btn btn--small" href="{{ d.resumeUrl }}" target="_blank" rel="noopener">Resume</a>
         </nav>
-       
     </header>
 
-
     <main id="main">
-        <div class="intro">
-            <p class="intro__hello">Hello, my name is</p>
-            <h1 class="intro__name u-font-secondary">{{ portfolioData.name }}</h1>
-            <h2 class="header-big u-font-secondary u-font-color-secondary u-margin-bottom-medium">I'm a Software Engineer</h2>
-            <p id="intro-description" class="intro__description">{{ portfolioData.introText }}</p>
-            <a href="mailto:{{ portfolioData.email }}" target="_blank" class="btn btn--medium">Say Hello!</a>
-        </div>
+        <section class="hero" id="top">
+            {%- set current = d.experience[0] -%}
+            <a class="hero__status reveal" href="{{ current.companyUrl }}" target="_blank" rel="noopener">
+                <span class="pulse" aria-hidden="true"></span>
+                {{ current.title }} @ {{ current.companyName }}
+            </a>
+            <p class="hero__hello reveal">Hi, my name is</p>
+            <h1 class="hero__name reveal">{{ d.name }}.</h1>
+            <h2 class="hero__tagline reveal">{{ d.tagline }}</h2>
+            <p class="hero__intro reveal">{{ d.introText }}</p>
+            <div class="hero__actions reveal">
+                <a class="btn btn--large" href="mailto:{{ d.email }}">Say hello</a>
+                <a class="btn btn--large btn--ghost" href="#work">See my work <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+            </div>
+        </section>
 
-        <section id="about-me" class="section-about-me scroll-elem">
-            <h3 class="subtitle u-margin-bottom-medium-plus">About me</h3>
+        <section class="section" id="about">
+            <h2 class="section__title reveal">About me</h2>
 
-            <div class="about-me">
-                <div id="about-me-content" class="about-me__content">
-                    {% for text in portfolioData.aboutMeText %}
-                    <p class="content-paragraph u-margin-bottom-small">{{text}}</p>
+            <div class="about">
+                <div class="about__content reveal">
+                    {% for text in d.aboutMeText %}
+                    <p>{{ text }}</p>
                     {% endfor %}
-
-                    <ul id="skills-list" class="list list--skills">
-                        {% for skill in portfolioData.aboutMeSkills %}
-                        <li class="list__item text-tiny">{{skill}}</li>
+                    <ul class="skills">
+                        {% for skill in d.aboutMeSkills %}
+                        <li>{{ skill }}</li>
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="about-me__img">
-                    <div class="colored-img">
-                        <div class="colored-img__box colored-img__box--headshot">
-                            <img class="colored-img__picture colored-img__picture--headshot" src="/assets/img/headshot.jpeg" alt="Abraham headshot">
-                            <div class="colored-img__overlay colored-img--headshot"></div>
-                        </div>
-                        <div class="colored-img__back-border"></div>
+
+                <div class="about__photo reveal">
+                    <div class="tinted">
+                        <img src="/assets/img/headshot-900.jpg" alt="Portrait of Abraham Perez" width="796" height="900" loading="lazy">
                     </div>
                 </div>
             </div>
-            
         </section>
 
-        <section id="experience" class="section-experience scroll-elem">
-            <h3 class="subtitle u-margin-bottom-medium-plus">Where I've worked</h3>
+        <section class="section" id="experience">
+            <h2 class="section__title reveal">Where I've worked</h2>
 
-            <div class="tabs">
-                <div class="tabs__menu">
-
-                    {% for experience in portfolioData.experience %}
-                    <input class="tabs__radio" type="radio" id="exp-tab-{{ loop.index0 }}" name="experience-tab" value="{{ loop.index0 }}">
-                    <label class="tabs__button text-tiny" for="exp-tab-{{ loop.index0 }}">{{ experience.companyName }}</label>
+            <div class="tabs reveal">
+                <div class="tabs__list" role="tablist" aria-label="Job history">
+                    {% for job in d.experience %}
+                    <button class="tabs__tab" role="tab" id="tab-{{ loop.index0 }}" aria-controls="panel-{{ loop.index0 }}"
+                        aria-selected="{{ 'true' if loop.first else 'false' }}" tabindex="{{ '0' if loop.first else '-1' }}">
+                        <span class="tabs__company">{{ job.companyName }}</span>
+                        <span class="tabs__year">{{ job.startDate | yearOf }}–{% if job.endDate %}{{ job.endDate | yearOf }}{% else %}Now{% endif %}</span>
+                    </button>
                     {% endfor %}
-
-                    <div id="tab-line-selector" class="tabs__line-selector"></div>
-                    <div id="tab-line-border" class="tabs__line-border"></div>
+                    <span class="tabs__indicator" aria-hidden="true"></span>
                 </div>
-                <div id="tabs-content-box" class="tabs__content-box">
-                    {% for experience in portfolioData.experience %}
-                    <div class="tabs__content">
-                        <h5 class="company-position-title u-margin-bottom-tiny">{{ experience.title }}<span>@ {{ experience.companyName }}</span></h5>
-                        <p class="text-tiny u-font-color-gray u-margin-bottom-small">
-                            {{ experience.startDate | niceDate }} - {% if experience.endDate %} {{ experience.endDate | niceDate }} {% else %} Present {% endif %}
+
+                <div class="tabs__panels">
+                    {% for job in d.experience %}
+                    <div class="tabs__panel" role="tabpanel" id="panel-{{ loop.index0 }}" aria-labelledby="tab-{{ loop.index0 }}" tabindex="0" {% if not loop.first %}hidden{% endif %}>
+                        <h3 class="job__title">
+                            {{ job.title }}
+                            <a href="{{ job.companyUrl }}" target="_blank" rel="noopener">@ {{ job.companyName }}</a>
+                        </h3>
+                        <p class="job__dates">
+                            {{ job.startDate | niceDate }} – {% if job.endDate %}{{ job.endDate | niceDate }}{% else %}Present{% endif %}
+                            <span>· {{ job.startDate | duration(job.endDate) }}</span>
                         </p>
-                        <ul class="list">
-                            {% for responsability in experience.responsabilities %}
-                            <li class="list__item list__item--experience">{{ responsability }}</li>
+                        <ul class="arrow-list">
+                            {% for item in job.responsabilities %}
+                            <li>{{ item }}</li>
                             {% endfor %}
                         </ul>
                     </div>
                     {% endfor %}
                 </div>
             </div>
-
-
         </section>
 
-        <section id="work" class="section-projects">
-            <h3 class="subtitle u-margin-bottom-medium-plus scroll-elem">Some things I've built</h3>
+        <section class="section" id="work">
+            <h2 class="section__title reveal">Some things I've built</h2>
 
-            {% for work in portfolioData.work %}
-            {% if work.featuredProject %}
-                {% if loop.index % 2 == 0 %} {% set position = "left" %}
-                {% else %} {% set position = "right" %}
-                {% endif %}
-                <div class="project scroll-elem">
-                    <div class="project__box project__box--{{position}}">
-                        <div class="colored-img">
-                            <a target="_blank" rel="noopener" href="{{ work.links["self"] }}">
-                                <div class="colored-img__box colored-img__box--radius">
-                                    <img class="colored-img__picture colored-img__picture--project" src="{{ work.imgUrl }}" alt="Gifterest Logo">
-                                    <div class="colored-img__overlay"></div>
-                                </div>
-                            </a>
+            <ul class="featured">
+                {% for project in d.work | selectattr("featuredProject") %}
+                <li class="featured__item {% if loop.index is even %}featured__item--flip{% endif %} reveal">
+                    <a class="featured__media" href="{{ project.links.self }}" {% if project.links.self.startsWith('http') %}target="_blank" rel="noopener"{% endif %} tabindex="-1" aria-hidden="true">
+                        <img src="{{ project.imgUrl }}" alt="" loading="lazy">
+                    </a>
+                    <div class="featured__content">
+                        <p class="eyebrow">Featured project{% if project.badge %} <span class="badge">{{ project.badge }}</span>{% endif %}</p>
+                        <h3 class="featured__title">
+                            <a href="{{ project.links.self }}" {% if project.links.self.startsWith('http') %}target="_blank" rel="noopener"{% endif %}>{{ project.title }}</a>
+                        </h3>
+                        <div class="featured__desc"><p>{{ project.description }}</p></div>
+                        <ul class="stack">
+                            {% for item in project.stack %}<li>{{ item }}</li>{% endfor %}
+                        </ul>
+                        <div class="featured__links">
+                            {% for key, url in project.links %}{% if key != "self" or not project.links.git %}{% projectLink project.title, key, url %}{% endif %}{% endfor %}
                         </div>
                     </div>
-                    <div class="project__content project__content--{{position}}">
-                        <a target="_blank" rel="noopener" href="{{ work.links["self"] }}" class="project__clickable-div"></a>
-                        <p class="text-tiny u-font-color-secondary u-margin-bottom-tinier">Featured Project</p>
-                        <h4 class="project-title project-title--medium u-margin-bottom-small">{{ work.title }}</h4>
-                        <div class="project__description project__description--{{position}} u-margin-bottom-small">
-                            <p class="font-paragraph-small">{{ work.description }}</p>
-                        </div>
-                        <div class="stack-list u-margin-bottom-small">
-                            {% for stackItem in work.stack %}
-                            <p class="text-tiny u-font-color-gray">{{ stackItem }}</p>
-                            {% endfor %}
-                        </div>
-
-                        <div class="project__links">
-                            {% for linkKey, linkUrl in work.links %}
-                                {% generateLink work.title, linkKey, linkUrl, work.showSelfLink %}
-                            {% endfor %}
-                            
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-            {% endfor %}
-
-        </section>
-
-        <section class="section-noteworthy-projects">
-            <h3 class="subtitle-unnumbered u-margin-bottom-medium-plus scroll-elem">Other Noteworthy Projects</h3>
-
-            <div id="noteworthy-projects" class="grid-3-by-3">
-                {% for project in portfolioData.work %}
-                {% if not project.featuredProject %}
-                <div class="noteworthy-project scroll-elem">
-                    <a href="{{ project.links["self"] }}" class="noteworthy-project__clickable-div" target="_blank"></a>
-                    <div class="noteworthy-project__header u-margin-bottom-small">
-                        <i class="fa-regular fa-folder noteworthy-project__left-icon"></i>
-                        <div class="noteworthy-project__right-icons">
-
-                            {% for linkKey, linkUrl in project.links %}
-                                {% generateLink project.title, linkKey, linkUrl %}
-                            {% endfor %}
-
-                        </div>
-                    </div>
-
-                    <div class="project-title project-title--small u-margin-bottom-tinier">{{ project.title }}</div>
-                    <p class="font-paragraph-small u-font-color-gray u-margin-bottom-small">{{ project.description }}</p>
-                    <div class="stack-list u-margin-bottom-small">
-                        {% for stackItem in project.stack%}
-                        <p class="text-tiny u-font-color-gray">{{stackItem}}</p>
-                        {% endfor %}
-                    </div>
-                </div>
-                {% endif %}
+                </li>
                 {% endfor %}
+            </ul>
+        </section>
 
-            </div>
+        <section class="section section--narrow" id="other-projects">
+            <h2 class="section__subtitle reveal">Other noteworthy projects</h2>
 
-            {% if notewortyProjectsLength(portfolioData.work) > 6 %}
-            <button id="grid-show-btn" class="btn u-margin-top-big">Show More</button>
+            <ul class="cards" id="cards">
+                {% for project in d.work | rejectattr("featuredProject") %}
+                <li class="card reveal {% if loop.index > 6 %}card--extra{% endif %}">
+                    <div class="card__top">
+                        <i class="fa-regular fa-folder card__folder" aria-hidden="true"></i>
+                        <div class="card__links">
+                            {% for key, url in project.links %}{% projectLink project.title, key, url %}{% endfor %}
+                        </div>
+                    </div>
+                    <h3 class="card__title">
+                        <a href="{{ project.links.self or project.links.git }}" target="_blank" rel="noopener">{{ project.title }}</a>
+                    </h3>
+                    <p class="card__desc">{{ project.description }}</p>
+                    <ul class="stack stack--card">
+                        {% for item in project.stack %}<li>{{ item }}</li>{% endfor %}
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+
+            {% if (d.work | rejectattr("featuredProject") | length) > 6 %}
+            <button class="btn btn--large cards__more" id="cards-more" aria-expanded="false">Show more</button>
             {% endif %}
         </section>
-        
 
-        <section  id="contact" class="section-whats-next scroll-elem">
-            <h3 class="text-small text-small--numbered u-font-color-secondary u-margin-bottom-tiny">What's Next?</h3>
-            <h6 class="header-big u-font-color-light-gray u-font-secondary u-margin-bottom-small">Get In Touch</h6>
-            <p class="content-paragraph u-text-justify-center u-margin-bottom-medium-plus">{{ portfolioData.getInTouchText }}</p>
-            <a href="mailto:{{ portfolioData.email }}" target="_blank" class="btn btn--medium">Say Hello!</a>
+        <section class="section section--center" id="contact">
+            <p class="section__kicker reveal">What's next?</p>
+            <h2 class="contact__title reveal">Get in touch</h2>
+            <p class="contact__text reveal">{{ d.getInTouchText }}</p>
+            <a class="btn btn--large reveal" href="mailto:{{ d.email }}">Say hello</a>
         </section>
     </main>
 
-    <footer id="footer" class="footer u-margin-bottom-medium">
-        <div class="footer__social-media">
-            <ul class="footer__social-media__list">
-                <li class="footer__social-media__item">
-                    <a href="{{ portfolioData.git }}" rel="noopener" target="_blank" title="Github" class="contact-info-fixed__link">
-                        <i class="fa-brands fa-github hoverable-icon hoverable-icon--translateY contact-info-fixed__icon"></i>
-                    </a>
-                </li>
-                <li class="footer__social-media__item">
-                    <a href="{{ portfolioData.linkedIn }}" rel="noopener" target="_blank" title="Linkedin" class="contact-info-fixed__link">
-                        <i class="fa-brands fa-linkedin-in hoverable-icon hoverable-icon--translateY contact-info-fixed__icon"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <a class="footer__link text-tiny" rel="noopener" target="_blank" href="{{ portfolioData.portfolioRepoUrl }}">
-            Design Inspiration by Brittany Chiang & Developed by Abraham Perez
+    <aside class="rail rail--left" aria-label="Social links">
+        <ul>
+            <li><a href="{{ d.git }}" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="{{ d.linkedIn }}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+        </ul>
+    </aside>
+
+    <aside class="rail rail--right" aria-label="Email">
+        <a class="rail__email" href="mailto:{{ d.email }}">{{ d.email }}</a>
+    </aside>
+
+    <footer class="footer">
+        <ul class="footer__social">
+            <li><a href="{{ d.git }}" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="{{ d.linkedIn }}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+            <li><a href="mailto:{{ d.email }}" aria-label="Email"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a></li>
+        </ul>
+        <a class="footer__credit" href="{{ d.portfolioRepoUrl }}" target="_blank" rel="noopener">
+            Design inspired by Brittany Chiang · Built by Abraham Perez · {{ "" | year }}
         </a>
     </footer>
-
-    <div id="contact-info-left" class="contact-info-fixed--left">
-        <div class="contact-info-fixed__box">
-            <ul class="contact-info-fixed__list">
-                <li class="contact-info-fixed__item">
-                    <a href="https://github.com/Aperezpe" rel="noopener" target="_blank" title="Github" class="contact-info-fixed__link"><i class="fa-brands fa-github hoverable-icon hoverable-icon--translateY contact-info-fixed__icon"></i></a>
-                </li>
-                <li class="contact-info-fixed__item">
-                    <a href="https://www.linkedin.com/in/aperezpe/" rel="noopener" target="_blank" title="Linkedin" class="contact-info-fixed__link"><i class="fa-brands fa-linkedin-in hoverable-icon hoverable-icon--translateY contact-info-fixed__icon"></i></a>
-                </li>
-                <li class="contact-info-fixed__item">
-                    <div class="contact-info-fixed__line"></div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="contact-info-right" class="contact-info-fixed--right">
-        <div class="contact-info-fixed__box">
-            <ul class="contact-info-fixed__list">
-                <li class="contact-info-fixed__item contact-info-fixed__item--rotate">
-                    <a href="mailto:{{ portfolioData.email }}" target="_blank" class="contact-info-fixed__link">{{ portfolioData.email }}</a>
-                </li>
-                <li class="contact-info-fixed__item">
-                    <div class="contact-info-fixed__line"></div>
-                </li>
-            </ul>
-        </div>
-    </div>
 </body>
-
-<script src="index.js" defer></script>
-<script src="js/components/navbar.js"></script>
-<script src="js/scroll.js"></script>
-<script src="js/components/tabs.js"></script>
-<script src="js/components/grid.js"></script>
 
 </html>

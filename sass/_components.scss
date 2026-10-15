@@ -1,0 +1,186 @@
+@use "tokens" as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1;
+  position: relative;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), background-color 0.25s var(--ease);
+
+  &:hover {
+    background: var(--accent-soft);
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px 0 0 var(--accent);
+  }
+
+  &--small {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  &--large {
+    padding: 18px 28px;
+    font-size: 15px;
+  }
+
+  &--ghost {
+    border-color: var(--border-strong);
+    color: var(--text);
+
+    &:hover {
+      border-color: var(--text);
+      background: var(--surface);
+      box-shadow: 4px 4px 0 0 var(--border-strong);
+    }
+  }
+}
+
+.icon-link {
+  display: inline-flex;
+  padding: 6px;
+  color: var(--text);
+  font-size: 20px;
+  transition: color 0.25s var(--ease), transform 0.25s var(--ease);
+
+  &:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+  }
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent);
+}
+
+.badge {
+  padding: 2px 8px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text);
+
+  li {
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+
+  &--card li {
+    padding: 0;
+    background: none;
+    color: var(--text-muted);
+  }
+}
+
+.arrow-list li,
+.skills li {
+  position: relative;
+  padding-left: 22px;
+
+  &::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+}
+
+.arrow-list li + li {
+  margin-top: 10px;
+}
+
+.pulse {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: inherit;
+    animation: pulse 2s ease-out infinite;
+  }
+}
+
+@keyframes pulse {
+  to { transform: scale(3); opacity: 0; }
+}
+
+.tinted {
+  position: relative;
+  border-radius: var(--radius);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border: 2px solid var(--accent);
+    border-radius: inherit;
+    transform: translate(18px, 18px);
+    transition: transform 0.3s var(--ease);
+  }
+
+  img {
+    border-radius: inherit;
+    filter: grayscale(100%) contrast(1.05);
+    mix-blend-mode: normal;
+    transition: filter 0.4s var(--ease);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: var(--accent-strong);
+    mix-blend-mode: multiply;
+    transition: opacity 0.4s var(--ease);
+  }
+
+  &:hover {
+    &::before { transform: translate(12px, 12px); }
+    &::after { opacity: 0; }
+    img { filter: none; }
+  }
+}
+
+// Fade-up on scroll; JS adds .in-view. Without JS everything stays visible.
+.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  transition-delay: var(--delay, 0s);
+
+  &.in-view {
+    opacity: 1;
+    transform: none;
+  }
+}

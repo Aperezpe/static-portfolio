@@ -1,34 +1,50 @@
 {
   "name": "Abraham Perez",
-  "introText": "I specialize on web and mobile development. I'm actively looking for a job opportunity as Front-end or Full-stack developer!",
+  "introText": "I'm a software engineer specializing in React and React Native. Right now I'm at Self Financial, building the web and mobile experiences that help people build credit and savings.",
   "aboutMeText": [
-    "Hello! My name is Abraham and I enjoy creating things that live on the internet. My interest in web development started back in 2018 when I was exposed to basic concepts of Web Development such as jQuery, HTML, and CSS on my Internet Programming class. I was amazed to know that I can create any interface only using a computer!",
-    "Fast-forward to today, and I’ve had the privilege of having two internships at ExxonMobil, one as an Admin Analyst and the other one as Full Stack intern. My main focus these days is develop and support the international market distribution centers with web applications that help them improve their supply chain opperation's efficiency.",
-    "I also recently launched this personal portfolio that I made from scratch using HTML, SASS, Vanilla JS, and Eleventy.",
-    "Here are a few technologies I’ve been working with recently:"
+    "Hello! I'm Abraham, and I enjoy creating things that live on the internet and in people's pockets. My interest in software started back in 2018, in an Internet Programming class where I first played with HTML, CSS, and jQuery. I was hooked the moment I realized I could build any interface with just a computer.",
+    "Fast-forward to today: I've interned twice at ExxonMobil, spent five years at Walmart leading frontend work on the international Warehouse Management System, and I now work at Self Financial, shipping features across their React Native app and Next.js web app.",
+    "These days I care most about clean UI, fast experimentation, and developer experience, including the AI-assisted tooling that helps my team ship faster.",
+    "Here are a few technologies I've been working with recently:"
   ],
   "aboutMeSkills": [
+    "TypeScript",
     "React",
     "React Native",
-    "Typescript",
+    "Next.js",
+    "GraphQL",
     "Android Native",
-    "HTML & CSS",
-    "SQL \\ No SQL",
-    "Flutter"
+    "Supabase",
+    "Claude Code & AI tooling"
   ],
   "experience": [
     {
-      "companyName": "Walmart",
-      "title": "Full Stack",
-      "startDate": "2021-07-12",
+      "companyName": "Self Financial",
+      "companyUrl": "https://www.self.inc",
+      "title": "Software Engineer",
+      "startDate": "2026-06-01",
       "endDate": null,
+      "responsabilities": [
+        "Build member-facing features across Self's React Native app and Next.js web app from a shared TypeScript monorepo",
+        "Ship A/B experiments on credit-building funnels, from Figma handoff to feature-flagged rollout and analytics tracking",
+        "Contribute components, icons, and Figma Code Connect mappings to the v4 design system",
+        "Hardened native Plaid bank linking for app-to-app OAuth hand-offs",
+        "Build AI-assisted developer tooling (Claude Code agent skills) for demos, simulator runs, and QA; serve as a frontend code owner"
+      ]
+    },
+    {
+      "companyName": "Walmart",
+      "title": "Full Stack Engineer",
+      "startDate": "2021-07-12",
+      "endDate": "2026-06-01",
       "responsabilities": [
         "Led a team of 4 frontend engineers in supporting the international Warehouse Management System (WMS)",
         "Oversaw developers in a multi-flavor micro-services system, ensuring high code quality and adherence to configuration management for reliable app releases",
         "Leveraged React & Android Native expertise to train teammates, boosting code delivery speed by 30%",
         "Reduced tech-debt by 25% through proactive refactoring and upgrading dependencies and CI/CDs",
         "Collaborated with cross-functional teams in designing and grooming user stories"
-      ]
+      ],
+      "companyUrl": "https://www.walmart.com"
     },
     {
       "companyName": "ExxonMobil",
@@ -41,7 +57,8 @@
         "Efficiently worked as a Scrum team using Azure DevOps for versioning control, project management, and CI/CD",
         "Hardened app by migrating current authentication to a role-based authentication",
         "Lowered replication cost by redesigning the entire database using Azure Table Storage"
-      ]
+      ],
+      "companyUrl": "https://corporate.exxonmobil.com"
     },
     {
       "companyName": "ExxonMobil",
@@ -52,7 +69,8 @@
         "Combined previous data visualizations into one automated and manageable web dashboard with Flask",
         "Automated software delivery process by setting up CI/CD pipeline in OpenShift Container Platform",
         "Worked in an Agile development cycle using Scrum methodologies"
-      ]
+      ],
+      "companyUrl": "https://corporate.exxonmobil.com"
     }
   ],
   "work": [
@@ -67,50 +85,43 @@
         "Figma"
       ],
       "links": {
-        "appleStore": "https://in-progress.dummy.com",
         "git": "https://github.com/Aperezpe/flex-job-reports-mobile",
         "self": "https://github.com/Aperezpe/flex-job-reports-mobile"
       },
-      "showSelfLink": false,
-      "imgUrl": "/assets/img/flex-job-reports-img.png"
-
+      "imgUrl": "/assets/img/flex-job-reports-img.png",
+      "badge": "In development"
     },
     {
       "title": "Gifterest",
       "featuredProject": true,
-      "description": "A cross-platform mobile application that I developed on my free time. It reminds of friend’s important events and generates gift recomendations for each friend based on their interests. You can find it in the Appstore and Google Play!",
+      "description": "A cross-platform mobile app I built in my free time. It reminded you of friends' important events and generated gift recommendations based on their interests. It shipped on the App Store and Google Play.",
       "stack": [
         "Flutter",
         "Firebase",
         "Figma"
       ],
       "links": {
-        "appleStore": "https://discontinued",
-        "googlePlay": "https://discontinued",
         "git": "https://github.com/Aperezpe/gifterest",
         "self": "https://github.com/Aperezpe/gifterest"
       },
-      "showSelfLink": false,
-      "imgUrl": "/assets/img/launcher_iconlogo_circle 1.png"
-
+      "imgUrl": "/assets/img/launcher_iconlogo_circle 1.png",
+      "badge": "Retired"
     },
     {
       "title": "Personal Portfolio",
       "featuredProject": true,
-      "description": "With the design inspiration of Brittany Chiang, I developed this personal portfolio from the ground up by using classic HTML, SCSS, Vanilla JS, and Eleventy.",
+      "description": "Designed and built from scratch with semantic HTML, Sass, and vanilla JS on Eleventy. Refreshed in 2026 with a modern design, a lighter runtime, and no jQuery.",
       "stack": [
-        "HTML",
-        "SCSS",
+        "Eleventy 3",
+        "Sass",
         "Javascript",
-        "NJK",
-        "11ty"
+        "Nunjucks"
       ],
       "links": {
         "git": "https://github.com/Aperezpe/static-portfolio",
         "self": "/"
       },
       "imgUrl": "/assets/img/squared_my-logo.png"
-
     },
     {
       "title": "Qdash",
@@ -156,7 +167,7 @@
     {
       "title": "Maze Generator & Solver",
       "featuredProject": false,
-      "description": "Interactive maze app that generates mazes and solves them with pathfinding logic.",
+      "description": "Interactive maze app that generates random mazes and solves them step by step with pathfinding algorithms.",
       "stack": [
         "Javascript",
         "Algorithms",
@@ -166,13 +177,13 @@
         "self": "https://maze-game-calude-db4ns5sph-aperezpes-projects.vercel.app/"
       }
     }
-    
   ],
-  "getInTouchText": "Currently I'm actively looking for a remote Frontend opportunity, so please contact me if you think I can fit in your team! Otherwise, if you just feel like saying hi, my inbox is always open! (:",
+  "getInTouchText": "Whether you have a question, an idea, or just want to say hi, my inbox is always open. I'll do my best to get back to you!",
   "git": "https://github.com/Aperezpe",
   "portfolioRepoUrl": "https://github.com/Aperezpe/static-portfolio",
   "resumeUrl": "https://drive.google.com/file/d/1F9ofe8iJi7yOJn8dkmj09AvBu0SsS2DM/view",
   "linkedIn": "https://www.linkedin.com/in/aperezpe/",
-  "email": "aperezpe01@gmail.com"
-
+  "email": "aperezpe01@gmail.com",
+  "role": "Software Engineer",
+  "tagline": "I build web & mobile products people use every day."
 }

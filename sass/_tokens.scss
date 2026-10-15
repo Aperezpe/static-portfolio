@@ -1,0 +1,45 @@
+$bp-phone: 600px;
+$bp-tablet: 768px;
+$bp-desktop: 1080px;
+
+@mixin below($bp) {
+  @media (max-width: #{$bp - 1px}) { @content; }
+}
+
+@mixin above($bp) {
+  @media (min-width: $bp) { @content; }
+}
+
+:root {
+  --bg: #1f0544;
+  --bg-raised: #2a0b5c;
+  --surface: rgb(255 255 255 / 0.04);
+  --surface-hover: rgb(255 255 255 / 0.07);
+  --border: rgb(211 222 251 / 0.12);
+  --border-strong: rgb(211 222 251 / 0.22);
+
+  --accent: #f0599e;
+  --accent-strong: #ae2d68;
+  --accent-soft: rgb(240 89 158 / 0.12);
+  --violet: #8267bc;
+
+  --text: #d3defb;
+  --text-muted: #9aa5c5;
+  --text-bright: #f3f6ff;
+
+  --font-sans: "Poppins", system-ui, sans-serif;
+  --font-display: "Nunito", "Poppins", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow: 0 20px 40px -20px rgb(10 0 30 / 0.7);
+  --ease: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  --nav-h: 88px;
+  --gutter: clamp(16px, 6vw, 150px);
+  --content-max: 1000px;
+
+  --splash: 1.4s;
+}

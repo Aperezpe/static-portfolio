@@ -1,57 +1,48 @@
 const { DateTime } = require("luxon");
 
-module.exports = function(eleventyConfig) {
+const LINKS = {
+  git: { icon: "fa-brands fa-github", label: "GitHub repository" },
+  appleStore: { icon: "fa-brands fa-app-store-ios", label: "App Store" },
+  googlePlay: { icon: "fa-brands fa-google-play", label: "Google Play" },
+  self: { icon: "fa-solid fa-arrow-up-right-from-square", label: "Live site" },
+};
+
+module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("resume");
   eleventyConfig.addPassthroughCopy("js");
-  eleventyConfig.addPassthroughCopy("index.js");
 
-  eleventyConfig.addNunjucksFilter('niceDate', (dateObj) => {
-    return DateTime.fromJSDate(new Date(dateObj)).toFormat("LLL yyyy");
+  eleventyConfig.addFilter("niceDate", (date) =>
+    DateTime.fromISO(date).toFormat("LLL yyyy")
+  );
+
+  eleventyConfig.addFilter("duration", (start, end) => {
+    const diff = (end ? DateTime.fromISO(end) : DateTime.now())
+      .diff(DateTime.fromISO(start), ["years", "months"])
+      .toObject();
+    const years = Math.floor(diff.years);
+    const months = Math.max(1, Math.round(diff.months));
+    const parts = [];
+    if (years) parts.push(`${years} yr${years > 1 ? "s" : ""}`);
+    if (months && months < 12) parts.push(`${months} mo${months > 1 ? "s" : ""}`);
+    return parts.join(" ");
   });
 
-  eleventyConfig.addNunjucksGlobal('notewortyProjectsLength', (notewortyProjects) => {
-    return notewortyProjects.filter(notewortyProject => !notewortyProject.featuredProject).length;
-  });
+  eleventyConfig.addFilter("yearOf", (date) => DateTime.fromISO(date).year);
 
-  // It generates a git, appleStore, googlePlay, or normal link
-  // className = name of class that <a> tag will have
-  eleventyConfig.addNunjucksShortcode("generateLink", function(projectTitle , linkKey, linkUrl, showSelfLink) {
+  eleventyConfig.addFilter("year", () => new Date().getFullYear());
 
-    let linkElement = '';
-    if (linkKey === "git") {
-      linkElement =  `
-      <a class="project__link" target="_blank" rel="noopener" title="${projectTitle} Repo" href="${linkUrl}" >
-        <i class="fa-brands fa-github hoverable-icon"></i>
-      </a>`;
-    } else if (linkKey === "appleStore") {
-      linkElement =  `
-      <a class="project__link" target="_blank" rel="noopener" title="${projectTitle} Apple Store" href="${linkUrl}" >
-        <i class="fa-brands fa-app-store-ios hoverable-icon noteworthy-project__right-icon"></i>
-      </a>`;
-    } else if (linkKey === "googlePlay") {
-      linkElement =  `
-      <a class="project__link" target="_blank" rel="noopener" title="${projectTitle} Google Play" href="${linkUrl}" >
-        <i class="fa-brands fa-google-play hoverable-icon noteworthy-project__right-icon"></i>
-      </a>`;
-    } else {
-
-      linkElement = showSelfLink == null || showSelfLink == true ? `
-        <a class="project__link" target="_blank" rel="noopener" title="${projectTitle}" href="${linkUrl}" >
-          <i class="fa-solid fa-arrow-up-right-from-square hoverable-icon noteworthy-project__right-icon"></i>
-        </a>` : ``;
-    }
-
-    return linkElement;
-
+  eleventyConfig.addShortcode("projectLink", (title, key, url) => {
+    const link = LINKS[key] || LINKS.self;
+    const isExternal = url.startsWith("http");
+    return `<a class="icon-link" href="${url}" ${isExternal ? 'target="_blank" rel="noopener"' : ""} aria-label="${title} – ${link.label}" title="${link.label}"><i class="${link.icon}" aria-hidden="true"></i></a>`;
   });
 
   return {
-    passThroughFileCopy: true,
     dir: {
       input: "src",
       output: "public",
-    }
-  }
-}
+    },
+  };
+};

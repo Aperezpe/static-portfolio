@@ -7,20 +7,12 @@ This project is hosted by Netlify, but the sice can be accessed by the following
 https://portfolio.abperez.com/
 
 ## Run project
-In Project directory:
-1. Install dependencies
-```
-npm i
-```
-2. Run sass preprocessor if you're doing sass changes
-```
-npm run compile:sass 
-```
-3. Run eleventy server
-```
-npx @11ty/eleventy --serve
-```
-4. Do any changes in the project and it should hot reload automatically and reflect changes
+1. Install dependencies: `npm i`
+2. Start the dev server (Sass watch + Eleventy, hot reload): `npm start`
+3. Open http://localhost:8080
+
+`npm run build` compiles Sass into `css/style.css` and builds the site into `public/`.
+Commit `css/style.css` after style changes.
 
 ## Update portfolio data
 
